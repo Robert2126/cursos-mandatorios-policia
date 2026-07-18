@@ -4,46 +4,46 @@
    ------------------------------------------------------------- */
 
 :root {
-  /* Cambridge English Styling Palette (Claro por defecto) */
-  --bg-primary: #f4f6f9;
-  --bg-secondary: #ffffff;
-  --bg-glass: rgba(255, 255, 255, 0.95);
-  --border-glass: #e1e6eb;
-  --text-primary: #19273c; /* Navy oscuro para lectura legible */
-  --text-secondary: #586980;
+  /* Cambridge English Official Palette (https://www.cambridgeenglish.org) */
+  --bg-primary: #f8f9fa; /* Fondo gris claro ultra limpio */
+  --bg-secondary: #ffffff; /* Paneles completamente blancos y sólidos, no vidrio */
+  --bg-glass: #ffffff; 
+  --border-glass: #dcdfe3; /* Bordes sólidos y finos */
+  --text-primary: #002f6c; /* Azul Oxford profundo oficial de Cambridge */
+  --text-secondary: #4a5568; /* Gris carbón para texto secundario legible */
   
-  /* Colores Corporativos de Cambridge English */
-  --police-blue: #0b2c5c; /* Cambridge Deep Blue */
-  --police-accent: #0f3d7a; /* Royal Blue */
-  --accent-gold: #c31e39; /* Crimson Red de Cambridge */
-  --accent-gold-hover: #9c152a;
-  --accent-color: #0b2c5c; 
+  /* Colores de Acento Institucionales de Cambridge */
+  --police-blue: #002f6c; /* Cambridge Navy Blue */
+  --police-accent: #00a4e4; /* Cambridge Bright Cyan / Azul Claro */
+  --accent-gold: #c6093b; /* Cambridge Crimson Red (usado en llamados a la acción e hitos) */
+  --accent-gold-hover: #a50730;
+  --accent-color: #00a4e4; /* Cian Cambridge */
   --success: #1b8555;
-  --error: #c31e39;
+  --error: #c6093b;
   --warning: #d97706;
   
-  /* Tipografía y sombras */
+  /* Estilo visual Cambridge (Líneas limpias, sombras corporativas, fuentes clásicas) */
   --font-display: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
   --font-body: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-  --shadow-premium: 0 4px 16px rgba(11, 44, 92, 0.08);
-  --transition-smooth: all 0.25s ease-in-out;
-  --border-radius: 8px; /* Cambridge usa bordes más rectos/limpios */
+  --shadow-premium: 0 4px 12px rgba(0, 47, 108, 0.08); /* Sombra corporativa sutil */
+  --transition-smooth: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --border-radius: 4px; /* Bordes corporativos rectos y modernos (sin radios exagerados) */
 }
 
-/* Conservar el soporte dark-mode adaptado al azul de Cambridge */
 .dark-mode {
-  --bg-primary: #0b1624;
-  --bg-secondary: #112136;
-  --bg-glass: rgba(17, 33, 54, 0.9);
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --text-primary: #f4f6f9;
-  --text-secondary: #9cb1cc;
+  /* Soporte alternativo oscuro adaptado a la identidad Cambridge */
+  --bg-primary: #071524;
+  --bg-secondary: #0d2139;
+  --bg-glass: #0d2139;
+  --border-glass: #1e3a5f;
+  --text-primary: #f8f9fa;
+  --text-secondary: #a3b8cc;
   
-  --police-blue: #112136;
-  --police-accent: #3b82f6;
-  --accent-color: #60a5fa;
+  --police-blue: #071524;
+  --police-accent: #00a4e4;
+  --accent-color: #3b82f6;
   
-  --shadow-premium: 0 4px 20px rgba(0,0,0,0.4);
+  --shadow-premium: 0 4px 20px rgba(0,0,0,0.5);
 }
 
 /* Reset y Base */
