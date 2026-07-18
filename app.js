@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const coursesList = document.getElementById("courses-list");
   const globalProgressFill = document.getElementById("global-progress-fill");
   const globalProgressText = document.getElementById("global-progress-text");
+  const goHomeBtn = document.getElementById("go-home-btn");
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const sidebarNav = document.getElementById("sidebar-nav");
   
   // Vistas principales
   const welcomeView = document.getElementById("welcome-view");
@@ -158,6 +161,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!isLocked) {
           navItem.addEventListener("click", () => {
             selectModule(courseIdx, modIdx);
+            // Ocultar la barra lateral en móviles después de seleccionar
+            if (window.innerWidth <= 1024) {
+              sidebarNav.classList.remove("show-mobile");
+            }
           });
         }
 
@@ -760,16 +767,29 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === "Enter") sendFloatingMessage();
     });
 
-    // Reiniciar Progreso
-    resetProgressBtn.addEventListener("click", () => {
-      if (confirm("¿Estás seguro de que deseas reiniciar todo tu progreso de capacitación?")) {
-        state.progress = {};
-        state.questionsScore = { correct: 0, incorrect: 0 };
-        state.currentQuestionIndex = 0;
-        saveProgress();
-        selectModule(0, 0);
-      }
-    });
+    if (resetProgressBtn) {
+      resetProgressBtn.addEventListener("click", () => {
+        if (confirm("¿Estás seguro de reiniciar tu certificación? Se perderá todo el progreso.")) {
+          localStorage.removeItem("policia_cursos_progress");
+          location.reload();
+        }
+      });
+    }
+
+    if (goHomeBtn) {
+      goHomeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showView(welcomeView);
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => item.classList.remove('active'));
+      });
+    }
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener("click", () => {
+        sidebarNav.classList.toggle("show-mobile");
+      });
+    }
   }
 
   // Lanzar aplicación

@@ -160,6 +160,18 @@ body {
   top: 100px;
 }
 
+.mobile-menu-btn {
+  display: none; /* Oculto por defecto */
+  background: var(--police-accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .sidebar-header h3 {
   font-family: var(--font-display);
   font-size: 1.15rem;
@@ -1046,12 +1058,23 @@ body {
     flex-direction: column;
     padding: 1rem;
   }
+  
+  .mobile-menu-btn {
+    display: inline-block;
+  }
+  
   .app-sidebar {
+    display: none; /* Oculto por defecto en movil */
     width: 100%;
     height: auto;
     position: static;
     padding: 1.25rem;
   }
+  
+  .app-sidebar.show-mobile {
+    display: flex; /* Mostrar si se clickea el boton */
+  }
+  
   .course-navigation {
     flex-direction: row;
     overflow-x: auto;
