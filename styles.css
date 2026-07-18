@@ -176,12 +176,15 @@ body {
   flex-direction: column;
   gap: 1rem;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 0.25rem;
+  scrollbar-width: thin;
 }
 
 /* Scrollbar styling */
 .course-navigation::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 .course-navigation::-webkit-scrollbar-thumb {
   background: var(--border-glass);
@@ -401,6 +404,23 @@ body {
   color: var(--police-accent);
 }
 
+.module-visual {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 1rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--border-glass);
+}
+
+.module-visual img, .module-visual iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 #module-scenario-desc {
   font-size: 0.95rem;
   line-height: 1.6;
@@ -448,6 +468,12 @@ body {
   border-bottom: 1px solid var(--border-glass);
   background: rgba(0, 0, 0, 0.2);
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+}
+
+.tabs-header::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .tab-btn {
@@ -466,7 +492,9 @@ body {
   gap: 0.5rem;
   transition: var(--transition-smooth);
   border-bottom: 2px solid transparent;
-  min-width: 130px;
+  min-width: 140px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
 }
 
 .tab-btn.active {
@@ -850,20 +878,18 @@ body {
 }
 
 .video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16/9;
   border-radius: 12px;
   border: 1px solid var(--border-glass);
+  overflow: hidden;
+  background: #000;
 }
 
 .video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 /* Botón Flotante de IA */
@@ -1018,11 +1044,29 @@ body {
 @media (max-width: 1024px) {
   .app-container {
     flex-direction: column;
+    padding: 1rem;
   }
   .app-sidebar {
     width: 100%;
     height: auto;
     position: static;
+    padding: 1.25rem;
+  }
+  .course-navigation {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .course-group {
+    min-width: 300px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.01);
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-glass);
   }
   .methodology-cards {
     grid-template-columns: 1fr;
@@ -1030,6 +1074,9 @@ body {
 }
 
 @media (max-width: 600px) {
+  .app-container {
+    padding: 0.5rem;
+  }
   .app-header {
     flex-direction: column;
     gap: 1rem;
@@ -1039,14 +1086,50 @@ body {
     width: 100%;
     justify-content: space-between;
   }
-  .welcome-card {
-    padding: 1.5rem;
+  .welcome-card, .module-header-card, .workspace-card, .video-card {
+    padding: 1rem;
+  }
+  #module-title {
+    font-size: 1.35rem;
+  }
+  .score-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
   }
   .tabs-header {
     flex-wrap: nowrap;
   }
   .tab-btn {
     padding: 0.75rem 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    min-width: 120px;
+  }
+  .panel-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .panel-actions .btn {
+    width: 100%;
+  }
+  .diploma-box {
+    padding: 1.5rem;
+  }
+  .diploma-box h3 {
+    font-size: 1.4rem;
+  }
+  .ai-floating-chat {
+    width: 90vw;
+    right: 5vw;
+    bottom: 5.5rem;
+    height: 60vh;
+  }
+  .ai-floating-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
 }
+
