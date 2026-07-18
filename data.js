@@ -1,110 +1,161 @@
 // Base de datos de los Cursos Mandatorios de la Policía Nacional de Colombia
 // Actualizada con los contenidos, estándares mínimos, links de videos, transcripciones, métricas e imágenes de referencia
+// Sincronizada con el Material de Apoyo y Planes de Lección Oficiales (Resolución 04180 de 2022)
 
 const COURSES_DATA = [
   {
     id: "atencion-ciudadano",
     title: "Atención al Ciudadano",
-    description: "Orientación y atención presencial promoviendo la comunicación asertiva y el portafolio de trámites institucionales.",
+    description: "Orientación y atención presencial promoviendo la comunicación asertiva y el portafolio de trámites institucionales conforme al Manual de Atención (Res. 04180 de 2022).",
     modules: [
       {
         id: "comunicacion-asertiva",
-        title: "1. Atención y Comunicación Asertiva",
+        title: "1. Habilidades y Protocolo de Atención Presencial",
         videoUrl: "https://www.youtube.com/embed/cl7iUeFvy5E",
-        videoDescription: "Instrucciones Clave sobre la Atención al Ciudadano y Comunicación Asertiva:\n\n1. Enfoque Humano y Empatía: Toda interacción de policía debe fundamentarse en el trato digno, la empatía y la resolución pacífica de conflictos, colocando al ciudadano en el centro de la atención pública.\n2. Comunicación No Verbal (Lenguaje Corporal): Se detallan los factores proxémicos. Mantener una distancia táctica y segura de al menos 1.5 metros, adoptar una postura de manos abiertas (nunca de brazos cruzados o manos en los bolsillos que demuestran desinterés o agresión) y sostener contacto visual asertivo.\n3. Modulación y Control de Voz: Utilizar un tono de voz calmado, firme y pausado. Evitar gritar o responder de manera impositiva, lo cual escala inmediatamente la hostilidad de los implicados.\n4. Método de Escucha Activa: Escuchar sin interrumpir el relato inicial del ciudadano para entender sus necesidades emocionales y jurídicas reales antes de formular un plan de acción policial.",
+        videoDescription: "Instrucciones del Manual de Atención y Servicio al Ciudadano (Resolución 04180 de 2022):\n\n1. Protocolo de Atención Presencial Común (Art. 16):\n   - Saludo Obligatorio: 'Dios y Patria, buenos días/tardes/noches, mi nombre es (Grado, Nombre y Apellido), ¿En qué puedo servirle?'.\n   - Presentación Personal: Identificación siempre visible y uniforme impecable.\n   - Comportamiento: Prohibido realizar actividades personales (comer en el puesto de facción, chicle, maquillarse, usar celular personal o hablar con compañeros temas ajenos al servicio) frente al ciudadano.\n   - Primeros y Últimos 30 Segundos: Usar los primeros 30 segundos del contacto para sorprender favorablemente al ciudadano con cordialidad y respeto, y los últimos 30 segundos para reforzar la credibilidad y confianza institucional.\n   - Despedida formal: Agradecer al ciudadano por recurrir a la Policía, preguntar si se le ofrece algo más y dar un apretón de manos seguro.\n\n2. Habilidades Comunicativas Básicas (Art. 13):\n   - Amabilidad y cortesía, Tolerancia, Persuasión, Capacidad para asesorar/orientar, Autocontrol y Capacidad de Escucha Activa.",
         metrics: {
-          type: "Atención Ciudadana / Prevención",
-          means: "Diálogo / Mediación / SEA Policía",
-          law: "Resolución 06558 de 2024 / Ley 1801 de 2016"
+          type: "Protocolo de Atención Personal (Art. 16 - Res. 04180/2022)",
+          means: "Saludar, Escuchar, Actuar (SEA Policía) / Habilidades del Art. 13",
+          law: "Resolución 04180 de 2022 (Manual de Atención al Ciudadano)"
         },
         imageSrc: "atencion_caso_comercial_1784399958164.png",
         scenario: {
-          title: "Promover la comunicación asertiva en la actividad de policía",
-          description: "Durante una patrulla en zona comercial, un ciudadano muy exaltado y molesto se acerca gritando que un comerciante lo estafó. El ciudadano exige que arrestes inmediatamente al comerciante. Si respondes a la defensiva o de forma autoritaria el conflicto escalará. Debes aplicar la comunicación asertiva y el lenguaje no verbal adecuado para calmar al ciudadano y mediar la situación.",
-          role: "Patrullero del cuadrante en atención inmediata al ciudadano.",
+          title: "Aplicación del Protocolo Común y Habilidades del Art. 13",
+          description: "Estás de facción en el puesto de información de la estación de policía. Un ciudadano ingresa de manera abrupta e insultando a los uniformados debido a una inconformidad. Debes aplicar estrictamente el protocolo del Artículo 16 de la Resolución 04180 (Saludo reglamentario, control de comportamiento, voz y despedida) y las habilidades de amabilidad, tolerancia y autocontrol para canalizar el caso.",
+          role: "Patrullero del área de atención al ciudadano en Estación de Policía.",
           objectives: [
-            "Aplicar las técnicas de comunicación no verbal (postura, distancia de seguridad y contacto visual).",
-            "Promover el diálogo asertivo y la escucha activa.",
-            "Desescalar la hostilidad y canalizar el requerimiento de forma profesional."
+            "Iniciar la atención con el saludo reglamentario de la Resolución 04180 ('Dios y Patria...').",
+            "Aplicar las pautas de comportamiento del puesto de trabajo y autocontrol ante insultos.",
+            "Utilizar la técnica de los primeros y últimos 30 segundos y realizar la despedida institucional."
           ]
         },
         designThinking: {
           empatizar: {
-            question: "¿Qué emociones identificas en el ciudadano alterado? ¿Cuáles son sus necesidades prioritarias (sentirse escuchado, resolver su dinero, respeto) y cómo influye tu lenguaje corporal?",
-            placeholder: "Analiza el estado emocional del ciudadano y cómo tu postura corporal (brazos abiertos, distancia) puede tranquilizarlo...",
-            keywords: ["emociones", "escucha activa", "lenguaje corporal", "tranquilidad", "empatía", "respeto"]
+            question: "¿Cómo influye el cumplimiento estricto del protocolo de presentación personal y comportamiento en un ciudadano exaltado durante los primeros 30 segundos?",
+            placeholder: "Analiza el impacto del saludo formal de Dios y Patria y el evitar distracciones (celular, charlas)...",
+            keywords: ["dios y patria", "primeros 30 segundos", "presentación personal", "comportamiento", "confianza", "respeto"]
           },
           definir: {
-            question: "Identifica cuál es la barrera de comunicación principal en este escenario y define el problema central de convivencia o legal que se presenta.",
-            placeholder: "Define el obstáculo comunicativo y el conflicto a resolver...",
-            keywords: ["barrera", "exaltación", "estafa", "conflicto", "atención"]
+            question: "Identifica qué habilidades del Artículo 13 de la Resolución 04180 de 2022 son indispensables para manejar al ciudadano y qué está prohibido hacer.",
+            placeholder: "Define las habilidades del Art. 13 (autocontrol, tolerancia) y los comportamientos prohibidos en el puesto...",
+            keywords: ["autocontrol", "tolerancia", "prohibido comer", "chicle", "celular", "amabilidad"]
           },
           idear: {
-            question: "¿Qué técnicas de comunicación verbal y de desescalamiento (parafraseo, preguntas abiertas, tono de voz pausado) puedes plantear para canalizar el caso?",
-            placeholder: "Plantea al menos dos técnicas de comunicación asertiva...",
-            keywords: ["tono de voz", "parafraseo", "preguntas abiertas", "calma", "asertividad"]
+            question: "¿Cómo estructurarías el abordaje empleando el tono de voz, la postura relajada y el lenguaje claro para desescalar el conflicto?",
+            placeholder: "Plantea el uso del tono de voz adaptado, columna flexible y contacto visual...",
+            keywords: ["tono de voz", "postura", "contacto visual", "desescalar", "vocalizar"]
           },
           prototipar: {
-            question: "Redacta el diálogo exacto o las palabras con las que abordarías al ciudadano para calmarlo y guiar el caso.",
-            placeholder: "Ej: 'Buenas tardes, entiendo perfectamente su malestar. Permítame escucharle detalladamente para poder orientarle de la mejor manera...'",
-            keywords: ["buenas tardes", "entiendo", "permítame", "respeto", "orientarle", "escucharle"]
+            question: "Redacta el diálogo exacto que tendrías con el ciudadano, incluyendo el saludo inicial formal, el desarrollo de la atención y la despedida reglamentaria.",
+            placeholder: "Ej: 'Dios y Patria, buenos días. Soy el Patrullero... ¿en qué puedo servirle?... Comprendo su malestar... ¿puedo servirle en algo más? Agradecemos que se acerque...'",
+            keywords: ["dios y patria", "buenos días", "servirle", "despedida", "últimos 30 segundos", "mano"]
           }
         },
         evaluation: {
-          perfectKeywords: ["comunicación asertiva", "escucha activa", "lenguaje no verbal", "tono de voz", "respeto", "empatía", "desescalar"],
-          iaResponseGood: "Excelente aplicación de la comunicación asertiva policial. Has priorizado la empatía y la escucha activa junto con el control de tu lenguaje no verbal, lo cual es fundamental para una atención al ciudadano de alta calidad.",
-          iaResponseRegular: "Tu respuesta es correcta pero se enfoca demasiado en la norma escrita. Recuerda que la comunicación asertiva requiere primero calmar la emoción de la persona mediante el tono de voz y el parafraseo.",
-          iaResponseBad: "Debes mejorar el abordaje. Responder de manera impositiva o autoritaria escala la hostilidad y no soluciona la problemática del ciudadano, violando los principios de atención y comunicación asertiva."
+          perfectKeywords: ["dios y patria", "artículo 16", "primeros 30 segundos", "autocontrol", "tolerancia", "despedida", "comportamiento", "resolución 04180"],
+          iaResponseGood: "Excelente aplicación. Has estructurado tu respuesta con el saludo reglamentario de la Resolución 04180, evitado conductas no profesionales y cerrado con el protocolo de despedida institucional y la regla de los 30 segundos.",
+          iaResponseRegular: "La respuesta es aceptable, pero recuerda recitar el saludo formal de 'Dios y Patria...' exactamente como lo ordena el Artículo 16 literal A para sorprender favorablemente al ciudadano en los primeros 30 segundos.",
+          iaResponseBad: "Procedimiento incorrecto. El omitir el saludo oficial, ponerse a la defensiva o distraerse con actividades no autorizadas viola el Manual de Atención al Ciudadano (Resolución 04180 de 2022)."
+        }
+      },
+      {
+        id: "atencion-preferencial",
+        title: "2. Atención Presencial Preferencial",
+        videoUrl: "https://www.youtube.com/embed/cl7iUeFvy5E", // Se mantiene el video doctrinal oficial
+        videoDescription: "Instrucciones del Protocolo de Atención Presencial Preferencial (Art. 16, numeral 2 - Resolución 04180 de 2022):\n\n1. Beneficiarios prioritarios: Adultos mayores, mujeres embarazadas, niños, niñas y adolescentes, personas en situación de vulnerabilidad, grupos étnicos, personas en condición de discapacidad y personas de talla baja.\n2. Pautas para Adultos Mayores y Gestantes:\n   - Orientarlos de inmediato a las áreas destinadas en la sala de espera.\n   - Asignar turno preferencial de llegada.\n   - PROHIBIDO usar términos paternalistas o diminutivos (como 'abuelito', 'mamita', etc.).\n   - Escuchar con actitud de acompañamiento y verificar que la respuesta sea comprendida en lenguaje claro.\n3. Pautas para Víctimas (sufrieron menoscabo de derechos o daño por el conflicto/delitos):\n   - Escuchar atentamente sin prevención ni juicios de valor por su vestir o hablar (no hay estereotipos).\n   - No generar falsas expectativas; usar lenguaje sencillo sin tecnicismos.\n   - Garantizar la confidencialidad absoluta.\n4. Pautas para Personas en Condición de Discapacidad:\n   - Tratar a adultos con discapacidad con la madurez correspondiente (nunca tono aniñado o consentirles la cabeza).\n   - Mirar con naturalidad, preguntar antes de ayudar: '¿En qué puedo servirle?'.",
+        metrics: {
+          type: "Atención Preferencial (Art. 16 Numeral 2)",
+          means: "Turno Preferencial / Trato Digno sin Diminutivos",
+          law: "Resolución 04180 de 2022 / Ley 1346 de 2009"
+        },
+        imageSrc: "atencion_caso_comercial_1784399958164.png",
+        scenario: {
+          title: "Atención a Poblaciones Vulnerables y Víctimas",
+          description: "Ingresa a la Oficina de Atención al Ciudadano un adulto mayor que manifiesta ser víctima de desplazamiento forzado y no sabe cómo solicitar orientación. Además, en la sala se encuentra una persona sorda esperando turno. Debes aplicar las directrices del Protocolo Preferencial de la Resolución 04180 de 2022.",
+          role: "Encargado de la Oficina de Atención al Ciudadano (OAC).",
+          objectives: [
+            "Aplicar el protocolo de adultos mayores evitando términos paternalistas ('abuelito').",
+            "Atender la condición de víctima garantizando confidencialidad y sin tecnicismos ni falsas expectativas.",
+            "Orientar a la persona en condición de discapacidad con respeto, naturalidad y de acuerdo a su autonomía."
+          ]
+        },
+        designThinking: {
+          empatizar: {
+            question: "¿Por qué el uso de términos paternalistas como 'abuelito' o tratar como niños a adultos con discapacidad afecta su dignidad en el servicio?",
+            placeholder: "Analiza el derecho al trato digno, la autonomía personal y la inclusión social...",
+            keywords: ["dignidad", "trato digno", "autonomía", "paternalistas", "abuelito", "respeto"]
+          },
+          definir: {
+            question: "Define los pasos obligatorios para el adulto mayor y la víctima de acuerdo con las pautas de la Resolución 04180.",
+            placeholder: "Indica la asignación de áreas destinadas, turno preferencial y no generar falsas expectativas...",
+            keywords: ["turno preferencial", "confidencialidad", "expectativas", "área destinada", "sin juicios"]
+          },
+          idear: {
+            question: "¿Qué canales y apoyos institucionales propondrías para facilitar la comunicación con la persona con discapacidad auditiva y la víctima?",
+            placeholder: "Propón el uso de lenguaje claro, apoyo visual o articulación con entes encargados...",
+            keywords: ["lenguaje claro", "apoyo visual", "acompañamiento", "restituir derechos"]
+          },
+          prototipar: {
+            question: "Escribe la simulación del diálogo respetando las pautas para ambos ciudadanos.",
+            placeholder: "Ej: 'Buenas tardes señor. Por favor acompáñeme a esta sección preferencial... entiendo su situación, la información que me brinde es confidencial...'",
+            keywords: ["preferencial", "acompañe", "confidencial", "lenguaje sencillo", "servirle"]
+          }
+        },
+        evaluation: {
+          perfectKeywords: ["paternalistas", "confidencialidad", "discapacidad", "víctima", "trato digno", "área destinada", "resolución 04180"],
+          iaResponseGood: "Excelente. Has respetado las prohibiciones del protocolo preferencial (no usar abuelito, evitar tono aniñado) y asegurado la confidencialidad de la víctima.",
+          iaResponseRegular: "El procedimiento es aceptable, pero debes ser más enfático en la prohibición de usar diminutivos con personas de la tercera edad y en cómo garantizar la confidencialidad de la víctima.",
+          iaResponseBad: "Incorrecto. Usar diminutivos condescendientes o no priorizar el espacio físico y la confidencialidad viola la directriz del Protocolo de Atención Preferencial."
         }
       },
       {
         id: "portafolio-servicios",
-        title: "2. Portafolio de Servicios y Trámites",
+        title: "3. Portafolio de Servicios y Canales de PQRS",
         videoUrl: "https://www.youtube.com/embed/dkWStFwfvOw",
-        videoDescription: "Explicación de PQRS y Canales de Atención: En este video aprenderás a identificar los canales formales que tiene la Policía Nacional para la recepción de Peticiones, Quejas, Reclamos, Sugerencias y Reconocimientos. Específicamente aprenderás sobre: \n\n1. Canal Presencial: Oficinas de Atención al Ciudadano a nivel nacional y Centros de Conciliación.\n2. Canal Telefónico: Línea de emergencias 123, línea directa anticorrupción 166 y líneas nacionales gratuitas (018000 910112).\n3. Canal Virtual: Plataforma de denuncia virtual 'ADenunciar' en convenio con la Fiscalía, portal web institucional de la Policía, y el correo formal 'lineadirecta@policia.gov.co'.",
+        videoDescription: "Contenido del Portafolio de Servicios y Canales de Atención (Resolución 04180 de 2022):\n\n1. Servicios Clave del Portafolio:\n   - Recepcionar y Despachar Motivos de Policía: Gestión de emergencias y despachos a través de la Línea de Emergencia 123.\n   - Consulta de Antecedentes Judiciales: Expedición de información judicial en tiempo real.\n   - Revisión Técnica de Automotores: Verificación física de la procedencia lícita de vehículos.\n   - Denuncia Virtual: Sistema nacional para denunciar hurtos, extorsión y delitos informáticos.\n   - Atención de Emergencias Viales: Información en tiempo real del estado de vías y pico y placa.\n   - Incorporación Policial: Procesos de selección de Oficiales y Patrulleros.\n   - Oficinas de Atención al Ciudadano: 98 oficinas desconcentradas y 1423 puntos de atención de la Inspección General para la gestión de PQRS.\n   - Centros de Conciliación y Mediación: 13 centros nacionales para resolver civil, familia y convivencia de forma alternativa.\n\n2. Clasificación de Canales de PQRS:\n   - Presencial: Puntos OAC y Centros de Conciliación.\n   - Virtual: Plataforma ADenunciar, Portal de Servicios Internos (PSI) y correo lineadirecta@policia.gov.co.\n   - Telefónico: Línea de Integridad Policial (166) y línea nacional 018000 910112.",
         metrics: {
-          type: "Canales de PQRS y Recepción Ciudadana",
-          means: "Oficinas OAC / Correo Institucional / ADenunciar",
-          law: "Resolución 06558 de 2024 / Ley 1755 de 2015"
+          type: "Portafolio de Servicios y PQRS (Art. 11)",
+          means: "98 Oficinas OAC / 13 Centros de Conciliación / Línea 123",
+          law: "Ley 1755 de 2015 / Resolución 04180 de 2022"
         },
         imageSrc: "atencion_caso_comercial_1784399958164.png",
         scenario: {
-          title: "Orientación de Trámites y Canales de Atención",
-          description: "Un ciudadano acude al CAI deseando interponer una queja formal contra una actuación policial y denunciar el extravío de sus documentos. Debes guiarlo y orientarlo asertivamente sobre qué canal (presencial, virtual o telefónico) es el idóneo para su PQRS.",
-          role: "Policía encargado de la atención ciudadana en el CAI.",
+          title: "Orientación del Portafolio y Recepción de PQRS",
+          description: "Un ciudadano acude al CAI para reportar la pérdida de su motocicleta, consultar si tiene antecedentes pendientes para un empleo, y quejarse por el maltrato físico de una patrulla. Debes canalizar estos tres requerimientos utilizando los servicios y oficinas específicas del portafolio.",
+          role: "Integrante de patrulla orientador en CAI.",
           objectives: [
-            "Identificar y explicar los tres tipos de canales de atención de PQRS (presencial, telefónico y virtual).",
-            "Explicar el uso de la plataforma digital ADenunciar y el correo lineadirecta@policia.gov.co.",
-            "Asesorar de manera preferencial y transparente al ciudadano sobre cómo tramitar su inconformidad o reporte."
+            "Remitir la queja disciplinaria al canal adecuado (Oficinas OAC de la Inspección General o correo lineadirecta@policia.gov.co).",
+            "Orientar el caso de la motocicleta (Línea 123 / Denuncia Virtual ADenunciar) y explicar la revisión técnica de automotores.",
+            "Guiar la consulta de antecedentes judiciales a través del canal virtual oficial de la institución."
           ]
         },
         designThinking: {
           empatizar: {
-            question: "¿Cuáles son las dudas y temores del ciudadano al interponer una queja o denuncia? ¿Cómo generas confianza y transparencia desde el primer momento?",
-            placeholder: "Analiza el estado de desconfianza o necesidad del ciudadano y cómo tu orientación imparcial ayuda...",
-            keywords: ["queja", "denuncia", "transparencia", "confianza", "imparcial", "preferencial"]
+            question: "¿Qué temores presenta un ciudadano al interponer una queja contra uniformados en el mismo CAI y cómo el portafolio descentralizado de la Inspección General le da tranquilidad?",
+            placeholder: "Analiza el papel de las 98 oficinas de la Inspección General y el correo lineadirecta@policia.gov.co en la transparencia...",
+            keywords: ["inspección general", "transparencia", "queja", "descentralizado", "tranquilidad", "confianza"]
           },
           definir: {
-            question: "Define los canales de PQRS adecuados para este caso: ¿Dónde se radica la queja contra la actuación y dónde la pérdida de documentos?",
-            placeholder: "Especifica los canales presenciales, virtuales o telefónicos exactos...",
-            keywords: ["lineadirecta@policia.gov.co", "adenunciar", "queja", "correo", "plataforma"]
+            question: "Clasifica los tres requerimientos del ciudadano en los canales idóneos (virtual, presencial o telefónico) de acuerdo con el portafolio.",
+            placeholder: "Especifica la ruta para antecedentes, denuncia de moto y queja disciplinaria...",
+            keywords: ["lineadirecta@policia.gov.co", "adenunciar", "antecedentes", "oac", "inspección general"]
           },
           idear: {
-            question: "¿Cómo estructurar tu explicación para que el ciudadano diferencie con claridad el canal virtual (para denuncias y quejas rápidas) del presencial?",
-            placeholder: "Plantea ideas pedagógicas de orientación al ciudadano...",
-            keywords: ["correo", "virtual", "explicar", "presencial", "cai"]
+            question: "¿Cómo orientarías al ciudadano para que acceda al sistema nacional de mediación (13 centros) si su problema fuera un conflicto de convivencia vecinal?",
+            placeholder: "Propón el uso de los Centros de Conciliación y Mediación Policial de la Inspección General...",
+            keywords: ["mediación", "centros de conciliación", "inspección general", "convivencia", "conciliar"]
           },
           prototipar: {
-            question: "Escribe la respuesta exacta que le darías al ciudadano indicándole los canales de radicación y sus respectivos enlaces/medios.",
-            placeholder: "Ej: 'Para su queja formal puede escribir al correo lineadirecta@policia.gov.co y para la pérdida de sus documentos ingresamos a la plataforma ADenunciar...'",
-            keywords: ["lineadirecta@policia.gov.co", "correo", "adenunciar", "teléfono", "oac"]
+            question: "Escribe la orientación final detallada que le darás al ciudadano para cada uno de sus tres trámites.",
+            placeholder: "Ej: 'Para su queja disciplinaria, puede radicar de forma virtual al correo lineadirecta@policia.gov.co. Para la moto, reportamos a la línea 123 y radicamos en la plataforma ADenunciar...'",
+            keywords: ["lineadirecta@policia.gov.co", "adenunciar", "123", "oac", "antecedentes", "correo"]
           }
         },
         evaluation: {
-          perfectKeywords: ["lineadirecta@policia.gov.co", "adenunciar", "pqrs", "virtual", "presencial", "telefónico", "queja"],
-          iaResponseGood: "Excelente orientación. Has clasificado perfectamente los canales presenciales, telefónicos y virtuales de PQRS, guiando al ciudadano de forma exacta y transparente.",
-          iaResponseRegular: "Tu orientación es buena, pero asegúrate de especificar el correo oficial lineadirecta@policia.gov.co como el canal virtual exclusivo para la radicación de quejas y reclamos disciplinarios.",
-          iaResponseBad: "Incorrecto. Ignorar o no saber orientar sobre los canales oficiales de radicación de PQRS (como el correo institucional o la plataforma ADenunciar) afecta el debido proceso del ciudadano."
+          perfectKeywords: ["lineadirecta@policia.gov.co", "adenunciar", "antecedentes", "oac", "inspección general", "123", "resolución 04180"],
+          iaResponseGood: "Excelente. Has mapeado de forma perfecta cada solicitud ciudadana a los recursos del portafolio (Inspección General, OAC, 123 y canales virtuales de denuncia y antecedentes).",
+          iaResponseRegular: "Tu respuesta es correcta, pero asegúrate de nombrar las 98 oficinas OAC de la Inspección General y el correo institucional para la radicación transparente de quejas.",
+          iaResponseBad: "Incorrecto. No clasificar los trámites o enviarlo a oficinas equivocadas viola el estándar de orientación al ciudadano y portafolio de servicios."
         }
       }
     ]
@@ -245,7 +296,7 @@ const COURSES_DATA = [
           role: "Policía mediador en conflictos de convivencia ciudadana.",
           objectives: [
             "Emplear la mediación policial como instrumento para desescalar conflictos.",
-            "Facilitar el diálogo entre los líderes de la manifestación y los afectados.",
+            "Facilitar el diálogo entre los líderes de la manifestación and los afectados.",
             "Llegar a acuerdos temporales para habilitar la movilidad respetando los derechos de todos."
           ]
         },
