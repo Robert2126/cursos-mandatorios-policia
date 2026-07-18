@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos Mandatorios - Policía Nacional de Colombia</title>
+  <meta name="description" content="Plataforma interactiva de capacitación y evaluación para la Policía Nacional de Colombia usando Andragogía y Design Thinking.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-logo">
+      <div class="shield-icon">🛡️</div>
+      <div class="header-titles">
+        <h1>CURSOS MANDATORIOS</h1>
+        <h2>Policía Nacional de Colombia</h2>
+      </div>
+    </div>
+    
+    <div class="header-actions">
+      <!-- Progreso General -->
+      <div class="global-progress">
+        <span class="progress-label">Progreso General:</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="global-progress-fill" style="width: 0%;"></div>
+        </div>
+        <span class="progress-percentage" id="global-progress-text">0%</span>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar Tema" title="Cambiar Tema">
+        <span class="mode-icon">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar" id="sidebar-nav">
+      <div class="sidebar-header">
+        <h3>Estructura del Plan</h3>
+        <p>Completa las fases prácticas para graduarte.</p>
+      </div>
+      <nav class="course-navigation" id="courses-list">
+        <!-- Renderizado dinámico desde app.js -->
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-main-content">
+      
+      <!-- Welcome Screen -->
+      <section class="welcome-screen active" id="welcome-view">
+        <div class="welcome-card">
+          <div class="welcome-badge">Metodología Andragógica & Design Thinking</div>
+          <h2>Aprende Resolviendo Situaciones Reales de Policía</h2>
+          <p>Esta plataforma te guiará a través de los 4 cursos mandatorios institucionales obligatorios para la actividad de policía en Colombia. En lugar de exámenes teóricos tradicionales, aplicarás el pensamiento de diseño a casos cotidianos para resolver problemas de convivencia y procedimientos de forma legal y humana.</p>
+          
+          <div class="methodology-cards">
+            <div class="m-card">
+              <span class="m-icon">🎯</span>
+              <h4>Andragogía</h4>
+              <p>Aprendizaje para adultos enfocado en problemas reales y aplicación práctica inmediata.</p>
+            </div>
+            <div class="m-card">
+              <span class="m-icon">💡</span>
+              <h4>Design Thinking</h4>
+              <p>Empatiza con el ciudadano, define el problema legal, idea alternativas y prototipa tu respuesta.</p>
+            </div>
+            <div class="m-card">
+              <span class="m-icon">🤖</span>
+              <h4>Evaluador IA</h4>
+              <p>Nuestra Inteligencia Artificial analizará la validez y apego normativo de tu procedimiento en tiempo real.</p>
+            </div>
+          </div>
+          
+          <button class="btn btn-primary btn-large" id="start-learning-btn">Iniciar Primer Módulo</button>
+        </div>
+      </section>
+
+      <!-- Learning & Design Thinking Module Screen -->
+      <section class="module-screen" id="module-view">
+        
+        <!-- Module Header info -->
+        <div class="module-header-card">
+          <span class="badge" id="module-course-badge">Curso Mandatorio</span>
+          <h3 id="module-title">1. Título del Módulo</h3>
+          <div class="scenario-box">
+            <div class="scenario-header">
+              <span class="scenario-icon">🎬</span>
+              <h4>Escenario de Convivencia / Procedimiento</h4>
+            </div>
+            <p id="module-scenario-desc">Descripción del escenario...</p>
+            <div class="role-box">
+              <strong>Tu Rol Operativo:</strong> <span id="module-role-text">Rol...</span>
+            </div>
+            <div class="objectives-list">
+              <strong>Objetivos de la Misión:</strong>
+              <ul id="module-objectives-list">
+                <!-- Objetivos dinámicos -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video de Apoyo Oficial -->
+        <div class="video-card" id="module-video-card" style="display: none;">
+          <div class="video-header">
+            <span class="video-icon">🎥</span>
+            <h4>Video de Apoyo Oficial del Módulo</h4>
+          </div>
+          <div class="video-wrapper">
+            <iframe id="module-video-iframe" src="" title="Video de apoyo policial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Design Thinking Tabbed Workspace -->
+        <div class="workspace-card">
+          <div class="tabs-header">
+            <button class="tab-btn active" data-tab="empatizar">
+              <span class="tab-num">1</span> Empatizar
+            </button>
+            <button class="tab-btn" data-tab="definir">
+              <span class="tab-num">2</span> Definir
+            </button>
+            <button class="tab-btn" data-tab="idear">
+              <span class="tab-num">3</span> Idear
+            </button>
+            <button class="tab-btn" data-tab="prototipar">
+              <span class="tab-num">4</span> Prototipar (Acción)
+            </button>
+            <button class="tab-btn" data-tab="evaluar" id="tab-evaluar-btn">
+              <span class="tab-num">5</span> Evaluar (IA)
+            </button>
+          </div>
+
+          <div class="tabs-content">
+            
+            <!-- Tab Empatizar -->
+            <div class="tab-panel active" id="panel-empatizar">
+              <p class="tab-instruction" id="instruction-empatizar">Instrucción...</p>
+              <textarea class="textarea-input" id="input-empatizar" placeholder="Escribe aquí..."></textarea>
+              <div class="panel-actions">
+                <button class="btn btn-secondary next-tab-btn" data-next="definir">Siguiente Fase: Definir</button>
+              </div>
+            </div>
+
+            <!-- Tab Definir -->
+            <div class="tab-panel" id="panel-definir">
+              <p class="tab-instruction" id="instruction-definir">Instrucción...</p>
+              <textarea class="textarea-input" id="input-definir" placeholder="Escribe aquí..."></textarea>
+              <div class="panel-actions">
+                <button class="btn btn-outline prev-tab-btn" data-prev="empatizar">Anterior</button>
+                <button class="btn btn-secondary next-tab-btn" data-next="idear">Siguiente Fase: Idear</button>
+              </div>
+            </div>
+
+            <!-- Tab Idear -->
+            <div class="tab-panel" id="panel-idear">
+              <p class="tab-instruction" id="instruction-idear">Instrucción...</p>
+              <textarea class="textarea-input" id="input-idear" placeholder="Escribe aquí..."></textarea>
+              <div class="panel-actions">
+                <button class="btn btn-outline prev-tab-btn" data-prev="definir">Anterior</button>
+                <button class="btn btn-secondary next-tab-btn" data-next="prototipar">Siguiente Fase: Prototipar</button>
+              </div>
+            </div>
+
+            <!-- Tab Prototipar -->
+            <div class="tab-panel" id="panel-prototipar">
+              <p class="tab-instruction" id="instruction-prototipar">Instrucción...</p>
+              <textarea class="textarea-input" id="input-prototipar" placeholder="Escribe aquí..."></textarea>
+              <div class="panel-actions">
+                <button class="btn btn-outline prev-tab-btn" data-prev="idear">Anterior</button>
+                <button class="btn btn-primary" id="submit-to-ia-btn">Enviar a Evaluación de IA</button>
+              </div>
+            </div>
+
+            <!-- Tab Evaluar (IA) -->
+            <div class="tab-panel" id="panel-evaluar">
+              <div class="ia-chat-interface">
+                <div class="ia-avatar-area">
+                  <div class="ia-avatar">🤖</div>
+                  <div class="ia-status">
+                    <h5>Asistente IA de Procedimiento</h5>
+                    <p id="ia-status-text">Analizando tu propuesta...</p>
+                  </div>
+                </div>
+
+                <div class="ia-chat-box" id="ia-chat-box">
+                  <!-- Mensajes de la IA -->
+                </div>
+
+                <!-- Score Board -->
+                <div class="score-card" id="evaluation-score-card" style="display: none;">
+                  <div class="gauge-container">
+                    <svg viewBox="0 0 100 50" class="gauge">
+                      <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#2a3b5c" stroke-width="8"></path>
+                      <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="var(--accent-color)" stroke-width="8" id="gauge-fill" stroke-dasharray="125" stroke-dashoffset="125"></path>
+                    </svg>
+                    <div class="score-value" id="score-text">0%</div>
+                  </div>
+                  <div class="score-verdict">
+                    <h4 id="score-verdict-title">Procedimiento Regular</h4>
+                    <p id="score-verdict-desc">Debes mejorar los fundamentos legales de la actuación.</p>
+                  </div>
+                </div>
+
+                <div class="panel-actions" id="eval-actions" style="display: none;">
+                  <button class="btn btn-outline" id="retry-module-btn">Corregir Propuesta</button>
+                  <button class="btn btn-success" id="next-module-btn">Aprobar y Siguiente Módulo</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Congratulations Screen -->
+      <section class="welcome-screen" id="congrats-view">
+        <div class="welcome-card text-center">
+          <div class="badge success-badge">🎖️ CERTIFICACIÓN COMPLETADA</div>
+          <h2>¡Felicitaciones, Oficial!</h2>
+          <p>Has completado satisfactoriamente los 4 cursos mandatorios de la Policía Nacional de Colombia. Has demostrado capacidad de empatía ciudadana, resolución legal de conflictos y un correcto apego a los Derechos Humanos y el Uso Proporcional de la Fuerza.</p>
+          
+          <div class="diploma-box">
+            <h4>POLICÍA NACIONAL DE COLOMBIA</h4>
+            <p>Se otorga el presente reconocimiento por finalizar con éxito el programa de:</p>
+            <h3>Estándares Mínimos en Cursos Mandatorios</h3>
+            <p class="methodology-info">Basado en Andragogía, Design Thinking y Evaluación Interactiva</p>
+            <div class="diploma-footer">
+              <span>Bogotá D.C., Colombia</span>
+              <span>Evaluador de Inteligencia Artificial</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-large" id="reset-progress-btn">Reiniciar Capacitación</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="app-footer">
+    <p>© 2026 - Plataforma de Aprendizaje Activo y Convivencia Policial - Policía Nacional de Colombia</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
