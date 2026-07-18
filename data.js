@@ -61,50 +61,50 @@ const COURSES_DATA = [
         id: "portafolio-servicios",
         title: "2. Portafolio de Servicios y Trámites",
         videoUrl: "https://www.youtube.com/embed/dkWStFwfvOw",
-        videoDescription: "El video explica de forma detallada el portafolio de servicios de la Policía Nacional de Colombia, el uso correcto de canales digitales como la plataforma ADenunciar (en convenio con la Fiscalía General), las líneas de atención a emergencias (123, 165) y cómo orientar presencialmente a grupos poblacionales con atención preferencial.",
+        videoDescription: "Explicación de PQRS y Canales de Atención: En este video aprenderás a identificar los canales formales que tiene la Policía Nacional para la recepción de Peticiones, Quejas, Reclamos, Sugerencias y Reconocimientos. Específicamente aprenderás sobre: \n\n1. Canal Presencial: Oficinas de Atención al Ciudadano a nivel nacional y Centros de Conciliación.\n2. Canal Telefónico: Línea de emergencias 123, línea directa anticorrupción 166 y líneas nacionales gratuitas (018000 910112).\n3. Canal Virtual: Plataforma de denuncia virtual 'ADenunciar' en convenio con la Fiscalía, portal web institucional de la Policía, y el correo formal 'lineadirecta@policia.gov.co'.",
         metrics: {
-          type: "Orientación y Trámite Administrativo",
-          means: "Canales Digitales (ADenunciar) / Centro de Mediación",
-          law: "Ley 1437 de 2011 / Decreto 2106 de 2019"
+          type: "Canales de PQRS y Recepción Ciudadana",
+          means: "Oficinas OAC / Correo Institucional / ADenunciar",
+          law: "Resolución 06558 de 2024 / Ley 1755 de 2015"
         },
         imageSrc: "atencion_caso_comercial_1784399958164.png",
         scenario: {
           title: "Orientación de Trámites y Canales de Atención",
-          description: "Un ciudadano de la tercera edad acude desorientado al CAI. Manifiesta haber extraviado sus documentos personales (cédula y licencia de conducción) y no sabe cómo reportarlo para evitar suplantaciones de identidad. Debes orientarlo acerca de los canales definidos por la Policía Nacional.",
+          description: "Un ciudadano acude al CAI deseando interponer una queja formal contra una actuación policial y denunciar el extravío de sus documentos. Debes guiarlo y orientarlo asertivamente sobre qué canal (presencial, virtual o telefónico) es el idóneo para su PQRS.",
           role: "Policía encargado de la atención ciudadana en el CAI.",
           objectives: [
-            "Brindar una atención presencial preferencial de acuerdo a su condición (persona de la tercera edad).",
-            "Explicar el uso de los canales digitales de atención (plataforma ADenunciar o reportes de pérdida).",
-            "Guiar de forma clara en el portafolio de trámites sin enviar al ciudadano a hacer recorridos innecesarios."
+            "Identificar y explicar los tres tipos de canales de atención de PQRS (presencial, telefónico y virtual).",
+            "Explicar el uso de la plataforma digital ADenunciar y el correo lineadirecta@policia.gov.co.",
+            "Asesorar de manera preferencial y transparente al ciudadano sobre cómo tramitar su inconformidad o reporte."
           ]
         },
         designThinking: {
           empatizar: {
-            question: "¿Cuáles son las dificultades especiales de un ciudadano de la tercera edad con las tecnologías? ¿Cómo demuestras atención preferencial?",
-            placeholder: "Analiza las necesidades especiales de paciencia, claridad y apoyo tecnológico para el adulto mayor...",
-            keywords: ["preferencial", "tercera edad", "paciencia", "claridad", "apoyo", "tecnología"]
+            question: "¿Cuáles son las dudas y temores del ciudadano al interponer una queja o denuncia? ¿Cómo generas confianza y transparencia desde el primer momento?",
+            placeholder: "Analiza el estado de desconfianza o necesidad del ciudadano y cómo tu orientación imparcial ayuda...",
+            keywords: ["queja", "denuncia", "transparencia", "confianza", "imparcial", "preferencial"]
           },
           definir: {
-            question: "Define los trámites exactos del portafolio de la Policía Nacional y entes estatales que corresponden a la pérdida de documentos.",
-            placeholder: "Identifica la plataforma de denuncia y el trámite a seguir...",
-            keywords: ["adenunciar", "pérdida de documentos", "policía nacional", "trámite", "constancia"]
+            question: "Define los canales de PQRS adecuados para este caso: ¿Dónde se radica la queja contra la actuación y dónde la pérdida de documentos?",
+            placeholder: "Especifica los canales presenciales, virtuales o telefónicos exactos...",
+            keywords: ["lineadirecta@policia.gov.co", "adenunciar", "queja", "correo", "plataforma"]
           },
           idear: {
-            question: "¿Cómo puedes ayudar al ciudadano a radicar su reporte de forma inmediata utilizando los recursos del CAI o dándole una instrucción simplificada?",
-            placeholder: "Propón una idea para facilitar la radicación de la pérdida...",
-            keywords: ["ayudar", "cai", "computador", "celular", "explicar paso a paso"]
+            question: "¿Cómo estructurar tu explicación para que el ciudadano diferencie con claridad el canal virtual (para denuncias y quejas rápidas) del presencial?",
+            placeholder: "Plantea ideas pedagógicas de orientación al ciudadano...",
+            keywords: ["correo", "virtual", "explicar", "presencial", "cai"]
           },
           prototipar: {
-            question: "Escribe la explicación paso a paso que le darías al adulto mayor para que entienda el trámite y se retire con una solución.",
-            placeholder: "Ej: 'Don Juan, no se preocupe, aquí en el CAI vamos a ingresar juntos a la página de la Policía para generar su documento temporal...'",
-            keywords: ["no se preocupe", "página", "policía", "adenunciar", "constancia", "paso a paso"]
+            question: "Escribe la respuesta exacta que le darías al ciudadano indicándole los canales de radicación y sus respectivos enlaces/medios.",
+            placeholder: "Ej: 'Para su queja formal puede escribir al correo lineadirecta@policia.gov.co y para la pérdida de sus documentos ingresamos a la plataforma ADenunciar...'",
+            keywords: ["lineadirecta@policia.gov.co", "correo", "adenunciar", "teléfono", "oac"]
           }
         },
         evaluation: {
-          perfectKeywords: ["atención preferencial", "adenunciar", "pérdida de documentos", "cai", "explicación clara", "acompañamiento"],
-          iaResponseGood: "Excelente. Destaca el enfoque andragógico de acompañar al adulto mayor en la realización digital del trámite (ADenunciar) en lugar de simplemente enviarlo a una página web. Cumple con la atención preferencial.",
-          iaResponseRegular: "Tu orientación es correcta, pero para una persona de la tercera edad puede ser difícil seguir instrucciones tecnológicas puras. Considera brindar un apoyo más presencial y directo en el CAI.",
-          iaResponseBad: "Incorrecto. Limitarse a decirle que busque en internet sin verificar si sabe usar un computador o si tiene los medios no es una atención al ciudadano aceptable bajo el portafolio de servicios policial."
+          perfectKeywords: ["lineadirecta@policia.gov.co", "adenunciar", "pqrs", "virtual", "presencial", "telefónico", "queja"],
+          iaResponseGood: "Excelente orientación. Has clasificado perfectamente los canales presenciales, telefónicos y virtuales de PQRS, guiando al ciudadano de forma exacta y transparente.",
+          iaResponseRegular: "Tu orientación es buena, pero asegúrate de especificar el correo oficial lineadirecta@policia.gov.co como el canal virtual exclusivo para la radicación de quejas y reclamos disciplinarios.",
+          iaResponseBad: "Incorrecto. Ignorar o no saber orientar sobre los canales oficiales de radicación de PQRS (como el correo institucional o la plataforma ADenunciar) afecta el debido proceso del ciudadano."
         }
       }
     ]
