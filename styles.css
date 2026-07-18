@@ -4,45 +4,45 @@
    ------------------------------------------------------------- */
 
 :root {
-  /* Paleta cromática exacta extraída de la captura de pantalla de Cambridge English */
-  --bg-primary: #f0f4f8; /* Gris muy claro institucional */
-  --bg-secondary: #ffffff; /* Paneles sólidos */
+  /* Paleta Mate Corporativa: Gris, Azul y Verde */
+  --bg-primary: #f4f5f7; /* Gris mate claro para fondos */
+  --bg-secondary: #ffffff; /* Blanco sólido para tarjetas */
   --bg-glass: #ffffff; 
-  --border-glass: #dcdfe3; 
-  --text-primary: #002f6c; /* Azul Oxford para textos principales */
-  --text-secondary: #4a5568; 
+  --border-glass: #e2e4e8; /* Borde gris mate sutil */
+  --text-primary: #2d3748; /* Gris carbón oscuro para legibilidad superior */
+  --text-secondary: #718096; /* Gris intermedio mate */
   
-  /* Colores de Acento Cambridge de la Captura */
-  --police-blue: #51004a; /* Púrpura profundo del banner (#51004a) */
-  --police-accent: #00b0ab; /* Verde azulado / cian vibrante del banner (#00b0ab) */
-  --accent-gold: #00b0ab; /* Usado para botones principales */
-  --accent-gold-hover: #008f8b;
-  --accent-color: #00b0ab; 
-  --success: #1b8555;
-  --error: #c6093b;
-  --warning: #d97706;
+  /* Colores de Acento Mate */
+  --police-blue: #344c68; /* Azul pizarra mate (para la cabecera y el logo) */
+  --police-accent: #5e8b7e; /* Verde salvia mate (secundario) */
+  --accent-gold: #5e8b7e; /* Verde salvia mate (botones principales) */
+  --accent-gold-hover: #4a7065; /* Hover verde oscuro mate */
+  --accent-color: #4a6572; /* Azul grisáceo */
+  --success: #5e8b7e;
+  --error: #c55a5a; /* Rojo opaco mate */
+  --warning: #d08c49; /* Naranja mate */
   
-  /* Estilo visual Cambridge */
+  /* Estilo visual */
   --font-display: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
   --font-body: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-  --shadow-premium: 0 4px 12px rgba(0, 47, 108, 0.08);
+  --shadow-premium: 0 4px 12px rgba(45, 55, 72, 0.08); /* Sombra mate suave */
   --transition-smooth: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --border-radius: 4px; 
 }
 
 .dark-mode {
-  --bg-primary: #071524;
-  --bg-secondary: #0d2139;
-  --bg-glass: #0d2139;
-  --border-glass: #1e3a5f;
-  --text-primary: #f8f9fa;
-  --text-secondary: #a3b8cc;
+  --bg-primary: #1a202c; /* Gris muy oscuro mate */
+  --bg-secondary: #2d3748; /* Gris oscuro para tarjetas */
+  --bg-glass: #2d3748;
+  --border-glass: #4a5568;
+  --text-primary: #f7fafc;
+  --text-secondary: #a0aec0;
   
-  --police-blue: #51004a;
-  --police-accent: #00b0ab;
-  --accent-color: #00b0ab;
+  --police-blue: #2c3e50;
+  --police-accent: #5e8b7e;
+  --accent-color: #5e8b7e;
   
-  --shadow-premium: 0 4px 20px rgba(0,0,0,0.5);
+  --shadow-premium: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 /* Reset y Base */
