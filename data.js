@@ -480,5 +480,162 @@ const COURSES_DATA = [
         }
       }
     ]
+  },
+  {
+    id: "derechos-humanos",
+    title: "Derechos Humanos",
+    description: "Garantizar, respetar y proteger los Derechos Humanos, incluyendo el enfoque de género, la no discriminación y el dominio de los mecanismos de protección constitucional.",
+    modules: [
+      {
+        id: "garantizar-respetar-ddhh",
+        title: "1. Garantizar, Respetar y Proteger los DDHH",
+        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
+        videoDescription: "Instrucciones M2C1L1 - El policía debe garantizar, respetar y proteger los Derechos Humanos en todo momento de su servicio:\n\n1. En caso de manifestaciones y desorden público: Mantener la calma, usar los elementos de protección (casco, escudo) y cumplir el ordenamiento jurídico y el D.I.H.\n2. Principios de uso de fuerza: Proporcionalidad, Legalidad y Necesidad absoluta, primando siempre la vida.\n3. Protección ciudadana: Es deber constitucional brindar atención médica y auxilio inmediato a cualquier persona lesionada.",
+        metrics: {
+          type: "Respeto y Protección de DDHH",
+          means: "Uso de la Fuerza Proporcional / Auxilio a Heridos",
+          law: "Constitución Política, DD.HH y D.I.H."
+        },
+        imageSrc: "uso_fuerza_taser_1784399968366.png",
+        scenario: {
+          title: "Protección en Manifestaciones y Desorden Público",
+          description: "Te encuentras en una protesta social que comienza a volverse violenta, con lanzamiento de objetos. Hay civiles no involucrados y un manifestante resulta herido. Debes activar el protocolo de defensa y actuar bajo los principios de Derechos Humanos.",
+          role: "Unidad policial en control y contención de multitudes.",
+          objectives: [
+            "Conservar la calma, activar el plan de defensa y usar elementos de dotación (casco, escudo).",
+            "Garantizar el respeto estricto de los DDHH en el control de disturbios.",
+            "Prestar primeros auxilios y proteger la vida del manifestante herido."
+          ]
+        },
+        designThinking: {
+          empatizar: {
+            question: "¿Cómo puedes equilibrar el mantenimiento del orden público con el respeto a la protesta pacífica y la vida de los transeúntes?",
+            placeholder: "Analiza la responsabilidad de salvaguardar la vida mientras controlas el desorden...",
+            keywords: ["protesta pacífica", "vida", "orden público", "derechos humanos", "equilibrio"]
+          },
+          definir: {
+            question: "Identifica los principios básicos para el uso de la fuerza según los DDHH aplicables a este escenario.",
+            placeholder: "Define necesidad, proporcionalidad y legalidad en el uso de elementos y fuerza...",
+            keywords: ["necesidad", "proporcionalidad", "legalidad", "uso de la fuerza", "dotación"]
+          },
+          idear: {
+            question: "¿Qué estrategias no violentas y tácticas puedes usar antes de acudir a la fuerza extrema?",
+            placeholder: "Propón el uso de advertencias, diálogo, presencia disuasiva y atención médica...",
+            keywords: ["diálogo", "mediación", "presencia", "disuasión", "atención médica"]
+          },
+          prototipar: {
+            question: "Redacta el reporte rápido que le das por radio a la central de comunicaciones asegurando que estás garantizando los Derechos Humanos.",
+            placeholder: "Ej: 'Central, se prioriza atención a ciudadano herido y se mantiene formación defensiva respetando el principio de proporcionalidad...'",
+            keywords: ["atención", "herido", "formación", "proporcionalidad", "derechos humanos", "ambulancia"]
+          }
+        },
+        evaluation: {
+          perfectKeywords: ["proporcionalidad", "necesidad", "legalidad", "ambulancia", "derechos humanos", "vida", "auxilio"],
+          iaResponseGood: "Excelente respuesta. Has aplicado los principios de proporcionalidad, priorizando la vida y solicitando asistencia médica, cumpliendo a cabalidad los mandatos del D.I.H y los DD.HH.",
+          iaResponseRegular: "La respuesta es aceptable, pero recuerda hacer énfasis explícito en el uso estricto de solo la fuerza necesaria (proporcionalidad) y el aseguramiento del área antes de intervenir médicamente.",
+          iaResponseBad: "Procedimiento incorrecto. Responder con fuerza desproporcionada ante provocaciones menores u omitir el auxilio de una persona herida viola gravemente los Derechos Humanos y los protocolos institucionales."
+        }
+      },
+      {
+        id: "enfoque-de-genero",
+        title: "2. Enfoque de Género y No Discriminación",
+        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
+        videoDescription: "Instrucciones M2C1L2 - Conocer el enfoque de género y el principio de no discriminación en la actividad de policía:\n\n1. Es mandato institucional ofrecer un trato digno e igualitario a todas las personas, respetando su identidad de género.\n2. Evitar prejuicios o sesgos, así como estereotipos que deriven en la revictimización de poblaciones vulnerables.\n3. Activación de la Ruta de Atención Integral para víctimas de violencias basadas en género (VBG).",
+        metrics: {
+          type: "Enfoque de Género / Inclusión",
+          means: "Trato Digno / Ruta VBG / Cero Estereotipos",
+          law: "Constitución Política (Principio de Igualdad y No Discriminación)"
+        },
+        imageSrc: "atencion_caso_comercial_1784399958164.png",
+        scenario: {
+          title: "Atención de Caso con Enfoque de Género y Diversidad",
+          description: "Atiendes un caso de violencia intrafamiliar. Al llegar, identificas que la víctima es una persona perteneciente a la comunidad LGTBIQ+ que ha sido agredida físicamente por su pareja. Debes garantizar un procedimiento libre de discriminación y asegurar su integridad.",
+          role: "Integrantes de patrulla de vigilancia comunitaria.",
+          objectives: [
+            "Aplicar el principio de no discriminación y garantizar el respeto a la identidad.",
+            "Evitar cualquier comentario de revictimización o sesgo personal.",
+            "Activar la Ruta de Atención Integral para violencia de género y brindar protección."
+          ]
+        },
+        designThinking: {
+          empatizar: {
+            question: "¿Por qué es crucial evitar sesgos personales o institucionales al atender a una víctima de la comunidad LGTBIQ+?",
+            placeholder: "Analiza el riesgo de revictimización, el daño psicológico y la pérdida de confianza...",
+            keywords: ["revictimización", "confianza", "sesgos", "identidad", "empatía", "dignidad"]
+          },
+          definir: {
+            question: "Define las acciones obligatorias para garantizar el principio de no discriminación durante tu atención.",
+            placeholder: "Identifica el uso del pronombre correcto, evitar juicios y activar rutas...",
+            keywords: ["ruta de género", "pronombre", "identidad", "no discriminación", "juicios"]
+          },
+          idear: {
+            question: "¿Cómo coordinarías con otras instituciones y entidades para ofrecer el apoyo integral a la víctima de violencia de género?",
+            placeholder: "Propón el contacto con salud, Fiscalía, Comisaría de Familia, patrulla púrpura...",
+            keywords: ["comisaría", "fiscalía", "salud", "patrulla púrpura", "ruta de atención", "integral"]
+          },
+          prototipar: {
+            question: "Escribe cómo te dirigirías a la víctima al iniciar el procedimiento, respetando su identidad de manera asertiva y protectora.",
+            placeholder: "Ej: 'Buenas noches, somos la Policía, estamos aquí para protegerle. Nos dirigiremos a usted como prefiera... activaremos los protocolos de salud.'",
+            keywords: ["identidad", "proteger", "garantías", "respeto", "ruta", "pronombre", "salud"]
+          }
+        },
+        evaluation: {
+          perfectKeywords: ["ruta", "patrulla púrpura", "no discriminación", "identidad", "revictimización", "pronombre", "respeto"],
+          iaResponseGood: "Excelente. Has garantizado el trato digno, aplicando correctamente el enfoque de género, activando la ruta correspondiente (como la Patrulla Púrpura) y brindando seguridad sin emitir juicios de valor.",
+          iaResponseRegular: "El procedimiento es adecuado en cuanto al respeto, pero te faltó mencionar específicamente la activación de las rutas de salud y justicia competentes (Ruta Integral de Atención VBG).",
+          iaResponseBad: "Procedimiento revictimizante y altamente incorrecto. El uso de estereotipos, chistes ofensivos, o la desestimación de la denuncia de la víctima constituyen violaciones severas al principio constitucional de no discriminación y acarrean graves sanciones."
+        }
+      },
+      {
+        id: "mecanismos-proteccion",
+        title: "3. Mecanismos de Protección Constitucional",
+        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
+        videoDescription: "Instrucciones M2C1L3 - Conocer y orientar al ciudadano sobre los mecanismos de protección constitucional de Derechos Humanos:\n\n1. Acción de Tutela (Art. 86): Para reclamar la protección inmediata de derechos fundamentales vulnerados (vida, salud, buen nombre, etc.).\n2. Habeas Corpus (Art. 30): Para proteger el derecho a la libertad personal ante capturas o detenciones ilegales o prolongadas indebidamente.\n3. Derecho de Petición (Art. 23): Para presentar solicitudes respetuosas y recibir pronta respuesta institucional.",
+        metrics: {
+          type: "Asesoría Constitucional",
+          means: "Acción de Tutela / Habeas Corpus / Derecho Petición",
+          law: "Constitución Política de Colombia"
+        },
+        imageSrc: "puesto_control_transito_p_1784399989800.png",
+        scenario: {
+          title: "Orientación Ciudadana sobre Mecanismos de Protección",
+          description: "En tu patrullaje, un ciudadano te aborda desesperado manifestando que su familiar requiere una cirugía urgente para salvar su vida y la EPS se la niega. A su vez, te cuenta que su hijo fue retenido por unos guardias de seguridad privada en un conjunto residencial por más de 12 horas sin justificación legal. Pide orientación de la Policía.",
+          role: "Patrullero ofreciendo orientación y mediación comunitaria.",
+          objectives: [
+            "Orientar al ciudadano sobre el uso de la Acción de Tutela para el derecho a la salud/vida.",
+            "Orientar sobre la acción de Habeas Corpus o la intervención policial inmediata por retención ilegal.",
+            "Brindar una respuesta asertiva basada en el conocimiento de la Constitución."
+          ]
+        },
+        designThinking: {
+          empatizar: {
+            question: "¿Cómo afecta a la percepción ciudadana de seguridad y justicia que un policía no conozca y no asesore sobre los derechos fundamentales?",
+            placeholder: "Analiza el impacto del desconocimiento policial en la garantía de derechos de la sociedad...",
+            keywords: ["desprotección", "justicia", "confianza", "asesoría", "derechos fundamentales"]
+          },
+          definir: {
+            question: "Define exactamente qué mecanismo constitucional aplica para el caso de salud (EPS) y cuál para la retención ilegal (guardias privados).",
+            placeholder: "Identifica la Acción de Tutela y el Habeas Corpus/Libertad...",
+            keywords: ["tutela", "salud", "habeas corpus", "libertad", "vida", "ilegal"]
+          },
+          idear: {
+            question: "¿Cómo le explicarías al ciudadano de manera sencilla qué debe hacer para interponer estos mecanismos o cómo vas a actuar tú frente a la retención?",
+            placeholder: "Plantea una orientación paso a paso y la acción policial de verificación en el conjunto...",
+            keywords: ["juez", "defensoría", "verificación", "personería", "orientación", "sencillo"]
+          },
+          prototipar: {
+            question: "Redacta el diálogo exacto de asesoría que le ofreces al ciudadano.",
+            placeholder: "Ej: 'Señor, para la cirugía de su familiar, debe interponer una Acción de Tutela ante cualquier juez... para la situación de su hijo, eso es una privación ilegal y aplicaría el Habeas Corpus, vamos inmediatamente a verificar...'",
+            keywords: ["acción de tutela", "habeas corpus", "juez", "vamos", "verificar", "salud", "libertad"]
+          }
+        },
+        evaluation: {
+          perfectKeywords: ["acción de tutela", "habeas corpus", "juez", "verificar", "libertad", "salud", "derecho fundamental"],
+          iaResponseGood: "Excelente dominio jurídico. Orientaste perfectamente sobre la Acción de Tutela (salud/vida) e identificaste la gravedad de la privación ilegal interviniendo de inmediato (Habeas Corpus/rescate).",
+          iaResponseRegular: "Buena orientación teórica sobre los recursos, pero recuerda que frente a un delito en curso (secuestro/retención ilegal) el policía debe actuar inmediatamente en el lugar de los hechos y no solo asesorar.",
+          iaResponseBad: "Orientación deficiente. No asesorar sobre la Tutela y evadir la responsabilidad policial frente a una retención ilegal en curso, vulnera el mandato de protección y acarrea consecuencias disciplinarias y penales por omisión."
+        }
+      }
+    ]
   }
 ];
