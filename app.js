@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentCourseIndex: 0,
     currentModuleIndex: 0,
     progress: {}, // Estructura: { "id_modulo": { completed: boolean, score: number, answers: {} } }
-    theme: "dark",
+    theme: "light",
     questions: [], // Guardará las 100 preguntas del JSON
     currentQuestionIndex: 0,
     questionsScore: { correct: 0, incorrect: 0 }
@@ -512,18 +512,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // Configuración de Event Listeners
   // -------------------------------------------------------------
   function setupEventListeners() {
-    // Alternancia de tema
+    // Alternancia de tema (Claro por defecto)
     themeToggle.addEventListener("click", () => {
-      if (body.classList.contains("dark-mode")) {
-        body.classList.remove("dark-mode");
-        body.classList.add("light-mode");
-        themeToggle.querySelector(".mode-icon").textContent = "🌙";
-        state.theme = "light";
-      } else {
+      if (body.classList.contains("light-mode")) {
         body.classList.remove("light-mode");
         body.classList.add("dark-mode");
         themeToggle.querySelector(".mode-icon").textContent = "☀️";
         state.theme = "dark";
+      } else {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        themeToggle.querySelector(".mode-icon").textContent = "🌙";
+        state.theme = "light";
       }
       localStorage.setItem("policia_cursos_theme", state.theme);
     });

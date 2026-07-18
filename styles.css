@@ -4,46 +4,46 @@
    ------------------------------------------------------------- */
 
 :root {
-  /* Modo Oscuro por defecto */
-  --bg-primary: #0a0f1d;
-  --bg-secondary: #13192b;
-  --bg-glass: rgba(19, 25, 43, 0.7);
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
+  /* Cambridge English Styling Palette (Claro por defecto) */
+  --bg-primary: #f4f6f9;
+  --bg-secondary: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.95);
+  --border-glass: #e1e6eb;
+  --text-primary: #19273c; /* Navy oscuro para lectura legible */
+  --text-secondary: #586980;
   
-  /* Colores de Acento */
-  --police-blue: #1e3a8a;
-  --police-accent: #3b82f6;
-  --accent-gold: #eab308;
-  --accent-gold-hover: #ca8a04;
-  --accent-color: #06b6d4; /* Cyan tecnológico */
-  --success: #10b981;
-  --error: #ef4444;
-  --warning: #f59e0b;
+  /* Colores Corporativos de Cambridge English */
+  --police-blue: #0b2c5c; /* Cambridge Deep Blue */
+  --police-accent: #0f3d7a; /* Royal Blue */
+  --accent-gold: #c31e39; /* Crimson Red de Cambridge */
+  --accent-gold-hover: #9c152a;
+  --accent-color: #0b2c5c; 
+  --success: #1b8555;
+  --error: #c31e39;
+  --warning: #d97706;
   
   /* Tipografía y sombras */
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'Outfit', sans-serif;
-  --shadow-premium: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --border-radius: 16px;
+  --font-display: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  --shadow-premium: 0 4px 16px rgba(11, 44, 92, 0.08);
+  --transition-smooth: all 0.25s ease-in-out;
+  --border-radius: 8px; /* Cambridge usa bordes más rectos/limpios */
 }
 
-/* Variables Modo Claro */
-.light-mode {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-glass: rgba(255, 255, 255, 0.75);
-  --border-glass: rgba(0, 0, 0, 0.08);
-  --text-primary: #0f172a;
-  --text-secondary: #64748b;
+/* Conservar el soporte dark-mode adaptado al azul de Cambridge */
+.dark-mode {
+  --bg-primary: #0b1624;
+  --bg-secondary: #112136;
+  --bg-glass: rgba(17, 33, 54, 0.9);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --text-primary: #f4f6f9;
+  --text-secondary: #9cb1cc;
   
-  --police-blue: #1e3a8a;
-  --police-accent: #2563eb;
-  --accent-color: #0891b2;
+  --police-blue: #112136;
+  --police-accent: #3b82f6;
+  --accent-color: #60a5fa;
   
-  --shadow-premium: 0 8px 32px 0 rgba(15, 23, 42, 0.08);
+  --shadow-premium: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 /* Reset y Base */
