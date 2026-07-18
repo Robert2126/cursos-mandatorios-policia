@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     currentCourseIndex: 0,
     currentModuleIndex: 0,
     progress: {}, // Estructura: { "id_modulo": { completed: boolean, score: number, answers: {} } }
-    theme: "dark"
+    theme: "dark",
+    questions: [], // Guardará las 100 preguntas del JSON
+    currentQuestionIndex: 0,
+    questionsScore: { correct: 0, incorrect: 0 }
   };
 
   // Elementos del DOM
@@ -57,6 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const evalActions = document.getElementById("eval-actions");
   const retryModuleBtn = document.getElementById("retry-module-btn");
   const nextModuleBtn = document.getElementById("next-module-btn");
+
+  // Elementos de la Evaluación de 100 Preguntas
+  const questionsView = document.getElementById("questions-view");
+  const goQuestionsBtn = document.getElementById("go-questions-btn");
+  const exitQuestionsBtn = document.getElementById("exit-questions-btn");
+  const questionNumberTitle = document.getElementById("question-number-title");
+  const questionsScoreTracker = document.getElementById("questions-score-tracker");
+  const questionBodyArea = document.getElementById("question-body-area");
+  const questionOptionsArea = document.getElementById("question-options-area");
+  const questionFeedbackArea = document.getElementById("question-feedback-area");
+  const prevQuestionBtn = document.getElementById("prev-question-btn");
+  const nextQuestionBtn = document.getElementById("next-question-btn");
 
   // -------------------------------------------------------------
   // Inicialización y Carga de Progreso
@@ -175,7 +190,13 @@ document.addEventListener("DOMContentLoaded", () => {
     welcomeView.classList.remove("active");
     moduleView.classList.remove("active");
     congratsView.classList.remove("active");
-    view.classList.add("active");
+    questionsView.style.display = "none";
+    
+    if (view === questionsView) {
+      questionsView.style.display = "flex";
+    } else {
+      view.classList.add("active");
+    }
     renderSidebar();
   }
 
@@ -387,6 +408,82 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // -------------------------------------------------------------
+  // Lógica de Evaluación Teórica (100 Preguntas)
+  // -------------------------------------------------------------
+  async function loadQuestions() {
+    try {
+      const response = await fetch("preguntas_evaluacion.json");
+      state.questions = await response.json();
+      renderQuestion();
+    } catch (error) {
+      console.error("Error al cargar las preguntas:", error);
+      questionBodyArea.textContent = "Error al cargar las preguntas. Asegúrate de estar ejecutando la app a través de un servidor local o de habilitar peticiones HTTP.";
+    }
+  }
+
+  function renderQuestion() {
+    if (state.questions.length === 0) return;
+    
+    const q = state.questions[state.currentQuestionIndex];
+    questionNumberTitle.textContent = `Pregunta ${state.currentQuestionIndex + 1} de ${state.questions.length}`;
+    questionBodyArea.textContent = q.question;
+    
+    // Limpiar opciones
+    questionOptionsArea.innerHTML = "";
+    questionFeedbackArea.style.display = "none";
+
+    // Cargar puntuaciones
+    questionsScoreTracker.textContent = `Aciertos: ${state.questionsScore.correct} | Errores: ${state.questionsScore.incorrect}`;
+
+    q.options.forEach((option, idx) => {
+      const btn = document.createElement("button");
+      btn.className = "option-btn";
+      btn.textContent = option;
+      
+      // Manejar la selección
+      btn.addEventListener("click", () => selectOption(idx, btn));
+      questionOptionsArea.appendChild(btn);
+    });
+
+    // Controlar visibilidad de botones de navegación
+    prevQuestionBtn.disabled = state.currentQuestionIndex === 0;
+    nextQuestionBtn.textContent = state.currentQuestionIndex === state.questions.length - 1 ? "Finalizar Evaluación" : "Siguiente Pregunta";
+  }
+
+  function selectOption(selectedIdx, buttonElement) {
+    const q = state.questions[state.currentQuestionIndex];
+    
+    // Evitar responder dos veces a la misma pregunta
+    if (questionFeedbackArea.style.display === "block") return;
+
+    // Resaltar opciones correctas/incorrectas
+    const buttons = questionOptionsArea.querySelectorAll(".option-btn");
+    buttons.forEach((btn, idx) => {
+      if (idx === q.correct) {
+        btn.classList.add("correct");
+      } else if (idx === selectedIdx) {
+        btn.classList.add("incorrect");
+      }
+      btn.disabled = true;
+    });
+
+    // Actualizar puntajes
+    if (selectedIdx === q.correct) {
+      state.questionsScore.correct++;
+      questionFeedbackArea.textContent = "¡Respuesta Correcta! Excelente conocimiento de la doctrina policial.";
+      questionFeedbackArea.style.background = "rgba(16, 185, 129, 0.15)";
+      questionFeedbackArea.style.color = "var(--success)";
+    } else {
+      state.questionsScore.incorrect++;
+      questionFeedbackArea.textContent = `Respuesta Incorrecta. La opción correcta era: ${q.options[q.correct]}`;
+      questionFeedbackArea.style.background = "rgba(239, 68, 68, 0.15)";
+      questionFeedbackArea.style.color = "var(--error)";
+    }
+    questionFeedbackArea.style.display = "block";
+    questionsScoreTracker.textContent = `Aciertos: ${state.questionsScore.correct} | Errores: ${state.questionsScore.incorrect}`;
+  }
+
+  // -------------------------------------------------------------
   // Configuración de Event Listeners
   // -------------------------------------------------------------
   function setupEventListeners() {
@@ -463,10 +560,41 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    // Eventos de la Evaluación de 100 Preguntas
+    goQuestionsBtn.addEventListener("click", () => {
+      showView(questionsView);
+      if (state.questions.length === 0) {
+        loadQuestions();
+      }
+    });
+
+    exitQuestionsBtn.addEventListener("click", () => {
+      showView(welcomeView);
+    });
+
+    prevQuestionBtn.addEventListener("click", () => {
+      if (state.currentQuestionIndex > 0) {
+        state.currentQuestionIndex--;
+        renderQuestion();
+      }
+    });
+
+    nextQuestionBtn.addEventListener("click", () => {
+      if (state.currentQuestionIndex < state.questions.length - 1) {
+        state.currentQuestionIndex++;
+        renderQuestion();
+      } else {
+        alert(`Has completado la evaluación teórica.\nRespuestas Correctas: ${state.questionsScore.correct}\nRespuestas Incorrectas: ${state.questionsScore.incorrect}`);
+        showView(welcomeView);
+      }
+    });
+
     // Reiniciar Progreso
     resetProgressBtn.addEventListener("click", () => {
       if (confirm("¿Estás seguro de que deseas reiniciar todo tu progreso de capacitación?")) {
         state.progress = {};
+        state.questionsScore = { correct: 0, incorrect: 0 };
+        state.currentQuestionIndex = 0;
         saveProgress();
         selectModule(0, 0);
       }

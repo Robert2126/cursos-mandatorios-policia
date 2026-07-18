@@ -38,6 +38,11 @@
       <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar Tema" title="Cambiar Tema">
         <span class="mode-icon">☀️</span>
       </button>
+
+      <!-- Botón Evaluación Teórica -->
+      <button class="btn btn-outline" id="go-questions-btn" style="gap: 0.5rem; display: flex; align-items: center;">
+        <span>📝</span> Evaluación Teórica (100 Q)
+      </button>
     </div>
   </header>
 
@@ -245,6 +250,47 @@
           </div>
 
           <button class="btn btn-primary btn-large" id="reset-progress-btn">Reiniciar Capacitación</button>
+        </div>
+      </section>
+
+      <!-- 100 Questions Theoretical Evaluation Screen -->
+      <section class="module-screen" id="questions-view" style="display: none; flex-direction: column; gap: 1.5rem;">
+        <div class="module-header-card">
+          <span class="badge" style="background: var(--accent-gold); color: #000;">Evaluación Escrita Oficial</span>
+          <h3>Repositorio de Evaluación Teórica Virtual (100 Preguntas)</h3>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem;">Responde el cuestionario de estándares mínimos de capacitación y entrenamiento de la Policía Nacional de Colombia.</p>
+        </div>
+
+        <div class="workspace-card" style="padding: 2rem; gap: 1.5rem;">
+          <!-- Progreso de la Evaluación -->
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-glass); padding-bottom: 1rem;">
+            <h4 id="question-number-title" style="font-family: var(--font-display);">Pregunta 1 de 100</h4>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <span id="questions-score-tracker" style="font-size: 0.9rem; font-weight: 600; color: var(--success);">Aciertos: 0 | Errores: 0</span>
+              <button class="btn btn-outline btn-small" id="exit-questions-btn">Volver a Módulos</button>
+            </div>
+          </div>
+
+          <!-- Enunciado de la Pregunta -->
+          <div id="question-body-area" style="font-size: 1.1rem; font-weight: 500; line-height: 1.6; padding: 1rem 0;">
+            Cargando pregunta...
+          </div>
+
+          <!-- Opciones de Respuesta -->
+          <div id="question-options-area" style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <!-- Opciones dinámicas en app.js -->
+          </div>
+
+          <!-- Feedback de la Pregunta -->
+          <div id="question-feedback-area" style="display: none; padding: 1rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem;">
+            <!-- Feedback correcto/incorrecto -->
+          </div>
+
+          <!-- Acciones de Navegación -->
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-glass); padding-top: 1.25rem;">
+            <button class="btn btn-outline" id="prev-question-btn">Atrás</button>
+            <button class="btn btn-primary" id="next-question-btn">Siguiente Pregunta</button>
+          </div>
         </div>
       </section>
 
