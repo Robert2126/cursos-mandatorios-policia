@@ -635,7 +635,7 @@ document.addEventListener("DOMContentLoaded", () => {
       aiFloatingChat.style.display = "none";
     });
 
-    function sendFloatingMessage() {
+    async function sendFloatingMessage() {
       const text = floatingChatInput.value.trim();
       if (!text) return;
 
@@ -647,9 +647,45 @@ document.addEventListener("DOMContentLoaded", () => {
       floatingChatInput.value = "";
       floatingChatBody.scrollTop = floatingChatBody.scrollHeight;
 
-      // Respuesta de IA simulada con capacidad de análisis de red y fuentes de la Policía Nacional de Colombia
-      setTimeout(() => {
-        let reply = "🔍 **[Búsqueda en Internet ejecutada]** Consultando base de doctrina de la Dirección de Educación Policial y Normatividad Nacional...<br><br>";
+      // Crear burbuja de cargando
+      const loadingMsg = document.createElement("div");
+      loadingMsg.className = "chat-message ia";
+      loadingMsg.innerHTML = `<span class="chat-message-sender">Asistente IA</span><p><em>Pensando...</em></p>`;
+      floatingChatBody.appendChild(loadingMsg);
+      floatingChatBody.scrollTop = floatingChatBody.scrollHeight;
+
+      try {
+        // Petición a la API del Asesor Normativo Policial (OpenAI backend)
+        const response = await fetch("http://localhost:8000/api/v1/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            question: text,
+            course_id: COURSES_DATA[state.currentCourseIndex].id
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error("API Offline / Error en servidor");
+        }
+
+        const data = await response.json();
+        
+        // Formatear respuesta con citas si existen
+        let reply = data.answer;
+        if (data.citations && data.citations.length > 0) {
+          reply += "<br><br>📚 **Fuentes y Fundamentos:**<br>";
+          data.citations.forEach(cit => {
+            reply += `- *${cit.title}* (Art/Pág: ${cit.article || 'N/A'}). Similitud: ${(cit.similarity * 100).toFixed(0)}%<br>`;
+          });
+        }
+
+        loadingMsg.innerHTML = `<span class="chat-message-sender">Asistente IA</span><p>${reply}</p>`;
+      } catch (err) {
+        // Fallback local robusto en caso de que la API de Python no esté iniciada
+        let reply = "🔍 **[Modo Offline - Doctrina Local]** (Inicie la API de Python para respuestas con OpenAI)<br><br>";
         const textLower = text.toLowerCase();
 
         if (textLower.includes("captura") || textLower.includes("flagrancia") || textLower.includes("arma de fuego") || textLower.includes("porte ilegal")) {
@@ -664,35 +700,31 @@ document.addEventListener("DOMContentLoaded", () => {
                    "- **Informe Ejecutivo de Captura en Flagrancia (FPJ-05):** Detallando circunstancias de tiempo, modo y lugar.<br><br>" +
                    "🌐 *Fuentes institucionales validadas: Código de Procedimiento Penal (Ley 906 de 2004), Manual de Policía Judicial de la Fiscalía y Policía Nacional.*";
         } else if (textLower.includes("ley 1801") || textLower.includes("convivencia") || textLower.includes("código")) {
-          reply += "La **Ley 1801 de 2016** establece el Código Nacional de Seguridad y Convivencia Ciudadana. Regula las categorías de convivencia (seguridad, tranquilidad, ambiente y salud pública) y faculta el uso de medidas correctivas de carácter eminentemente preventivo.<br><br>" +
-                   "📋 **Formatos a diligenciar:** Orden de Comparendo Nacional y Acta de Mediación Policial (si aplica).<br>" +
+          reply += "La **Ley 1801 de 2016** establece el Código Nacional de Seguridad y Convivencia Ciudadana. Regula las categorías de convivencia (seguridad, tranquilidad, ambiente y salud pública) y faculta el uso de medidas correctivas de carácter preventivo.<br><br>" +
+                   "📋 **Formatos a diligenciar:** Orden de Comparendo Nacional y Acta de Mediación Policial.<br>" +
                    "🌐 *Fuentes: Portal oficial del Senado de la República de Colombia / Ley 1801.*";
         } else if (textLower.includes("taser") || textLower.includes("uso de la fuerza") || textLower.includes("fuerza")) {
           reply += "El uso de la fuerza se rige bajo los principios de **Necesidad, Proporcionalidad, Legalidad y Temporalidad** según la **Resolución 02903 de 2017**.<br>" +
                    "Los dispositivos de control eléctrico (Taser) se consideran armas menos letales y requieren una distancia mínima de seguridad de 7 metros antes del despliegue táctico.<br><br>" +
-                   "📋 **Formatos a diligenciar:** Informe de Uso de la Fuerza (Formato único institucional).<br>" +
+                   "📋 **Formatos a diligenciar:** Informe de Uso de la Fuerza.<br>" +
                    "🌐 *Fuentes: Dirección General de la Policía Nacional - Resolución 02903.*";
         } else if (textLower.includes("derechos humanos") || textLower.includes("dh") || textLower.includes("vida")) {
           reply += "En toda actuación, la protección al derecho a la vida es tu prioridad absoluta. El ingreso a domicilio sin orden judicial (Art. 32 Constitucional y Art. 163 de Ley 1801) se fundamenta únicamente bajo imperiosa necesidad o voces de auxilio inmediato.<br><br>" +
                    "📋 **Formatos a diligenciar:** Informe Administrativo de Ingreso a Domicilio por Clamor de Auxilio.<br>" +
-                   "🌐 *Fuentes: Constitución Política de Colombia (Art. 32) / Corte Constitucional colombiana.*";
+                   "🌐 *Fuentes: Constitución Política de Colombia (Art. 32).*";
         } else if (textLower.includes("esposamiento") || textLower.includes("esposas")) {
-          reply += "El esposamiento es una medida preventiva de seguridad táctica. Debe realizarse con el sujeto en posición manos atrás, asegurando el doble seguro en los anillos para evitar lesiones en las muñecas y posibles reclamaciones disciplinarias ante la Inspección General.<br><br>" +
+          reply += "El esposamiento es una medida preventiva de seguridad táctica. Debe realizarse con el sujeto en posición manos atrás, asegurando el doble seguro en los anillos para evitar lesiones en las muñecas.<br><br>" +
                    "🌐 *Fuentes: Manual de Patrullaje Urbano y Táctica Policial de la Policía Nacional de Colombia.*";
         } else if (textLower.includes("uniforme") || textLower.includes("tonfa")) {
-          reply += "El reglamento de uniformes (**Resolución 3372 de 2009**) establece que el porte del uniforme es impecable. El bastón tonfa debe ubicarse siempre al lado opuesto del arma de fuego en tu cinturón multipropósito y portarse obligatoriamente en todo servicio de vigilancia.<br><br>" +
-                   "🌐 *Fuentes: Resolución 3372 de 2009 - Dirección General de la Policía Nacional.*";
+          reply += "El reglamento de uniformes (**Resolución 3372 de 2009**) establece que el porte del uniforme es impecable. El bastón tonfa debe ubicarse siempre al lado opuesto del arma de fuego en tu cinturón multipropósito.<br><br>" +
+                   "🌐 *Fuentes: Resolución 3372 de 2009.*";
         } else {
-          reply += "He buscado en las bases de doctrina policial. Recuerda que ante cualquier procedimiento general en calle, debes priorizar el diálogo utilizando la técnica **SEA Policía** (Saludar, Escuchar, Actuar) antes de recurrir a medidas físicas o tácticas de fuerza.<br><br>" +
-                   "🌐 *Fuentes: Manual de Convivencia y Seguridad Ciudadana de la Policía Nacional.*";
+          reply += "He buscado en las bases de doctrina policial. Recuerda que ante cualquier procedimiento general en calle, debes priorizar el diálogo utilizando la técnica **SEA Policía** (Saludar, Escuchar, Actuar) antes de recurrir a medidas físicas o tácticas de fuerza.";
         }
 
-        const iaMsg = document.createElement("div");
-        iaMsg.className = "chat-message ia";
-        iaMsg.innerHTML = `<span class="chat-message-sender">Asistente IA</span><p>${reply}</p>`;
-        floatingChatBody.appendChild(iaMsg);
-        floatingChatBody.scrollTop = floatingChatBody.scrollHeight;
-      }, 1200);
+        loadingMsg.innerHTML = `<span class="chat-message-sender">Asistente IA</span><p>${reply}</p>`;
+      }
+      floatingChatBody.scrollTop = floatingChatBody.scrollHeight;
     }
 
     floatingChatSendBtn.addEventListener("click", sendFloatingMessage);

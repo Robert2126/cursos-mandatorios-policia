@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Ley 1801 de 2016 - Código Nacional de Seguridad y Convivencia Ciudadana",
+    "url": "https://www.suin-juriscol.gov.co/viewDocument.asp?id=30021736",
+    "source_type": "ley"
+  },
+  {
+    "title": "Ley 906 de 2004 - Código de Procedimiento Penal",
+    "url": "https://www.suin-juriscol.gov.co/viewDocument.asp?id=1670249",
+    "source_type": "ley"
+  },
+  {
+    "title": "Reglamentos de la Policía Nacional de Colombia",
+    "url": "https://www.policia.gov.co/contenido/reglamentos",
+    "source_type": "reglamento"
+  },
+  {
+    "title": "Procesos y procedimientos de la Policía Nacional de Colombia",
+    "url": "https://www.policia.gov.co/contenido/procesos-procedimientos",
+    "source_type": "procedimiento"
+  }
+]
