@@ -637,5 +637,162 @@ const COURSES_DATA = [
         }
       }
     ]
+  },
+  {
+    id: "procedimientos-policia",
+    title: "Procedimientos de Policía",
+    description: "Dominio técnico, legal y procedimental en seguridad vial, mediación policial, incautaciones y el correcto porte del uniforme y elementos del servicio.",
+    modules: [
+      {
+        id: "procedimiento-transito",
+        title: "1. Tránsito: Puesto de Control y Accidentes",
+        videoUrl: "https://www.youtube.com/embed/aXXeg6wiOF4",
+        videoDescription: "Instrucciones de Tránsito (M4C3L6E y M4C3L8E):\n\n1. Puesto de Control: Instalar la señalización reglamentaria, mantener medidas de seguridad táctica y realizar un abordaje cortés a los vehículos.\n2. Accidentes de Tránsito: Acordonar el área, solicitar asistencia médica prioritaria para heridos y salvaguardar la escena sin alterar el material probatorio (fijación).",
+        metrics: {
+          type: "Seguridad Vial y Tránsito",
+          means: "Puesto de Control / Acordonamiento / Primer Respondiente",
+          law: "Código Nacional de Tránsito (Ley 769 de 2002)"
+        },
+        imageSrc: "puesto_control_transito_p_1784399989800.png",
+        scenario: {
+          title: "Accidente con Lesionados cerca al Puesto de Control",
+          description: "Mientras ejecutas un puesto de control vial, ocurre un accidente grave a pocos metros con un vehículo particular y una motocicleta. El motociclista está gravemente herido en el asfalto. Debes actuar como primer respondiente garantizando el procedimiento de tránsito y la vida.",
+          role: "Policía de Tránsito / Vigilancia.",
+          objectives: [
+            "Asegurar y acordonar el área para evitar siniestros secundarios.",
+            "Prestar primeros auxilios y solicitar ambulancia de forma inmediata.",
+            "Fijar la escena para el informe de accidente (croquis) sin alterar evidencias."
+          ]
+        },
+        designThinking: {
+          empatizar: {
+            question: "¿Cuáles son las necesidades de salud inmediatas del motociclista y qué riesgos genera el tráfico de vehículos cercano?",
+            placeholder: "Analiza el riesgo vital del lesionado y el peligro del entorno vehicular...",
+            keywords: ["lesionado", "vida", "riesgos", "tráfico", "seguridad vial"]
+          },
+          definir: {
+            question: "Identifica las acciones normativas como primer respondiente en un accidente con heridos.",
+            placeholder: "Define acordonamiento, atención médica y fijación probatoria...",
+            keywords: ["acordonar", "primer respondiente", "ambulancia", "fijación", "escena"]
+          },
+          idear: {
+            question: "¿Cómo coordinarías con tu compañero la división de tareas entre desviar el tráfico y atender al herido?",
+            placeholder: "Propón la asignación de roles operativos...",
+            keywords: ["compañero", "tráfico", "desviar", "roles", "atención"]
+          },
+          prototipar: {
+            question: "Redacta la comunicación de radio a la central solicitando apoyo y describiendo el aseguramiento de la escena.",
+            placeholder: "Ej: 'Central, requiero ambulancia urgente por accidente... procedo a acordonar la escena y desviar el flujo vehicular.'",
+            keywords: ["ambulancia", "central", "acordonar", "desviar", "flujo", "accidente"]
+          }
+        },
+        evaluation: {
+          perfectKeywords: ["acordonar", "ambulancia", "primer respondiente", "tráfico", "evidencia", "fijar"],
+          iaResponseGood: "Procedimiento impecable. Protegiste la vida solicitando la ambulancia rápidamente, aseguraste el área (acordonamiento) y garantizaste la inalterabilidad de la escena para las autoridades competentes.",
+          iaResponseRegular: "La respuesta es aceptable, pero recuerda siempre mencionar la fijación topográfica o fotográfica de la escena antes de que los vehículos sean removidos.",
+          iaResponseBad: "Fallo procedimental grave. Mover los vehículos antes de la fijación técnica en un accidente con heridos o no solicitar asistencia médica urgente viola el protocolo de primer respondiente y de tránsito."
+        }
+      },
+      {
+        id: "mediacion-policial",
+        title: "2. Mediación Policial y Resolución de Conflictos",
+        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
+        videoDescription: "Instrucciones Mediación Policial (M4C1L1E y M4C1L3E):\n\n1. El rol del mediador policial es neutral, imparcial y facilitador. No impone soluciones, ayuda a las partes a encontrarlas.\n2. Se debe aplicar el protocolo de mediación INSITU (en el lugar de los hechos) para desactivar la escalada de la violencia.\n3. Habilidades requeridas: Escucha activa, comunicación asertiva, empatía y manejo de las emociones.",
+        metrics: {
+          type: "Resolución de Conflictos",
+          means: "Mediación Policial In Situ / Escucha Activa",
+          law: "Ley 1801 de 2016 (Código Nacional de Seguridad y Convivencia)"
+        },
+        imageSrc: "atencion_caso_comercial_1784399958164.png",
+        scenario: {
+          title: "Conflicto Vecinal por Ruido y Basuras",
+          description: "Acudes a un requerimiento ciudadano donde dos vecinos están a punto de agredirse físicamente. Uno acusa al otro de ruido excesivo y de arrojar basuras en su puerta. Debes aplicar la mediación policial In Situ para resolver el conflicto.",
+          role: "Policía Mediador del Cuadrante.",
+          objectives: [
+            "Desescalar la agresividad y separar a las partes garantizando la seguridad.",
+            "Mantener la neutralidad y aplicar la escucha activa sin emitir juicios.",
+            "Guiar a las partes para que construyan un acuerdo de convivencia voluntario."
+          ]
+        },
+        designThinking: {
+          empatizar: {
+            question: "¿Por qué es fundamental que el policía no tome partido ni juzgue a ninguno de los vecinos durante el conflicto?",
+            placeholder: "Analiza el principio de imparcialidad y confianza...",
+            keywords: ["imparcialidad", "neutral", "juzgar", "confianza", "partido"]
+          },
+          definir: {
+            question: "Define los pasos del protocolo de mediación In Situ (desescalar, escuchar, proponer).",
+            placeholder: "Identifica la intervención temprana y la facilitación del diálogo...",
+            keywords: ["desescalar", "escuchar", "dialogar", "mediación", "acuerdo"]
+          },
+          idear: {
+            question: "¿Qué técnicas de comunicación usarías para que un vecino muy alterado baje la voz y comience a escuchar?",
+            placeholder: "Propón el tono de voz calmado, validación de emociones y pausas...",
+            keywords: ["tono calmado", "voz", "validar", "escucha activa", "empatía"]
+          },
+          prototipar: {
+            question: "Redacta el abordaje inicial y la invitación a conciliar que harías a las dos partes.",
+            placeholder: "Ej: 'Buenas noches, somos la Policía Nacional. Por favor, bajemos la voz. Vamos a escuchar a cada uno por turnos para llegar a un acuerdo...'",
+            keywords: ["buenas noches", "bajar la voz", "turnos", "escuchar", "acuerdo", "convivencia"]
+          }
+        },
+        evaluation: {
+          perfectKeywords: ["neutral", "imparcial", "escucha activa", "acuerdo", "turnos", "desescalar"],
+          iaResponseGood: "Excelente manejo de conflicto. Has asumido un rol imparcial y facilitador, logrando desescalar la situación a través del diálogo y permitiendo que los vecinos construyan su propio acuerdo.",
+          iaResponseRegular: "El abordaje es aceptable, pero recuerda que como mediador no debes imponer la solución, sino hacer preguntas orientadoras para que las partes lleguen a un pacto voluntario.",
+          iaResponseBad: "Procedimiento incorrecto. Tomar partido, imponer una solución arbitraria o amenazar inmediatamente con comparendos sin agotar la mediación (cuando aplica) anula el propósito preventivo del Código de Convivencia."
+        }
+      },
+      {
+        id: "porte-uniforme-comunicaciones",
+        title: "3. Porte del Uniforme y Radiocomunicaciones",
+        videoUrl: "https://www.youtube.com/embed/oS_bI6arJkc",
+        videoDescription: "Instrucciones de Uniformes y Comunicaciones (M4C4L1E y M4C4L3E):\n\n1. Obligaciones y Prohibiciones: Portar el uniforme con decoro y pulcritud. Prohibido usar el celular en servicio, comer en vía pública o desdibujar la imagen institucional.\n2. Elementos del Servicio: Portar de forma obligatoria el cinturón multipropósito con los elementos de dotación (radio, taser, esposa, bastón tonfa).\n3. Radiocomunicaciones: Utilizar la radio de manera efectiva, clara y precisa, usando las claves y jerga institucional correspondiente.",
+        metrics: {
+          type: "Disciplina Policial y Doctrina",
+          means: "Uso correcto del uniforme / Radio / Dotación",
+          law: "Reglamento de Uniformes y Régimen Disciplinario"
+        },
+        imageSrc: "uso_fuerza_taser_1784399968366.png",
+        scenario: {
+          title: "Revista de Presentación y Solicitud de Apoyo por Radio",
+          description: "Estás en el turno de vigilancia y un comandante pasa revista. Encuentra que tienes el uniforme incompleto. Minutos después, debes reportar una situación sospechosa por radio y pedir apoyo urgente. Demuestra tu pericia en ambas situaciones.",
+          role: "Patrullero en servicio de vigilancia.",
+          objectives: [
+            "Reconocer las obligaciones y prohibiciones del porte del uniforme.",
+            "Identificar la correcta ubicación del equipo en el cinturón multipropósito.",
+            "Transmitir un mensaje por radio de forma clara, concisa y bajo los protocolos de comunicación."
+          ]
+        },
+        designThinking: {
+          empatizar: {
+            question: "¿Cómo afecta a la percepción de seguridad del ciudadano verte usar el celular para asuntos personales o portar el uniforme desorganizado?",
+            placeholder: "Analiza el impacto en la imagen institucional y el respeto...",
+            keywords: ["imagen", "respeto", "seguridad", "celular", "desorganizado", "disciplina"]
+          },
+          definir: {
+            question: "Define las obligaciones principales sobre el cinturón multipropósito y qué elementos salvaguardan tu vida.",
+            placeholder: "Identifica radio, tonfa, arma de dotación, esposa...",
+            keywords: ["cinturón", "tonfa", "radio", "esposas", "dotación", "seguridad"]
+          },
+          idear: {
+            question: "¿Qué datos son indispensables al pedir apoyo por radio para que las demás patrullas lleguen rápido y seguras?",
+            placeholder: "Propón ubicación, descripción del sospechoso, tipo de arma, etc...",
+            keywords: ["ubicación", "dirección", "sospechoso", "apoyo", "claridad"]
+          },
+          prototipar: {
+            question: "Redacta la transmisión exacta por radio solicitando apoyo usando lenguaje claro y conciso.",
+            placeholder: "Ej: 'Central, de la patrulla del cuadrante, requerimos apoyo inmediato en la calle X con carrera Y, sujeto sospechoso armado...'",
+            keywords: ["central", "cuadrante", "apoyo", "inmediato", "ubicación", "armado"]
+          }
+        },
+        evaluation: {
+          perfectKeywords: ["central", "apoyo", "ubicación", "disciplina", "cinturón multipropósito", "imagen", "dotación"],
+          iaResponseGood: "Excelente dominio de la doctrina. Eres consciente de la disciplina en el porte del uniforme y lograste transmitir un mensaje radial claro, vital para salvaguardar tu vida y la de tus compañeros.",
+          iaResponseRegular: "Respuesta aceptable. Asegúrate de ser más preciso con la dirección y las características del evento al usar la radio, cada segundo cuenta en una emergencia.",
+          iaResponseBad: "Evaluación deficiente. Restarle importancia a la presentación personal afecta la disciplina policial, y dar un reporte confuso o incompleto por radio pone en riesgo la vida de las unidades de apoyo."
+        }
+      }
+    ]
   }
 ];
