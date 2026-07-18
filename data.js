@@ -11,14 +11,13 @@ const COURSES_DATA = [
       {
         id: "comunicacion-asertiva",
         title: "1. Habilidades y Protocolo de Atención Presencial",
-        videoUrl: "https://www.youtube.com/embed/cl7iUeFvy5E",
         videoDescription: "Instrucciones del Manual de Atención y Servicio al Ciudadano (Resolución 04180 de 2022):\n\n1. Protocolo de Atención Presencial Común (Art. 16):\n   - Saludo Obligatorio: 'Dios y Patria, buenos días/tardes/noches, mi nombre es (Grado, Nombre y Apellido), ¿En qué puedo servirle?'.\n   - Presentación Personal: Identificación siempre visible y uniforme impecable.\n   - Comportamiento: Prohibido realizar actividades personales (comer en el puesto de facción, chicle, maquillarse, usar celular personal o hablar con compañeros temas ajenos al servicio) frente al ciudadano.\n   - Primeros y Últimos 30 Segundos: Usar los primeros 30 segundos del contacto para sorprender favorablemente al ciudadano con cordialidad y respeto, y los últimos 30 segundos para reforzar la credibilidad y confianza institucional.\n   - Despedida formal: Agradecer al ciudadano por recurrir a la Policía, preguntar si se le ofrece algo más y dar un apretón de manos seguro.\n\n2. Habilidades Comunicativas Básicas (Art. 13):\n   - Amabilidad y cortesía, Tolerancia, Persuasión, Capacidad para asesorar/orientar, Autocontrol y Capacidad de Escucha Activa.",
         metrics: {
           type: "Protocolo de Atención Personal (Art. 16 - Res. 04180/2022)",
           means: "Saludar, Escuchar, Actuar (SEA Policía) / Habilidades del Art. 13",
           law: "Resolución 04180 de 2022 (Manual de Atención al Ciudadano)"
         },
-        imageSrc: "atencion_caso_comercial_1784399958164.png",
+        imageSrc: "ai_caso_atencion_presencial_1784407699958.png",
         scenarios: [
 {
           title: "Aplicación del Protocolo Común y Habilidades del Art. 13",
@@ -102,15 +101,14 @@ designThinking: {
       },
       {
         id: "atencion-preferencial",
-        title: "2. Atención Presencial Preferencial",
-        videoUrl: "https://www.youtube.com/embed/cl7iUeFvy5E", // Se mantiene el video doctrinal oficial
+        title: "2. Atención Presencial Preferencial", // Se mantiene el video doctrinal oficial
         videoDescription: "Instrucciones del Protocolo de Atención Presencial Preferencial (Art. 16, numeral 2 - Resolución 04180 de 2022):\n\n1. Beneficiarios prioritarios: Adultos mayores, mujeres embarazadas, niños, niñas y adolescentes, personas en situación de vulnerabilidad, grupos étnicos, personas en condición de discapacidad y personas de talla baja.\n2. Pautas para Adultos Mayores y Gestantes:\n   - Orientarlos de inmediato a las áreas destinadas en la sala de espera.\n   - Asignar turno preferencial de llegada.\n   - PROHIBIDO usar términos paternalistas o diminutivos (como 'abuelito', 'mamita', etc.).\n   - Escuchar con actitud de acompañamiento y verificar que la respuesta sea comprendida en lenguaje claro.\n3. Pautas para Víctimas (sufrieron menoscabo de derechos o daño por el conflicto/delitos):\n   - Escuchar atentamente sin prevención ni juicios de valor por su vestir o hablar (no hay estereotipos).\n   - No generar falsas expectativas; usar lenguaje sencillo sin tecnicismos.\n   - Garantizar la confidencialidad absoluta.\n4. Pautas para Personas en Condición de Discapacidad:\n   - Tratar a adultos con discapacidad con la madurez correspondiente (nunca tono aniñado o consentirles la cabeza).\n   - Mirar con naturalidad, preguntar antes de ayudar: '¿En qué puedo servirle?'.",
         metrics: {
           type: "Atención Preferencial (Art. 16 Numeral 2)",
           means: "Turno Preferencial / Trato Digno sin Diminutivos",
           law: "Resolución 04180 de 2022 / Ley 1346 de 2009"
         },
-        imageSrc: "atencion_caso_comercial_1784399958164.png",
+        imageSrc: "ai_caso_mecanismos_constitucionales_1784407738502.png",
         scenarios: [
 {
           title: "Atención a Poblaciones Vulnerables y Víctimas",
@@ -195,14 +193,13 @@ designThinking: {
       {
         id: "portafolio-servicios",
         title: "3. Portafolio de Servicios y Canales de PQRS",
-        videoUrl: "https://www.youtube.com/embed/dkWStFwfvOw",
         videoDescription: "Contenido del Portafolio de Servicios y Canales de Atención (Resolución 04180 de 2022):\n\n1. Servicios Clave del Portafolio:\n   - Recepcionar y Despachar Motivos de Policía: Gestión de emergencias y despachos a través de la Línea de Emergencia 123.\n   - Consulta de Antecedentes Judiciales: Expedición de información judicial en tiempo real.\n   - Revisión Técnica de Automotores: Verificación física de la procedencia lícita de vehículos.\n   - Denuncia Virtual: Sistema nacional para denunciar hurtos, extorsión y delitos informáticos.\n   - Atención de Emergencias Viales: Información en tiempo real del estado de vías y pico y placa.\n   - Incorporación Policial: Procesos de selección de Oficiales y Patrulleros.\n   - Oficinas de Atención al Ciudadano: 98 oficinas desconcentradas y 1423 puntos de atención de la Inspección General para la gestión de PQRS.\n   - Centros de Conciliación y Mediación: 13 centros nacionales para resolver civil, familia y convivencia de forma alternativa.\n\n2. Clasificación de Canales de PQRS:\n   - Presencial: Puntos OAC y Centros de Conciliación.\n   - Virtual: Plataforma ADenunciar, Portal de Servicios Internos (PSI) y correo lineadirecta@policia.gov.co.\n   - Telefónico: Línea de Integridad Policial (166) y línea nacional 018000 910112.",
         metrics: {
           type: "Portafolio de Servicios y PQRS (Art. 11)",
           means: "98 Oficinas OAC / 13 Centros de Conciliación / Línea 123",
           law: "Ley 1755 de 2015 / Resolución 04180 de 2022"
         },
-        imageSrc: "atencion_caso_comercial_1784399958164.png",
+        imageSrc: "ai_caso_procedimientos_convivencia_1784407753498.png",
         scenarios: [
 {
           title: "Orientación del Portafolio y Recepción de PQRS",
@@ -294,7 +291,6 @@ designThinking: {
       {
         id: "respeto-proteccion-dh",
         title: "3. Habilidades y Destrezas en la Protección de la Vida",
-        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         videoDescription: "Este video explica el estándar de protección al derecho a la vida y la integridad física. Instruye sobre las garantías y precauciones durante un allanamiento o ingreso excepcional por voces de auxilio (Art. 32 de la Constitución y la Ley 1801). Enfatiza en el respeto incondicional por la dignidad del ciudadano bajo custodia.",
         metrics: {
           type: "Procedimiento de Auxilio e Ingreso",
@@ -393,7 +389,6 @@ designThinking: {
       {
         id: "modelo-uso-fuerza",
         title: "4. Habilidades y Destrezas en el Uso de la Fuerza",
-        videoUrl: "https://www.youtube.com/embed/oS_bI6arJkc",
         videoDescription: "El video demuestra las técnicas físicas y tácticas de esposamiento (manos a la cabeza, manos atrás, reducción a piso) y los esquemas de movimientos con la tonfa policial y posiciones tácticas con armas de fuego. Adicionalmente, enseña el concepto de la triangulación de seguridad (agente de contacto y de seguridad).",
         metrics: {
           type: "Procedimiento de Control Táctico / Reducción",
@@ -492,14 +487,13 @@ designThinking: {
       {
         id: "mediacion-policial",
         title: "5. Mediación Policial y Código de Convivencia",
-        videoUrl: "https://www.youtube.com/embed/ck7LS7n7B8Y",
         videoDescription: "El video expone cómo opera la mediación policial en el marco de la convivencia ciudadana. Muestra técnicas de resolución alternativa de conflictos sociales, vecinales, escolares y familiares, y el diligenciamiento legal del Acta de Mediación conforme a la Ley 1801 de 2016.",
         metrics: {
           type: "Resolución Alternativa de Conflictos",
           means: "Mediación Comunitaria / Acta de Convivencia",
           law: "Ley 1801 de 2016 (Código de Seguridad y Convivencia)"
         },
-        imageSrc: "mediacion_policial_calle_1784399979535.png",
+        imageSrc: "ai_caso_mediacion_vecinal_1784407707633.png",
         scenarios: [
 {
           title: "Mediación Policial frente al Servicio Público de Policía",
@@ -584,7 +578,6 @@ designThinking: {
       {
         id: "captura-incautacion",
         title: "6. Procedimientos de Captura e Incautación",
-        videoUrl: "https://www.youtube.com/embed/QieQW7-4NRc",
         videoDescription: "El video instruye en los pasos del procedimiento judicial de captura y la incautación de armas bajo el Decreto 2535. Explica cómo realizar un registro minucioso, la lectura formal de derechos del capturado (Artículo 303 de CPP), y el inicio seguro de la cadena de custodia de elementos incautados.",
         metrics: {
           type: "Procedimiento Judicial / Administrativo",
@@ -676,7 +669,6 @@ designThinking: {
       {
         id: "puesto-control-transito",
         title: "7. Puesto de Control y Accidentes de Tránsito",
-        videoUrl: "https://www.youtube.com/embed/aXXeg6wiOF4",
         videoDescription: "El video instruye en las directrices de seguridad vial: el correcto montaje y señalización de un Puesto de Control en carretera (distancias, conos, chalecos) y el protocolo de primer respondiente en caso de colisiones viales con lesionados, incluyendo la preservación técnica del croquis.",
         metrics: {
           type: "Seguridad Vial / Control Vial",
@@ -768,7 +760,6 @@ designThinking: {
       {
         id: "porte-uniforme",
         title: "8. Porte de Uniforme y Elementos de Dotación",
-        videoUrl: "https://www.youtube.com/embed/oS_bI6arJkc",
         videoDescription: "En este video se hace énfasis en la importancia reglamentaria y legal del uso correcto del uniforme y los elementos de dotación (taser, tonfa, chaleco blindado, radio) por seguridad y autocuidado. Asimismo, explica la responsabilidad disciplinaria asociada al abandono o mal uso de los recursos públicos de policía.",
         metrics: {
           type: "Inspección Disciplinaria / Autocuidado",
@@ -867,14 +858,13 @@ designThinking: {
       {
         id: "garantizar-respetar-ddhh",
         title: "1. Garantizar, Respetar y Proteger los DDHH",
-        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         videoDescription: "Instrucciones M2C1L1 - El policía debe garantizar, respetar y proteger los Derechos Humanos en todo momento de su servicio:\n\n1. En caso de manifestaciones y desorden público: Mantener la calma, usar los elementos de protección (casco, escudo) y cumplir el ordenamiento jurídico y el D.I.H.\n2. Principios de uso de fuerza: Proporcionalidad, Legalidad y Necesidad absoluta, primando siempre la vida.\n3. Protección ciudadana: Es deber constitucional brindar atención médica y auxilio inmediato a cualquier persona lesionada.",
         metrics: {
           type: "Respeto y Protección de DDHH",
           means: "Uso de la Fuerza Proporcional / Auxilio a Heridos",
           law: "Constitución Política, DD.HH y D.I.H."
         },
-        imageSrc: "uso_fuerza_taser_1784399968366.png",
+        imageSrc: "ai_caso_ddhh_primeros_auxilios_1784407714247.png",
         scenarios: [
 {
           title: "Protección en Manifestaciones y Desorden Público",
@@ -959,14 +949,13 @@ designThinking: {
       {
         id: "enfoque-de-genero",
         title: "2. Enfoque de Género y No Discriminación",
-        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         videoDescription: "Instrucciones M2C1L2 - Conocer el enfoque de género y el principio de no discriminación en la actividad de policía:\n\n1. Es mandato institucional ofrecer un trato digno e igualitario a todas las personas, respetando su identidad de género.\n2. Evitar prejuicios o sesgos, así como estereotipos que deriven en la revictimización de poblaciones vulnerables.\n3. Activación de la Ruta de Atención Integral para víctimas de violencias basadas en género (VBG).",
         metrics: {
           type: "Enfoque de Género / Inclusión",
           means: "Trato Digno / Ruta VBG / Cero Estereotipos",
           law: "Constitución Política (Principio de Igualdad y No Discriminación)"
         },
-        imageSrc: "atencion_caso_comercial_1784399958164.png",
+        imageSrc: "ai_caso_enfoque_genero_1784407721258.png",
         scenarios: [
 {
           title: "Atención de Caso con Enfoque de Género y Diversidad",
@@ -1051,14 +1040,13 @@ designThinking: {
       {
         id: "mecanismos-proteccion",
         title: "3. Mecanismos de Protección Constitucional",
-        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         videoDescription: "Instrucciones M2C1L3 - Conocer y orientar al ciudadano sobre los mecanismos de protección constitucional de Derechos Humanos:\n\n1. Acción de Tutela (Art. 86): Para reclamar la protección inmediata de derechos fundamentales vulnerados (vida, salud, buen nombre, etc.).\n2. Habeas Corpus (Art. 30): Para proteger el derecho a la libertad personal ante capturas o detenciones ilegales o prolongadas indebidamente.\n3. Derecho de Petición (Art. 23): Para presentar solicitudes respetuosas y recibir pronta respuesta institucional.",
         metrics: {
           type: "Asesoría Constitucional",
           means: "Acción de Tutela / Habeas Corpus / Derecho Petición",
           law: "Constitución Política de Colombia"
         },
-        imageSrc: "puesto_control_transito_p_1784399989800.png",
+        imageSrc: "ai_caso_mecanismos_constitucionales_1784407738502.png",
         scenarios: [
 {
           title: "Orientación Ciudadana sobre Mecanismos de Protección",
@@ -1150,14 +1138,13 @@ designThinking: {
       {
         id: "procedimiento-transito",
         title: "1. Tránsito: Puesto de Control y Accidentes",
-        videoUrl: "https://www.youtube.com/embed/aXXeg6wiOF4",
         videoDescription: "Instrucciones de Tránsito (M4C3L6E y M4C3L8E):\n\n1. Puesto de Control: Instalar la señalización reglamentaria, mantener medidas de seguridad táctica y realizar un abordaje cortés a los vehículos.\n2. Accidentes de Tránsito: Acordonar el área, solicitar asistencia médica prioritaria para heridos y salvaguardar la escena sin alterar el material probatorio (fijación).",
         metrics: {
           type: "Seguridad Vial y Tránsito",
           means: "Puesto de Control / Acordonamiento / Primer Respondiente",
           law: "Código Nacional de Tránsito (Ley 769 de 2002)"
         },
-        imageSrc: "puesto_control_transito_p_1784399989800.png",
+        imageSrc: "ai_caso_transito_puesto_control_1784407746273.png",
         scenarios: [
 {
           title: "Accidente con Lesionados cerca al Puesto de Control",
@@ -1242,14 +1229,13 @@ designThinking: {
       {
         id: "mediacion-policial",
         title: "2. Mediación Policial y Resolución de Conflictos",
-        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         videoDescription: "Instrucciones Mediación Policial (M4C1L1E y M4C1L3E):\n\n1. El rol del mediador policial es neutral, imparcial y facilitador. No impone soluciones, ayuda a las partes a encontrarlas.\n2. Se debe aplicar el protocolo de mediación INSITU (en el lugar de los hechos) para desactivar la escalada de la violencia.\n3. Habilidades requeridas: Escucha activa, comunicación asertiva, empatía y manejo de las emociones.",
         metrics: {
           type: "Resolución de Conflictos",
           means: "Mediación Policial In Situ / Escucha Activa",
           law: "Ley 1801 de 2016 (Código Nacional de Seguridad y Convivencia)"
         },
-        imageSrc: "atencion_caso_comercial_1784399958164.png",
+        imageSrc: "ai_caso_mediacion_vecinal_1784407707633.png",
         scenarios: [
 {
           title: "Conflicto Vecinal por Ruido y Basuras",
@@ -1334,14 +1320,13 @@ designThinking: {
       {
         id: "porte-uniforme-comunicaciones",
         title: "3. Porte del Uniforme y Radiocomunicaciones",
-        videoUrl: "https://www.youtube.com/embed/oS_bI6arJkc",
         videoDescription: "Instrucciones de Uniformes y Comunicaciones (M4C4L1E y M4C4L3E):\n\n1. Obligaciones y Prohibiciones: Portar el uniforme con decoro y pulcritud. Prohibido usar el celular en servicio, comer en vía pública o desdibujar la imagen institucional.\n2. Elementos del Servicio: Portar de forma obligatoria el cinturón multipropósito con los elementos de dotación (radio, taser, esposa, bastón tonfa).\n3. Radiocomunicaciones: Utilizar la radio de manera efectiva, clara y precisa, usando las claves y jerga institucional correspondiente.",
         metrics: {
           type: "Disciplina Policial y Doctrina",
           means: "Uso correcto del uniforme / Radio / Dotación",
           law: "Reglamento de Uniformes y Régimen Disciplinario"
         },
-        imageSrc: "uso_fuerza_taser_1784399968366.png",
+        imageSrc: "ai_caso_porte_uniforme_radio_1784407761368.png",
         scenarios: [
 {
           title: "Revista de Presentación y Solicitud de Apoyo por Radio",
