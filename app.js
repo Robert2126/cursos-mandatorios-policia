@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     theme: "light",
     questions: [], // Guardará las 100 preguntas del JSON
     currentQuestionIndex: 0,
-    questionsScore: { correct: 0, incorrect: 0 }
+    questionsScore: { correct: 0, incorrect: 0 },
+    currentScenario: null // Guarda el escenario aleatorio seleccionado para este módulo
   };
 
   // Elementos del DOM
@@ -206,15 +207,23 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const moduleData = COURSES_DATA[courseIdx].modules[modIdx];
     
+    // Lógica dinámica: Seleccionar un escenario al azar si existe un array 'scenarios'
+    if (moduleData.scenarios && moduleData.scenarios.length > 0) {
+      const randomIndex = Math.floor(Math.random() * moduleData.scenarios.length);
+      state.currentScenario = moduleData.scenarios[randomIndex];
+    } else {
+      state.currentScenario = moduleData.scenario;
+    }
+    
     // Cargar textos en la interfaz
     moduleCourseBadge.textContent = COURSES_DATA[courseIdx].title;
     moduleTitle.textContent = moduleData.title;
-    moduleScenarioDesc.textContent = moduleData.scenario.description;
-    moduleRoleText.textContent = moduleData.scenario.role;
+    moduleScenarioDesc.textContent = state.currentScenario.description;
+    moduleRoleText.textContent = state.currentScenario.role;
     
     // Limpiar y cargar objetivos
     moduleObjectivesList.innerHTML = "";
-    moduleData.scenario.objectives.forEach(obj => {
+    state.currentScenario.objectives.forEach(obj => {
       const li = document.createElement("li");
       li.textContent = obj;
       moduleObjectivesList.appendChild(li);
@@ -258,15 +267,25 @@ document.addEventListener("DOMContentLoaded", () => {
       videoCard.style.display = "none";
     }
 
-    // Configurar Imagen de Caso
-    const caseImageContainer = document.getElementById("module-case-image-container");
-    const caseImage = document.getElementById("module-case-image");
-    if (moduleData.imageSrc) {
-      caseImage.src = moduleData.imageSrc;
-      caseImageContainer.style.display = "block";
+    // Configurar Imagen o Video Principal del Escenario
+    const scenarioImg = document.getElementById("module-scenario-img");
+    const scenarioVideo = document.getElementById("module-scenario-video");
+    
+    // Si el caso dinámico tiene video, o si el módulo principal tiene videoUrl
+    const mediaUrl = state.currentScenario.videoUrl || moduleData.videoUrl;
+    
+    if (mediaUrl && (mediaUrl.includes("youtube.com") || mediaUrl.includes(".mp4"))) {
+      scenarioImg.style.display = "none";
+      scenarioVideo.style.display = "block";
+      scenarioVideo.src = mediaUrl;
+    } else if (moduleData.imageSrc || state.currentScenario.imageSrc) {
+      scenarioVideo.src = "";
+      scenarioVideo.style.display = "none";
+      scenarioImg.style.display = "block";
+      scenarioImg.src = state.currentScenario.imageSrc || moduleData.imageSrc;
     } else {
-      caseImage.src = "";
-      caseImageContainer.style.display = "none";
+      scenarioVideo.style.display = "none";
+      scenarioImg.style.display = "none";
     }
 
     // Restaurar respuestas previas si existen
@@ -326,53 +345,58 @@ document.addEventListener("DOMContentLoaded", () => {
       inputPrototipar.value
     ].join(" ").toLowerCase();
 
-    // Análisis semántico simulado basado en palabras clave normativas
-    const perfectKeywords = currentModule.evaluation.perfectKeywords;
+    // Análisis semántico optimizado basado en palabras clave y variantes
+    const perfectKeywords = state.currentScenario.evaluation.perfectKeywords || currentModule.evaluation.perfectKeywords;
     let matchesCount = 0;
-    const foundKeywords = [];
+    const missingKeywords = [];
 
     perfectKeywords.forEach(kw => {
-      if (answersText.includes(kw.toLowerCase())) {
+      // Uso de expresiones regulares para identificar palabras clave con flexibilidad (plurales/femeninos)
+      const regex = new RegExp(kw.slice(0, -1), 'i'); 
+      if (answersText.match(regex)) {
         matchesCount++;
-        foundKeywords.push(kw);
+      } else {
+        missingKeywords.push(kw);
       }
     });
 
     // Calcular puntaje
     const matchPercentage = perfectKeywords.length > 0 ? (matchesCount / perfectKeywords.length) * 100 : 100;
-    // Dar un puntaje base de 30% por responder y sumarle el proporcional
-    let finalScore = Math.min(100, Math.round(30 + (matchPercentage * 0.7)));
-
-    // Si está muy vacío, penalizar severamente
-    if (answersText.trim().length < 40) {
-      finalScore = 15;
+    
+    // Penalización estricta por respuestas superficiales o genéricas
+    let finalScore = Math.min(100, Math.round(20 + (matchPercentage * 0.8)));
+    
+    if (answersText.trim().length < 60) {
+      finalScore = Math.min(finalScore, 15); // Castigo por falta de argumentación
     }
 
     // Iniciar animación del chat de IA
     iaChatBox.innerHTML = "";
-    iaStatusText.textContent = "Evaluando propuesta...";
+    iaStatusText.textContent = "Analizando marco normativo y procedimiento...";
     
     // Crear mensaje del usuario
-    appendChatMessage("user", "Oficial de Policía", `Presento mi plan de acción de 5 fases basado en Design Thinking para resolver el caso de '${currentModule.scenario.title}'.`);
+    appendChatMessage("user", "Oficial de Policía", `Presento mi procedimiento de acción policial para el caso: '${state.currentScenario.title}'.`);
 
-    // Retrasar respuesta de la IA para simular procesamiento cognitivo
+    // Retrasar respuesta de la IA para simular procesamiento cognitivo profundo
     setTimeout(() => {
       let feedback = "";
       let verdictTitle = "";
       let verdictDesc = "";
       
+      const iaEvaluationObj = state.currentScenario.evaluation || currentModule.evaluation;
+
       if (finalScore >= 80) {
-        feedback = currentModule.evaluation.iaResponseGood;
+        feedback = iaEvaluationObj.iaResponseGood;
         verdictTitle = "Procedimiento Aprobado";
-        verdictDesc = "Excelente desempeño. Aplicas las leyes y protocolos de forma correcta y humana.";
+        verdictDesc = "Excelente desempeño técnico y táctico.";
       } else if (finalScore >= 50) {
-        feedback = currentModule.evaluation.iaResponseRegular;
+        feedback = iaEvaluationObj.iaResponseRegular + ` Te faltó considerar conceptos clave como: ${missingKeywords.join(", ")}.`;
         verdictTitle = "Requiere Ajustes";
-        verdictDesc = "Tu procedimiento cumple parcialmente, pero debes afinar los fundamentos jurídicos y de comunicación.";
+        verdictDesc = "Procedimiento parcialmente correcto, pero con vacíos doctrinales.";
       } else {
-        feedback = currentModule.evaluation.iaResponseBad;
+        feedback = iaEvaluationObj.iaResponseBad + ` Omitiste elementos vitales como: ${missingKeywords.join(", ")}.`;
         verdictTitle = "Procedimiento No Aprobado";
-        verdictDesc = "Peligro de sanción legal o violación de DDHH. Revisa la normativa del módulo.";
+        verdictDesc = "Peligro de sanción legal o violación de DDHH.";
       }
 
       appendChatMessage("ia", "Asistente IA de Procedimiento", feedback);

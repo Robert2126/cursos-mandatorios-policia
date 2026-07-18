@@ -19,7 +19,8 @@ const COURSES_DATA = [
           law: "Resolución 04180 de 2022 (Manual de Atención al Ciudadano)"
         },
         imageSrc: "atencion_caso_comercial_1784399958164.png",
-        scenario: {
+        scenarios: [
+{
           title: "Aplicación del Protocolo Común y Habilidades del Art. 13",
           description: "Estás de facción en el puesto de información de la estación de policía. Un ciudadano ingresa de manera abrupta e insultando a los uniformados debido a una inconformidad. Debes aplicar estrictamente el protocolo del Artículo 16 de la Resolución 04180 (Saludo reglamentario, control de comportamiento, voz y despedida) y las habilidades de amabilidad, tolerancia y autocontrol para canalizar el caso.",
           role: "Patrullero del área de atención al ciudadano en Estación de Policía.",
@@ -29,7 +30,48 @@ const COURSES_DATA = [
             "Utilizar la técnica de los primeros y últimos 30 segundos y realizar la despedida institucional."
           ]
         },
-        designThinking: {
+{
+          title: "Aplicación del Protocolo Común y Habilidades del Art. 13",
+          description: "Estás de facción en el puesto de información de la estación de policía. Un ciudadana en estado de embriaguez llega llorando e insultando a los uniformados debido a una presunta negligencia médica. Debes aplicar estrictamente el protocolo del Artículo 16 de la Resolución 04180 (Saludo reglamentario, control de comportamiento, voz y despedida) y las habilidades de amabilidad, tolerancia y autocontrol para canalizar el caso.",
+          role: "Patrullero del área de atención al ciudadano en Estación de Policía.",
+          objectives: [
+            "Iniciar la atención con el saludo reglamentario de la Resolución 04180 ('Dios y Patria...').",
+            "Aplicar las pautas de comportamiento del puesto de trabajo y autocontrol ante insultos.",
+            "Utilizar la técnica de los primeros y últimos 30 segundos y realizar la despedida institucional."
+          ]
+        },
+{
+          title: "Aplicación del Protocolo Común y Habilidades del Art. 13",
+          description: "Estás de facción en el puesto de información de la estación de policía. Un grupo de jóvenes llega exaltado e insultando a los uniformados debido a una hurto de sus pertenencias. Debes aplicar estrictamente el protocolo del Artículo 16 de la Resolución 04180 (Saludo reglamentario, control de comportamiento, voz y despedida) y las habilidades de amabilidad, tolerancia y autocontrol para canalizar el caso.",
+          role: "Patrullero del área de atención al ciudadano en Estación de Policía.",
+          objectives: [
+            "Iniciar la atención con el saludo reglamentario de la Resolución 04180 ('Dios y Patria...').",
+            "Aplicar las pautas de comportamiento del puesto de trabajo y autocontrol ante insultos.",
+            "Utilizar la técnica de los primeros y últimos 30 segundos y realizar la despedida institucional."
+          ]
+        },
+{
+          title: "Aplicación del Protocolo Común y Habilidades del Art. 13",
+          description: "Estás de facción en el puesto de información de la estación de policía. Un adulto mayor ingresa de manera desorientada e insultando a los uniformados debido a una inconformidad. Debes aplicar estrictamente el protocolo del Artículo 16 de la Resolución 04180 (Saludo reglamentario, control de comportamiento, voz y despedida) y las habilidades de amabilidad, tolerancia y autocontrol para canalizar el caso.",
+          role: "Patrullero del área de atención al adulto mayor en Estación de Policía.",
+          objectives: [
+            "Iniciar la atención con el saludo reglamentario de la Resolución 04180 ('Dios y Patria...').",
+            "Aplicar las pautas de comportamiento del puesto de trabajo y autocontrol ante insultos.",
+            "Utilizar la técnica de los primeros y últimos 30 segundos y realizar la despedida institucional."
+          ]
+        },
+{
+          title: "Aplicación del Protocolo Común y Habilidades del Art. 13",
+          description: "Estás de facción en el puesto de información de la estación de policía. Un turista extranjero ingresa de manera angustiada e insultando a los uniformados debido a una inconformidad. Debes aplicar estrictamente el protocolo del Artículo 16 de la Resolución 04180 (Saludo reglamentario, control de comportamiento, voz y despedida) y las habilidades de amabilidad, tolerancia y autocontrol para canalizar el caso.",
+          role: "Patrullero del área de atención al turista extranjero en Estación de Policía.",
+          objectives: [
+            "Iniciar la atención con el saludo reglamentario de la Resolución 04180 ('Dios y Patria...').",
+            "Aplicar las pautas de comportamiento del puesto de trabajo y autocontrol ante insultos.",
+            "Utilizar la técnica de los primeros y últimos 30 segundos y realizar la despedida institucional."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Cómo influye el cumplimiento estricto del protocolo de presentación personal y comportamiento en un ciudadano exaltado durante los primeros 30 segundos?",
             placeholder: "Analiza el impacto del saludo formal de Dios y Patria y el evitar distracciones (celular, charlas)...",
@@ -69,7 +111,8 @@ const COURSES_DATA = [
           law: "Resolución 04180 de 2022 / Ley 1346 de 2009"
         },
         imageSrc: "atencion_caso_comercial_1784399958164.png",
-        scenario: {
+        scenarios: [
+{
           title: "Atención a Poblaciones Vulnerables y Víctimas",
           description: "Ingresa a la Oficina de Atención al Ciudadano un adulto mayor que manifiesta ser víctima de desplazamiento forzado y no sabe cómo solicitar orientación. Además, en la sala se encuentra una persona sorda esperando turno. Debes aplicar las directrices del Protocolo Preferencial de la Resolución 04180 de 2022.",
           role: "Encargado de la Oficina de Atención al Ciudadano (OAC).",
@@ -79,7 +122,48 @@ const COURSES_DATA = [
             "Orientar a la persona en condición de discapacidad con respeto, naturalidad y de acuerdo a su autonomía."
           ]
         },
-        designThinking: {
+{
+          title: "Atención a Poblaciones Vulnerables y Víctimas",
+          description: "Ingresa a la Oficina de Atención al Ciudadano un adulto mayor que manifiesta ser víctima de desplazamiento forzado y no sabe cómo solicitar orientación. Además, en la sala se encuentra una persona sorda esperando turno. Debes aplicar las directrices del Protocolo Preferencial de la Resolución 04180 de 2022.",
+          role: "Encargado de la Oficina de Atención al Ciudadano (OAC).",
+          objectives: [
+            "Aplicar el protocolo de adultos mayores evitando términos paternalistas ('abuelito').",
+            "Atender la condición de víctima garantizando confidencialidad y sin tecnicismos ni falsas expectativas.",
+            "Orientar a la persona en condición de discapacidad con respeto, naturalidad y de acuerdo a su autonomía."
+          ]
+        },
+{
+          title: "Atención a Poblaciones Vulnerables y Víctimas",
+          description: "Ingresa a la Oficina de Atención al Ciudadano un adulto mayor que manifiesta ser víctima de desplazamiento forzado y no sabe cómo solicitar orientación. Además, en la sala se encuentra una persona sorda esperando turno. Debes aplicar las directrices del Protocolo Preferencial de la Resolución 04180 de 2022.",
+          role: "Encargado de la Oficina de Atención al Ciudadano (OAC).",
+          objectives: [
+            "Aplicar el protocolo de adultos mayores evitando términos paternalistas ('abuelito').",
+            "Atender la condición de víctima garantizando confidencialidad y sin tecnicismos ni falsas expectativas.",
+            "Orientar a la persona en condición de discapacidad con respeto, naturalidad y de acuerdo a su autonomía."
+          ]
+        },
+{
+          title: "Atención a Poblaciones Vulnerables y Víctimas",
+          description: "Ingresa a la Oficina de Atención al Ciudadano un adulto mayor que manifiesta ser víctima de desplazamiento forzado y no sabe cómo solicitar orientación. Además, en la sala se encuentra una persona sorda esperando turno. Debes aplicar las directrices del Protocolo Preferencial de la Resolución 04180 de 2022.",
+          role: "Encargado de la Oficina de Atención al Ciudadano (OAC).",
+          objectives: [
+            "Aplicar el protocolo de adultos mayores evitando términos paternalistas ('abuelito').",
+            "Atender la condición de víctima garantizando confidencialidad y sin tecnicismos ni falsas expectativas.",
+            "Orientar a la persona en condición de discapacidad con respeto, naturalidad y de acuerdo a su autonomía."
+          ]
+        },
+{
+          title: "Atención a Poblaciones Vulnerables y Víctimas",
+          description: "Ingresa a la Oficina de Atención al Ciudadano un adulto mayor que manifiesta ser víctima de desplazamiento forzado y no sabe cómo solicitar orientación. Además, en la sala se encuentra una persona sorda esperando turno. Debes aplicar las directrices del Protocolo Preferencial de la Resolución 04180 de 2022.",
+          role: "Encargado de la Oficina de Atención al Ciudadano (OAC).",
+          objectives: [
+            "Aplicar el protocolo de adultos mayores evitando términos paternalistas ('abuelito').",
+            "Atender la condición de víctima garantizando confidencialidad y sin tecnicismos ni falsas expectativas.",
+            "Orientar a la persona en condición de discapacidad con respeto, naturalidad y de acuerdo a su autonomía."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Por qué el uso de términos paternalistas como 'abuelito' o tratar como niños a adultos con discapacidad afecta su dignidad en el servicio?",
             placeholder: "Analiza el derecho al trato digno, la autonomía personal y la inclusión social...",
@@ -119,7 +203,8 @@ const COURSES_DATA = [
           law: "Ley 1755 de 2015 / Resolución 04180 de 2022"
         },
         imageSrc: "atencion_caso_comercial_1784399958164.png",
-        scenario: {
+        scenarios: [
+{
           title: "Orientación del Portafolio y Recepción de PQRS",
           description: "Un ciudadano acude al CAI para reportar la pérdida de su motocicleta, consultar si tiene antecedentes pendientes para un empleo, y quejarse por el maltrato físico de una patrulla. Debes canalizar estos tres requerimientos utilizando los servicios y oficinas específicas del portafolio.",
           role: "Integrante de patrulla orientador en CAI.",
@@ -129,7 +214,48 @@ const COURSES_DATA = [
             "Guiar la consulta de antecedentes judiciales a través del canal virtual oficial de la institución."
           ]
         },
-        designThinking: {
+{
+          title: "Orientación del Portafolio y Recepción de PQRS",
+          description: "Un ciudadano acude al CAI para reportar la pérdida de su motocicleta, consultar si tiene antecedentes pendientes para un empleo, y quejarse por el maltrato físico de una patrulla. Debes canalizar estos tres requerimientos utilizando los servicios y oficinas específicas del portafolio.",
+          role: "Integrante de patrulla orientador en CAI.",
+          objectives: [
+            "Remitir la queja disciplinaria al canal adecuado (Oficinas OAC de la Inspección General o correo lineadirecta@policia.gov.co).",
+            "Orientar el caso de la motocicleta (Línea 123 / Denuncia Virtual ADenunciar) y explicar la revisión técnica de automotores.",
+            "Guiar la consulta de antecedentes judiciales a través del canal virtual oficial de la institución."
+          ]
+        },
+{
+          title: "Orientación del Portafolio y Recepción de PQRS",
+          description: "Un ciudadano acude al CAI para reportar la pérdida de su motocicleta, consultar si tiene antecedentes pendientes para un empleo, y quejarse por el maltrato físico de una patrulla. Debes canalizar estos tres requerimientos utilizando los servicios y oficinas específicas del portafolio.",
+          role: "Integrante de patrulla orientador en CAI.",
+          objectives: [
+            "Remitir la queja disciplinaria al canal adecuado (Oficinas OAC de la Inspección General o correo lineadirecta@policia.gov.co).",
+            "Orientar el caso de la motocicleta (Línea 123 / Denuncia Virtual ADenunciar) y explicar la revisión técnica de automotores.",
+            "Guiar la consulta de antecedentes judiciales a través del canal virtual oficial de la institución."
+          ]
+        },
+{
+          title: "Orientación del Portafolio y Recepción de PQRS",
+          description: "Un adulto mayor acude al CAI para reportar la pérdida de su motocicleta, consultar si tiene antecedentes pendientes para un empleo, y quejarse por el maltrato físico de una patrulla. Debes canalizar estos tres requerimientos utilizando los servicios y oficinas específicas del portafolio.",
+          role: "Integrante de patrulla orientador en CAI.",
+          objectives: [
+            "Remitir la queja disciplinaria al canal adecuado (Oficinas OAC de la Inspección General o correo lineadirecta@policia.gov.co).",
+            "Orientar el caso de la motocicleta (Línea 123 / Denuncia Virtual ADenunciar) y explicar la revisión técnica de automotores.",
+            "Guiar la consulta de antecedentes judiciales a través del canal virtual oficial de la institución."
+          ]
+        },
+{
+          title: "Orientación del Portafolio y Recepción de PQRS",
+          description: "Un turista extranjero acude al CAI para reportar la pérdida de su motocicleta, consultar si tiene antecedentes pendientes para un empleo, y quejarse por el maltrato físico de una patrulla. Debes canalizar estos tres requerimientos utilizando los servicios y oficinas específicas del portafolio.",
+          role: "Integrante de patrulla orientador en CAI.",
+          objectives: [
+            "Remitir la queja disciplinaria al canal adecuado (Oficinas OAC de la Inspección General o correo lineadirecta@policia.gov.co).",
+            "Orientar el caso de la motocicleta (Línea 123 / Denuncia Virtual ADenunciar) y explicar la revisión técnica de automotores.",
+            "Guiar la consulta de antecedentes judiciales a través del canal virtual oficial de la institución."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Qué temores presenta un ciudadano al interponer una queja contra uniformados en el mismo CAI y cómo el portafolio descentralizado de la Inspección General le da tranquilidad?",
             placeholder: "Analiza el papel de las 98 oficinas de la Inspección General y el correo lineadirecta@policia.gov.co en la transparencia...",
@@ -176,7 +302,8 @@ const COURSES_DATA = [
           law: "Artículo 32 de la Constitución Política de Colombia / Ley 1801"
         },
         imageSrc: "uso_fuerza_taser_1784399968366.png",
-        scenario: {
+        scenarios: [
+{
           title: "Protección del Derecho a la Vida en Procedimientos Policiales",
           description: "La patrulla acude a una riña intrafamiliar donde un sujeto está agrediendo físicamente a su pareja dentro de una vivienda y amenaza con matarla. El agresor grita que nadie puede entrar porque es propiedad privada. Tu prioridad absoluta es proteger la vida de la víctima respetando los marcos constitucionales.",
           role: "Integrante del cuadrante de policía respondiendo a la emergencia.",
@@ -186,7 +313,48 @@ const COURSES_DATA = [
             "Neutralizar la amenaza sin violar los Derechos Humanos del agresor una vez sometido."
           ]
         },
-        designThinking: {
+{
+          title: "Protección del Derecho a la Vida en Procedimientos Policiales",
+          description: "La patrulla acude a una riña intrafamiliar donde un sujeto está agrediendo físicamente a su pareja dentro de una vivienda y amenaza con matarla. El agresor grita que nadie puede entrar porque es propiedad privada. Tu prioridad absoluta es proteger la vida de la víctima respetando los marcos constitucionales.",
+          role: "Integrante del cuadrante de policía respondiendo a la emergencia.",
+          objectives: [
+            "Identificar el deber de protección inmediata del derecho a la vida por encima de otras consideraciones.",
+            "Reconocer las causales constitucionales para el ingreso a inmueble sin orden escrita (vulneración de derechos / flagrancia).",
+            "Neutralizar la amenaza sin violar los Derechos Humanos del agresor una vez sometido."
+          ]
+        },
+{
+          title: "Protección del Derecho a la Vida en Procedimientos Policiales",
+          description: "La patrulla acude a una riña intrafamiliar donde un sujeto está agrediendo físicamente a su pareja dentro de una vivienda y amenaza con matarla. El agresor grita que nadie puede entrar porque es propiedad privada. Tu prioridad absoluta es proteger la vida de la víctima respetando los marcos constitucionales.",
+          role: "Integrante del cuadrante de policía respondiendo a la emergencia.",
+          objectives: [
+            "Identificar el deber de protección inmediata del derecho a la vida por encima de otras consideraciones.",
+            "Reconocer las causales constitucionales para el ingreso a inmueble sin orden escrita (vulneración de derechos / flagrancia).",
+            "Neutralizar la amenaza sin violar los Derechos Humanos del agresor una vez sometido."
+          ]
+        },
+{
+          title: "Protección del Derecho a la Vida en Procedimientos Policiales",
+          description: "La patrulla acude a una riña intrafamiliar donde un sujeto está agrediendo físicamente a su pareja dentro de una vivienda y amenaza con matarla. El agresor grita que nadie puede entrar porque es propiedad privada. Tu prioridad absoluta es proteger la vida de la víctima respetando los marcos constitucionales.",
+          role: "Integrante del cuadrante de policía respondiendo a la emergencia.",
+          objectives: [
+            "Identificar el deber de protección inmediata del derecho a la vida por encima de otras consideraciones.",
+            "Reconocer las causales constitucionales para el ingreso a inmueble sin orden escrita (vulneración de derechos / flagrancia).",
+            "Neutralizar la amenaza sin violar los Derechos Humanos del agresor una vez sometido."
+          ]
+        },
+{
+          title: "Protección del Derecho a la Vida en Procedimientos Policiales",
+          description: "La patrulla acude a una riña intrafamiliar donde un sujeto está agrediendo físicamente a su pareja dentro de una vivienda y amenaza con matarla. El agresor grita que nadie puede entrar porque es propiedad privada. Tu prioridad absoluta es proteger la vida de la víctima respetando los marcos constitucionales.",
+          role: "Integrante del cuadrante de policía respondiendo a la emergencia.",
+          objectives: [
+            "Identificar el deber de protección inmediata del derecho a la vida por encima de otras consideraciones.",
+            "Reconocer las causales constitucionales para el ingreso a inmueble sin orden escrita (vulneración de derechos / flagrancia).",
+            "Neutralizar la amenaza sin violar los Derechos Humanos del agresor una vez sometido."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "@Cuáles son los riesgos de vida inminentes para la víctima? ¿Cómo se afecta la integridad de los involucrados?",
             placeholder: "Analiza la gravedad de la agresión y la vulnerabilidad de la víctima en este escenario...",
@@ -233,7 +401,8 @@ const COURSES_DATA = [
           law: "Resolución 02903 de 2017 (Reglamento Uso de la Fuerza)"
         },
         imageSrc: "uso_fuerza_taser_1784399968366.png",
-        scenario: {
+        scenarios: [
+{
           title: "Uso Proporcional, Esposamiento y Posiciones Tácticas",
           description: "Durante un patrullaje nocturno, interceptas a un sospechoso que coincide con la descripción de un autor de hurtos recientes. Al solicitarle un registro, el ciudadano reacciona de forma hostil, empuja al uniformado e intenta sacar un objeto metálico de su cinturón. Debes aplicar el modelo diferenciado y las técnicas tácticas (triangulación, tonfa, esposamiento).",
           role: "Patrullero en labor de control y registro de personas.",
@@ -243,7 +412,48 @@ const COURSES_DATA = [
             "Desplegar la tonfa o dispositivos menos letales y realizar el esposamiento reglamentario."
           ]
         },
-        designThinking: {
+{
+          title: "Uso Proporcional, Esposamiento y Posiciones Tácticas",
+          description: "Durante un patrullaje nocturno, interceptas a un sospechoso que coincide con la descripción de un autor de hurtos recientes. Al solicitarle un registro, el ciudadano reacciona de forma hostil, empuja al uniformado e intenta sacar un objeto metálico de su cinturón. Debes aplicar el modelo diferenciado y las técnicas tácticas (triangulación, tonfa, esposamiento).",
+          role: "Patrullero en labor de control y registro de personas.",
+          objectives: [
+            "Aplicar el modelo de uso proporcional y diferenciado de la fuerza según la resistencia.",
+            "Emplear la triangulación táctica con tu compañero de patrulla.",
+            "Desplegar la tonfa o dispositivos menos letales y realizar el esposamiento reglamentario."
+          ]
+        },
+{
+          title: "Uso Proporcional, Esposamiento y Posiciones Tácticas",
+          description: "Durante un patrullaje nocturno, interceptas a un sospechoso que coincide con la descripción de un autor de hurtos recientes. Al solicitarle un registro, el ciudadano reacciona de forma hostil, empuja al uniformado e intenta sacar un objeto metálico de su cinturón. Debes aplicar el modelo diferenciado y las técnicas tácticas (triangulación, tonfa, esposamiento).",
+          role: "Patrullero en labor de control y registro de personas.",
+          objectives: [
+            "Aplicar el modelo de uso proporcional y diferenciado de la fuerza según la resistencia.",
+            "Emplear la triangulación táctica con tu compañero de patrulla.",
+            "Desplegar la tonfa o dispositivos menos letales y realizar el esposamiento reglamentario."
+          ]
+        },
+{
+          title: "Uso Proporcional, Esposamiento y Posiciones Tácticas",
+          description: "Durante un patrullaje nocturno, interceptas a un sospechoso que coincide con la descripción de un autor de hurtos recientes. Al solicitarle un registro, el adulto mayor reacciona de forma hostil, empuja al uniformado e intenta sacar un objeto metálico de su cinturón. Debes aplicar el modelo diferenciado y las técnicas tácticas (triangulación, tonfa, esposamiento).",
+          role: "Patrullero en labor de control y registro de personas.",
+          objectives: [
+            "Aplicar el modelo de uso proporcional y diferenciado de la fuerza según la resistencia.",
+            "Emplear la triangulación táctica con tu compañero de patrulla.",
+            "Desplegar la tonfa o dispositivos menos letales y realizar el esposamiento reglamentario."
+          ]
+        },
+{
+          title: "Uso Proporcional, Esposamiento y Posiciones Tácticas",
+          description: "Durante un patrullaje nocturno, interceptas a un sospechoso que coincide con la descripción de un autor de hurtos recientes. Al solicitarle un registro, el turista extranjero reacciona de forma hostil, empuja al uniformado e intenta sacar un objeto metálico de su cinturón. Debes aplicar el modelo diferenciado y las técnicas tácticas (triangulación, tonfa, esposamiento).",
+          role: "Patrullero en labor de control y registro de personas.",
+          objectives: [
+            "Aplicar el modelo de uso proporcional y diferenciado de la fuerza según la resistencia.",
+            "Emplear la triangulación táctica con tu compañero de patrulla.",
+            "Desplegar la tonfa o dispositivos menos letales y realizar el esposamiento reglamentario."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Cuáles son las alertas de agresión activa del ciudadano? ¿Cuál es el peligro para tu compañero de patrulla y cómo debes mantener el autocontrol?",
             placeholder: "Identifica los factores de resistencia y las alertas tácticas...",
@@ -290,7 +500,8 @@ const COURSES_DATA = [
           law: "Ley 1801 de 2016 (Código de Seguridad y Convivencia)"
         },
         imageSrc: "mediacion_policial_calle_1784399979535.png",
-        scenario: {
+        scenarios: [
+{
           title: "Mediación Policial frente al Servicio Público de Policía",
           description: "Un grupo de vecinos bloquea una vía principal en protesta porque llevan tres días sin servicio de agua potable. Se genera un caos vehicular inmenso y hay agresiones verbales entre conductores atrapados y los manifestantes. Debes intervenir para desescalar el conflicto aplicando el diálogo y la mediación.",
           role: "Policía mediador en conflictos de convivencia ciudadana.",
@@ -300,7 +511,48 @@ const COURSES_DATA = [
             "Llegar a acuerdos temporales para habilitar la movilidad respetando los derechos de todos."
           ]
         },
-        designThinking: {
+{
+          title: "Mediación Policial frente al Servicio Público de Policía",
+          description: "Un grupo de comerciantes bloquea una vía principal en protesta porque llevan tres días sin servicio de agua potable. Se genera un caos vehicular inmenso y hay agresiones verbales entre conductores atrapados y los manifestantes. Debes intervenir para desescalar el conflicto aplicando el diálogo y la mediación.",
+          role: "Policía mediador en conflictos de convivencia ciudadana.",
+          objectives: [
+            "Emplear la mediación policial como instrumento para desescalar conflictos.",
+            "Facilitar el diálogo entre los líderes de la manifestación and los afectados.",
+            "Llegar a acuerdos temporales para habilitar la movilidad respetando los derechos de todos."
+          ]
+        },
+{
+          title: "Mediación Policial frente al Servicio Público de Policía",
+          description: "Un grupo de vecinos bloquea una vía principal en protesta porque llevan tres días sin servicio de agua potable. Se genera un caos vehicular inmenso y hay agresiones verbales entre conductores atrapados y los manifestantes. Debes intervenir para desescalar el conflicto aplicando el diálogo y la mediación.",
+          role: "Policía mediador en conflictos de convivencia ciudadana.",
+          objectives: [
+            "Emplear la mediación policial como instrumento para desescalar conflictos.",
+            "Facilitar el diálogo entre los líderes de la manifestación and los afectados.",
+            "Llegar a acuerdos temporales para habilitar la movilidad respetando los derechos de todos."
+          ]
+        },
+{
+          title: "Mediación Policial frente al Servicio Público de Policía",
+          description: "Un grupo de vecinos bloquea una vía principal en protesta porque llevan tres días sin servicio de agua potable. Se genera un caos vehicular inmenso y hay agresiones verbales entre conductores atrapados y los manifestantes. Debes intervenir para desescalar el conflicto aplicando el diálogo y la mediación.",
+          role: "Policía mediador en conflictos de convivencia ciudadana.",
+          objectives: [
+            "Emplear la mediación policial como instrumento para desescalar conflictos.",
+            "Facilitar el diálogo entre los líderes de la manifestación and los afectados.",
+            "Llegar a acuerdos temporales para habilitar la movilidad respetando los derechos de todos."
+          ]
+        },
+{
+          title: "Mediación Policial frente al Servicio Público de Policía",
+          description: "Un grupo de vecinos bloquea una vía principal en protesta porque llevan tres días sin servicio de agua potable. Se genera un caos vehicular inmenso y hay agresiones verbales entre conductores atrapados y los manifestantes. Debes intervenir para desescalar el conflicto aplicando el diálogo y la mediación.",
+          role: "Policía mediador en conflictos de convivencia ciudadana.",
+          objectives: [
+            "Emplear la mediación policial como instrumento para desescalar conflictos.",
+            "Facilitar el diálogo entre los líderes de la manifestación and los afectados.",
+            "Llegar a acuerdos temporales para habilitar la movilidad respetando los derechos de todos."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Cuáles son las demandas de la comunidad (servicio básico de agua) y las frustraciones de los conductores atrapados? ¿Cómo actúas con imparcialidad?",
             placeholder: "Analiza los intereses y posiciones de ambas partes en conflicto...",
@@ -340,7 +592,8 @@ const COURSES_DATA = [
           law: "Decreto 2535 de 1993 / Artículo 303 de CPP"
         },
         imageSrc: "mediacion_policial_calle_1784399979535.png",
-        scenario: {
+        scenarios: [
+{
           title: "Incautación de Armas (Decreto 2535) y Procedimiento de Captura",
           description: "Durante una requisa en un establecimiento público, hallas en el bolso de un ciudadano una pistola 9mm con su cargador abastecido. El ciudadano no presenta el permiso para porte ni tenencia del arma de fuego. Debes proceder a realizar la captura por porte ilegal y la respectiva incautación.",
           role: "Patrullero del cuadrante realizando el control de armas.",
@@ -350,7 +603,48 @@ const COURSES_DATA = [
             "Asegurar la cadena de custodia de los elementos materiales probatorios."
           ]
         },
-        designThinking: {
+{
+          title: "Incautación de Armas (Decreto 2535) y Procedimiento de Captura",
+          description: "Durante una requisa en un establecimiento público, hallas en el bolso de un ciudadano una pistola 9mm con su cargador abastecido. El ciudadano no presenta el permiso para porte ni tenencia del arma de fuego. Debes proceder a realizar la captura por porte ilegal y la respectiva incautación.",
+          role: "Patrullero del cuadrante realizando el control de armas.",
+          objectives: [
+            "Aplicar el procedimiento de captura garantizando los derechos del capturado (Art. 303 CPP).",
+            "Realizar la incautación del arma de fuego de conformidad con el Decreto 2535 de 1993.",
+            "Asegurar la cadena de custodia de los elementos materiales probatorios."
+          ]
+        },
+{
+          title: "Incautación de Armas (Decreto 2535) y Procedimiento de Captura",
+          description: "Durante una requisa en un establecimiento público, hallas en el bolso de un ciudadano una pistola 9mm con su cargador abastecido. El ciudadano no presenta el permiso para porte ni tenencia del arma de fuego. Debes proceder a realizar la captura por porte ilegal y la respectiva incautación.",
+          role: "Patrullero del cuadrante realizando el control de armas.",
+          objectives: [
+            "Aplicar el procedimiento de captura garantizando los derechos del capturado (Art. 303 CPP).",
+            "Realizar la incautación del arma de fuego de conformidad con el Decreto 2535 de 1993.",
+            "Asegurar la cadena de custodia de los elementos materiales probatorios."
+          ]
+        },
+{
+          title: "Incautación de Armas (Decreto 2535) y Procedimiento de Captura",
+          description: "Durante una requisa en un establecimiento público, hallas en el bolso de un adulto mayor una pistola 9mm con su cargador abastecido. El adulto mayor no presenta el permiso para porte ni tenencia del arma de fuego. Debes proceder a realizar la captura por porte ilegal y la respectiva incautación.",
+          role: "Patrullero del cuadrante realizando el control de armas.",
+          objectives: [
+            "Aplicar el procedimiento de captura garantizando los derechos del capturado (Art. 303 CPP).",
+            "Realizar la incautación del arma de fuego de conformidad con el Decreto 2535 de 1993.",
+            "Asegurar la cadena de custodia de los elementos materiales probatorios."
+          ]
+        },
+{
+          title: "Incautación de Armas (Decreto 2535) y Procedimiento de Captura",
+          description: "Durante una requisa en un establecimiento público, hallas en el bolso de un turista extranjero una pistola 9mm con su cargador abastecido. El turista extranjero no presenta el permiso para porte ni tenencia del arma de fuego. Debes proceder a realizar la captura por porte ilegal y la respectiva incautación.",
+          role: "Patrullero del cuadrante realizando el control de armas.",
+          objectives: [
+            "Aplicar el procedimiento de captura garantizando los derechos del capturado (Art. 303 CPP).",
+            "Realizar la incautación del arma de fuego de conformidad con el Decreto 2535 de 1993.",
+            "Asegurar la cadena de custodia de los elementos materiales probatorios."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Cuáles son las reacciones y temores usuales del capturado? ¿Cómo mantienes la calma y la seguridad táctica mientras lees sus derechos?",
             placeholder: "Analiza el comportamiento del sospechoso y tu seguridad táctica...",
@@ -390,7 +684,8 @@ const COURSES_DATA = [
           law: "Ley 769 de 2002 (Código Nacional de Tránsito)"
         },
         imageSrc: "puesto_control_transito_p_1784399989800.png",
-        scenario: {
+        scenarios: [
+{
           title: "Instalación de Puesto de Control y Choque con Lesionados",
           description: "Estás asignado a un Puesto de Control para la prevención vial. De repente, a 50 metros del puesto, ocurre una colisión frontal entre dos vehículos particulares. Uno de los conductores está atrapado dentro del vehículo y el otro presenta aliento alcohólico e intenta huir a pie. Debes priorizar las acciones operativas y de tránsito.",
           role: "Policía vial a cargo del Puesto de Control y primer respondiente en accidentes.",
@@ -400,7 +695,48 @@ const COURSES_DATA = [
             "Aprehender al conductor que intenta huir y asegurar el procedimiento de tránsito y embriaguez."
           ]
         },
-        designThinking: {
+{
+          title: "Instalación de Puesto de Control y Choque con Lesionados",
+          description: "Estás asignado a un Puesto de Control para la prevención vial. De repente, a 50 metros del puesto, ocurre una colisión frontal entre dos vehículos particulares. Uno de los conductores está atrapado dentro del vehículo y el otro presenta aliento alcohólico e intenta huir a pie. Debes priorizar las acciones operativas y de tránsito.",
+          role: "Policía vial a cargo del Puesto de Control y primer respondiente en accidentes.",
+          objectives: [
+            "Asegurar el área del accidente para evitar nuevos choques (canalizar tráfico).",
+            "Solicitar apoyo médico prioritario para el conductor atrapado y realizar primeros auxilios.",
+            "Aprehender al conductor que intenta huir y asegurar el procedimiento de tránsito y embriaguez."
+          ]
+        },
+{
+          title: "Instalación de Puesto de Control y Choque con Lesionados",
+          description: "Estás asignado a un Puesto de Control para la prevención vial. De repente, a 50 metros del puesto, ocurre una colisión frontal entre dos vehículos particulares. Uno de los conductores está atrapado dentro del vehículo y el otro presenta aliento alcohólico e intenta huir a pie. Debes priorizar las acciones operativas y de tránsito.",
+          role: "Policía vial a cargo del Puesto de Control y primer respondiente en accidentes.",
+          objectives: [
+            "Asegurar el área del accidente para evitar nuevos choques (canalizar tráfico).",
+            "Solicitar apoyo médico prioritario para el conductor atrapado y realizar primeros auxilios.",
+            "Aprehender al conductor que intenta huir y asegurar el procedimiento de tránsito y embriaguez."
+          ]
+        },
+{
+          title: "Instalación de Puesto de Control y Choque con Lesionados",
+          description: "Estás asignado a un Puesto de Control para la prevención vial. De repente, a 50 metros del puesto, ocurre una colisión frontal entre dos vehículos particulares. Uno de los conductores está atrapado dentro del vehículo y el otro presenta aliento alcohólico e intenta huir a pie. Debes priorizar las acciones operativas y de tránsito.",
+          role: "Policía vial a cargo del Puesto de Control y primer respondiente en accidentes.",
+          objectives: [
+            "Asegurar el área del accidente para evitar nuevos choques (canalizar tráfico).",
+            "Solicitar apoyo médico prioritario para el conductor atrapado y realizar primeros auxilios.",
+            "Aprehender al conductor que intenta huir y asegurar el procedimiento de tránsito y embriaguez."
+          ]
+        },
+{
+          title: "Instalación de Puesto de Control y Choque con Lesionados",
+          description: "Estás asignado a un Puesto de Control para la prevención vial. De repente, a 50 metros del puesto, ocurre una colisión frontal entre dos vehículos particulares. Uno de los conductores está atrapado dentro del vehículo y el otro presenta aliento alcohólico e intenta huir a pie. Debes priorizar las acciones operativas y de tránsito.",
+          role: "Policía vial a cargo del Puesto de Control y primer respondiente en accidentes.",
+          objectives: [
+            "Asegurar el área del accidente para evitar nuevos choques (canalizar tráfico).",
+            "Solicitar apoyo médico prioritario para el conductor atrapado y realizar primeros auxilios.",
+            "Aprehender al conductor que intenta huir y asegurar el procedimiento de tránsito y embriaguez."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Cuáles son las necesidades de salud de los lesionados? ¿Qué riesgos genera el tráfico de vehículos y la imprudencia de los curiosos?",
             placeholder: "Analiza los riesgos de salud y del entorno vial...",
@@ -440,7 +776,8 @@ const COURSES_DATA = [
           law: "Resolución 3372 de 2009 (Reglamento de Uniformes e Insignias)"
         },
         imageSrc: "uso_fuerza_taser_1784399968366.png",
-        scenario: {
+        scenarios: [
+{
           title: "Uso Correcto de Uniformes, Accesorios y Medios Tecnológicos",
           description: "Vas a salir a un servicio de patrullaje nocturno en una zona de alta delictividad. El comandante de guardia observa que portas el chaleco antibalas mal ajustado y no llevas tu radio de comunicaciones ni el dispositivo taser de dotación. Debes fundamentar disciplinariamente el uso del uniforme y equipos.",
           role: "Patrullero respondiendo a la revista de armamento y equipo.",
@@ -450,7 +787,48 @@ const COURSES_DATA = [
             "Hacer uso adecuado de los medios técnicos, tecnológicos (cámaras corporales/radios)."
           ]
         },
-        designThinking: {
+{
+          title: "Uso Correcto de Uniformes, Accesorios y Medios Tecnológicos",
+          description: "Vas a salir a un servicio de patrullaje nocturno en una zona de alta delictividad. El comandante de guardia observa que portas el chaleco antibalas mal ajustado y no llevas tu radio de comunicaciones ni el dispositivo taser de dotación. Debes fundamentar disciplinariamente el uso del uniforme y equipos.",
+          role: "Patrullero respondiendo a la revista de armamento y equipo.",
+          objectives: [
+            "Conocer el reglamento de uniformes, insignias y distintivos de la Policía Nacional.",
+            "Portar de forma obligatoria y adecuada los elementos de protección personal y armamento.",
+            "Hacer uso adecuado de los medios técnicos, tecnológicos (cámaras corporales/radios)."
+          ]
+        },
+{
+          title: "Uso Correcto de Uniformes, Accesorios y Medios Tecnológicos",
+          description: "Vas a salir a un servicio de patrullaje nocturno en una zona de alta delictividad. El comandante de guardia observa que portas el chaleco antibalas mal ajustado y no llevas tu radio de comunicaciones ni el dispositivo taser de dotación. Debes fundamentar disciplinariamente el uso del uniforme y equipos.",
+          role: "Patrullero respondiendo a la revista de armamento y equipo.",
+          objectives: [
+            "Conocer el reglamento de uniformes, insignias y distintivos de la Policía Nacional.",
+            "Portar de forma obligatoria y adecuada los elementos de protección personal y armamento.",
+            "Hacer uso adecuado de los medios técnicos, tecnológicos (cámaras corporales/radios)."
+          ]
+        },
+{
+          title: "Uso Correcto de Uniformes, Accesorios y Medios Tecnológicos",
+          description: "Vas a salir a un servicio de patrullaje nocturno en una zona de alta delictividad. El comandante de guardia observa que portas el chaleco antibalas mal ajustado y no llevas tu radio de comunicaciones ni el dispositivo taser de dotación. Debes fundamentar disciplinariamente el uso del uniforme y equipos.",
+          role: "Patrullero respondiendo a la revista de armamento y equipo.",
+          objectives: [
+            "Conocer el reglamento de uniformes, insignias y distintivos de la Policía Nacional.",
+            "Portar de forma obligatoria y adecuada los elementos de protección personal y armamento.",
+            "Hacer uso adecuado de los medios técnicos, tecnológicos (cámaras corporales/radios)."
+          ]
+        },
+{
+          title: "Uso Correcto de Uniformes, Accesorios y Medios Tecnológicos",
+          description: "Vas a salir a un servicio de patrullaje nocturno en una zona de alta delictividad. El comandante de guardia observa que portas el chaleco antibalas mal ajustado y no llevas tu radio de comunicaciones ni el dispositivo taser de dotación. Debes fundamentar disciplinariamente el uso del uniforme y equipos.",
+          role: "Patrullero respondiendo a la revista de armamento y equipo.",
+          objectives: [
+            "Conocer el reglamento de uniformes, insignias y distintivos de la Policía Nacional.",
+            "Portar de forma obligatoria y adecuada los elementos de protección personal y armamento.",
+            "Hacer uso adecuado de los medios técnicos, tecnológicos (cámaras corporales/radios)."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Por qué el no usar los elementos de protección (chaleco, radio) pone en riesgo no solo tu vida sino la seguridad de tu compañero?",
             placeholder: "Analiza el impacto del autocuidado y la seguridad colectiva de la patrulla...",
@@ -497,7 +875,8 @@ const COURSES_DATA = [
           law: "Constitución Política, DD.HH y D.I.H."
         },
         imageSrc: "uso_fuerza_taser_1784399968366.png",
-        scenario: {
+        scenarios: [
+{
           title: "Protección en Manifestaciones y Desorden Público",
           description: "Te encuentras en una protesta social que comienza a volverse violenta, con lanzamiento de objetos. Hay civiles no involucrados y un manifestante resulta herido. Debes activar el protocolo de defensa y actuar bajo los principios de Derechos Humanos.",
           role: "Unidad policial en control y contención de multitudes.",
@@ -507,7 +886,48 @@ const COURSES_DATA = [
             "Prestar primeros auxilios y proteger la vida del manifestante herido."
           ]
         },
-        designThinking: {
+{
+          title: "Protección en Manifestaciones y Desorden Público",
+          description: "Te encuentras en una protesta social que comienza a volverse violenta, con lanzamiento de objetos. Hay civiles no involucrados y un manifestante resulta herido. Debes activar el protocolo de defensa y actuar bajo los principios de Derechos Humanos.",
+          role: "Unidad policial en control y contención de multitudes.",
+          objectives: [
+            "Conservar la calma, activar el plan de defensa y usar elementos de dotación (casco, escudo).",
+            "Garantizar el respeto estricto de los DDHH en el control de disturbios.",
+            "Prestar primeros auxilios y proteger la vida del manifestante herido."
+          ]
+        },
+{
+          title: "Protección en Manifestaciones y Desorden Público",
+          description: "Te encuentras en una protesta social que comienza a volverse violenta, con lanzamiento de objetos. Hay civiles no involucrados y un manifestante resulta herido. Debes activar el protocolo de defensa y actuar bajo los principios de Derechos Humanos.",
+          role: "Unidad policial en control y contención de multitudes.",
+          objectives: [
+            "Conservar la calma, activar el plan de defensa y usar elementos de dotación (casco, escudo).",
+            "Garantizar el respeto estricto de los DDHH en el control de disturbios.",
+            "Prestar primeros auxilios y proteger la vida del manifestante herido."
+          ]
+        },
+{
+          title: "Protección en Manifestaciones y Desorden Público",
+          description: "Te encuentras en una protesta social que comienza a volverse violenta, con lanzamiento de objetos. Hay civiles no involucrados y un manifestante resulta herido. Debes activar el protocolo de defensa y actuar bajo los principios de Derechos Humanos.",
+          role: "Unidad policial en control y contención de multitudes.",
+          objectives: [
+            "Conservar la calma, activar el plan de defensa y usar elementos de dotación (casco, escudo).",
+            "Garantizar el respeto estricto de los DDHH en el control de disturbios.",
+            "Prestar primeros auxilios y proteger la vida del manifestante herido."
+          ]
+        },
+{
+          title: "Protección en Manifestaciones y Desorden Público",
+          description: "Te encuentras en una protesta social que comienza a volverse violenta, con lanzamiento de objetos. Hay civiles no involucrados y un manifestante resulta herido. Debes activar el protocolo de defensa y actuar bajo los principios de Derechos Humanos.",
+          role: "Unidad policial en control y contención de multitudes.",
+          objectives: [
+            "Conservar la calma, activar el plan de defensa y usar elementos de dotación (casco, escudo).",
+            "Garantizar el respeto estricto de los DDHH en el control de disturbios.",
+            "Prestar primeros auxilios y proteger la vida del manifestante herido."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Cómo puedes equilibrar el mantenimiento del orden público con el respeto a la protesta pacífica y la vida de los transeúntes?",
             placeholder: "Analiza la responsabilidad de salvaguardar la vida mientras controlas el desorden...",
@@ -547,7 +967,8 @@ const COURSES_DATA = [
           law: "Constitución Política (Principio de Igualdad y No Discriminación)"
         },
         imageSrc: "atencion_caso_comercial_1784399958164.png",
-        scenario: {
+        scenarios: [
+{
           title: "Atención de Caso con Enfoque de Género y Diversidad",
           description: "Atiendes un caso de violencia intrafamiliar. Al llegar, identificas que la víctima es una persona perteneciente a la comunidad LGTBIQ+ que ha sido agredida físicamente por su pareja. Debes garantizar un procedimiento libre de discriminación y asegurar su integridad.",
           role: "Integrantes de patrulla de vigilancia comunitaria.",
@@ -557,7 +978,48 @@ const COURSES_DATA = [
             "Activar la Ruta de Atención Integral para violencia de género y brindar protección."
           ]
         },
-        designThinking: {
+{
+          title: "Atención de Caso con Enfoque de Género y Diversidad",
+          description: "Atiendes un caso de violencia intrafamiliar. Al llegar, identificas que la víctima es una persona perteneciente a la comunidad LGTBIQ+ que ha sido agredida físicamente por su pareja. Debes garantizar un procedimiento libre de discriminación y asegurar su integridad.",
+          role: "Integrantes de patrulla de vigilancia comunitaria.",
+          objectives: [
+            "Aplicar el principio de no discriminación y garantizar el respeto a la identidad.",
+            "Evitar cualquier comentario de revictimización o sesgo personal.",
+            "Activar la Ruta de Atención Integral para violencia de género y brindar protección."
+          ]
+        },
+{
+          title: "Atención de Caso con Enfoque de Género y Diversidad",
+          description: "Atiendes un caso de violencia intrafamiliar. Al llegar, identificas que la víctima es una persona perteneciente a la comunidad LGTBIQ+ que ha sido agredida físicamente por su pareja. Debes garantizar un procedimiento libre de discriminación y asegurar su integridad.",
+          role: "Integrantes de patrulla de vigilancia comunitaria.",
+          objectives: [
+            "Aplicar el principio de no discriminación y garantizar el respeto a la identidad.",
+            "Evitar cualquier comentario de revictimización o sesgo personal.",
+            "Activar la Ruta de Atención Integral para violencia de género y brindar protección."
+          ]
+        },
+{
+          title: "Atención de Caso con Enfoque de Género y Diversidad",
+          description: "Atiendes un caso de violencia intrafamiliar. Al llegar, identificas que la víctima es una persona perteneciente a la comunidad LGTBIQ+ que ha sido agredida físicamente por su pareja. Debes garantizar un procedimiento libre de discriminación y asegurar su integridad.",
+          role: "Integrantes de patrulla de vigilancia comunitaria.",
+          objectives: [
+            "Aplicar el principio de no discriminación y garantizar el respeto a la identidad.",
+            "Evitar cualquier comentario de revictimización o sesgo personal.",
+            "Activar la Ruta de Atención Integral para violencia de género y brindar protección."
+          ]
+        },
+{
+          title: "Atención de Caso con Enfoque de Género y Diversidad",
+          description: "Atiendes un caso de violencia intrafamiliar. Al llegar, identificas que la víctima es una persona perteneciente a la comunidad LGTBIQ+ que ha sido agredida físicamente por su pareja. Debes garantizar un procedimiento libre de discriminación y asegurar su integridad.",
+          role: "Integrantes de patrulla de vigilancia comunitaria.",
+          objectives: [
+            "Aplicar el principio de no discriminación y garantizar el respeto a la identidad.",
+            "Evitar cualquier comentario de revictimización o sesgo personal.",
+            "Activar la Ruta de Atención Integral para violencia de género y brindar protección."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Por qué es crucial evitar sesgos personales o institucionales al atender a una víctima de la comunidad LGTBIQ+?",
             placeholder: "Analiza el riesgo de revictimización, el daño psicológico y la pérdida de confianza...",
@@ -597,7 +1059,8 @@ const COURSES_DATA = [
           law: "Constitución Política de Colombia"
         },
         imageSrc: "puesto_control_transito_p_1784399989800.png",
-        scenario: {
+        scenarios: [
+{
           title: "Orientación Ciudadana sobre Mecanismos de Protección",
           description: "En tu patrullaje, un ciudadano te aborda desesperado manifestando que su familiar requiere una cirugía urgente para salvar su vida y la EPS se la niega. A su vez, te cuenta que su hijo fue retenido por unos guardias de seguridad privada en un conjunto residencial por más de 12 horas sin justificación legal. Pide orientación de la Policía.",
           role: "Patrullero ofreciendo orientación y mediación comunitaria.",
@@ -607,7 +1070,48 @@ const COURSES_DATA = [
             "Brindar una respuesta asertiva basada en el conocimiento de la Constitución."
           ]
         },
-        designThinking: {
+{
+          title: "Orientación Ciudadana sobre Mecanismos de Protección",
+          description: "En tu patrullaje, un ciudadano te aborda desesperado manifestando que su familiar requiere una cirugía urgente para salvar su vida y la EPS se la niega. A su vez, te cuenta que su hijo fue retenido por unos guardias de seguridad privada en un conjunto residencial por más de 12 horas sin justificación legal. Pide orientación de la Policía.",
+          role: "Patrullero ofreciendo orientación y mediación comunitaria.",
+          objectives: [
+            "Orientar al ciudadano sobre el uso de la Acción de Tutela para el derecho a la salud/vida.",
+            "Orientar sobre la acción de Habeas Corpus o la intervención policial inmediata por retención ilegal.",
+            "Brindar una respuesta asertiva basada en el conocimiento de la Constitución."
+          ]
+        },
+{
+          title: "Orientación Ciudadana sobre Mecanismos de Protección",
+          description: "En tu patrullaje, un ciudadano te aborda desesperado manifestando que su familiar requiere una cirugía urgente para salvar su vida y la EPS se la niega. A su vez, te cuenta que su hijo fue retenido por unos guardias de seguridad privada en un conjunto residencial por más de 12 horas sin justificación legal. Pide orientación de la Policía.",
+          role: "Patrullero ofreciendo orientación y mediación comunitaria.",
+          objectives: [
+            "Orientar al ciudadano sobre el uso de la Acción de Tutela para el derecho a la salud/vida.",
+            "Orientar sobre la acción de Habeas Corpus o la intervención policial inmediata por retención ilegal.",
+            "Brindar una respuesta asertiva basada en el conocimiento de la Constitución."
+          ]
+        },
+{
+          title: "Orientación Ciudadana sobre Mecanismos de Protección",
+          description: "En tu patrullaje, un adulto mayor te aborda desesperado manifestando que su familiar requiere una cirugía urgente para salvar su vida y la EPS se la niega. A su vez, te cuenta que su hijo fue retenido por unos guardias de seguridad privada en un conjunto residencial por más de 12 horas sin justificación legal. Pide orientación de la Policía.",
+          role: "Patrullero ofreciendo orientación y mediación comunitaria.",
+          objectives: [
+            "Orientar al adulto mayor sobre el uso de la Acción de Tutela para el derecho a la salud/vida.",
+            "Orientar sobre la acción de Habeas Corpus o la intervención policial inmediata por retención ilegal.",
+            "Brindar una respuesta asertiva basada en el conocimiento de la Constitución."
+          ]
+        },
+{
+          title: "Orientación Ciudadana sobre Mecanismos de Protección",
+          description: "En tu patrullaje, un turista extranjero te aborda desesperado manifestando que su familiar requiere una cirugía urgente para salvar su vida y la EPS se la niega. A su vez, te cuenta que su hijo fue retenido por unos guardias de seguridad privada en un conjunto residencial por más de 12 horas sin justificación legal. Pide orientación de la Policía.",
+          role: "Patrullero ofreciendo orientación y mediación comunitaria.",
+          objectives: [
+            "Orientar al turista extranjero sobre el uso de la Acción de Tutela para el derecho a la salud/vida.",
+            "Orientar sobre la acción de Habeas Corpus o la intervención policial inmediata por retención ilegal.",
+            "Brindar una respuesta asertiva basada en el conocimiento de la Constitución."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Cómo afecta a la percepción ciudadana de seguridad y justicia que un policía no conozca y no asesore sobre los derechos fundamentales?",
             placeholder: "Analiza el impacto del desconocimiento policial en la garantía de derechos de la sociedad...",
@@ -654,7 +1158,8 @@ const COURSES_DATA = [
           law: "Código Nacional de Tránsito (Ley 769 de 2002)"
         },
         imageSrc: "puesto_control_transito_p_1784399989800.png",
-        scenario: {
+        scenarios: [
+{
           title: "Accidente con Lesionados cerca al Puesto de Control",
           description: "Mientras ejecutas un puesto de control vial, ocurre un accidente grave a pocos metros con un vehículo particular y una motocicleta. El motociclista está gravemente herido en el asfalto. Debes actuar como primer respondiente garantizando el procedimiento de tránsito y la vida.",
           role: "Policía de Tránsito / Vigilancia.",
@@ -664,7 +1169,48 @@ const COURSES_DATA = [
             "Fijar la escena para el informe de accidente (croquis) sin alterar evidencias."
           ]
         },
-        designThinking: {
+{
+          title: "Choque Múltiple en Hora Pico cerca al Puesto de Control",
+          description: "Mientras ejecutas un puesto de control vial, ocurre un accidente grave a pocos metros con un vehículo particular y una motocicleta. El motociclista está gravemente herido en el asfalto. Debes actuar como primer respondiente garantizando el procedimiento de tránsito y la vida.",
+          role: "Policía de Tránsito / Vigilancia.",
+          objectives: [
+            "Asegurar y acordonar el área para evitar siniestros secundarios.",
+            "Prestar primeros auxilios y solicitar ambulancia de forma inmediata.",
+            "Fijar la escena para el informe de accidente (croquis) sin alterar evidencias."
+          ]
+        },
+{
+          title: "Accidente con Lesionados cerca al Puesto de Control",
+          description: "Mientras ejecutas un puesto de control vial, ocurre un accidente grave a pocos metros con un vehículo particular y una motocicleta. El motociclista está gravemente herido en el asfalto. Debes actuar como primer respondiente garantizando el procedimiento de tránsito y la vida.",
+          role: "Policía de Tránsito / Vigilancia.",
+          objectives: [
+            "Asegurar y acordonar el área para evitar siniestros secundarios.",
+            "Prestar primeros auxilios y solicitar ambulancia de forma inmediata.",
+            "Fijar la escena para el informe de accidente (croquis) sin alterar evidencias."
+          ]
+        },
+{
+          title: "Accidente con Lesionados cerca al Puesto de Control",
+          description: "Mientras ejecutas un puesto de control vial, ocurre un accidente grave a pocos metros con un vehículo particular y una motocicleta. El motociclista está gravemente herido en el asfalto. Debes actuar como primer respondiente garantizando el procedimiento de tránsito y la vida.",
+          role: "Policía de Tránsito / Vigilancia.",
+          objectives: [
+            "Asegurar y acordonar el área para evitar siniestros secundarios.",
+            "Prestar primeros auxilios y solicitar ambulancia de forma inmediata.",
+            "Fijar la escena para el informe de accidente (croquis) sin alterar evidencias."
+          ]
+        },
+{
+          title: "Accidente con Lesionados cerca al Puesto de Control",
+          description: "Mientras ejecutas un puesto de control vial, ocurre un accidente grave a pocos metros con un vehículo particular y una motocicleta. El motociclista está gravemente herido en el asfalto. Debes actuar como primer respondiente garantizando el procedimiento de tránsito y la vida.",
+          role: "Policía de Tránsito / Vigilancia.",
+          objectives: [
+            "Asegurar y acordonar el área para evitar siniestros secundarios.",
+            "Prestar primeros auxilios y solicitar ambulancia de forma inmediata.",
+            "Fijar la escena para el informe de accidente (croquis) sin alterar evidencias."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Cuáles son las necesidades de salud inmediatas del motociclista y qué riesgos genera el tráfico de vehículos cercano?",
             placeholder: "Analiza el riesgo vital del lesionado y el peligro del entorno vehicular...",
@@ -704,7 +1250,8 @@ const COURSES_DATA = [
           law: "Ley 1801 de 2016 (Código Nacional de Seguridad y Convivencia)"
         },
         imageSrc: "atencion_caso_comercial_1784399958164.png",
-        scenario: {
+        scenarios: [
+{
           title: "Conflicto Vecinal por Ruido y Basuras",
           description: "Acudes a un requerimiento ciudadano donde dos vecinos están a punto de agredirse físicamente. Uno acusa al otro de ruido excesivo y de arrojar basuras en su puerta. Debes aplicar la mediación policial In Situ para resolver el conflicto.",
           role: "Policía Mediador del Cuadrante.",
@@ -714,7 +1261,48 @@ const COURSES_DATA = [
             "Guiar a las partes para que construyan un acuerdo de convivencia voluntario."
           ]
         },
-        designThinking: {
+{
+          title: "Conflicto entre Comerciantes por Espacio Público",
+          description: "Acudes a un requerimiento ciudadano donde dos comerciantes están a punto de agredirse físicamente. Uno acusa al otro de invadir el andén con mercancía en su puerta. Debes aplicar la mediación policial In Situ para resolver el conflicto.",
+          role: "Policía Mediador del Cuadrante.",
+          objectives: [
+            "Desescalar la agresividad y separar a las partes garantizando la seguridad.",
+            "Mantener la neutralidad y aplicar la escucha activa sin emitir juicios.",
+            "Guiar a las partes para que construyan un acuerdo de convivencia voluntario."
+          ]
+        },
+{
+          title: "Riña Familiar por Ruido y Basuras",
+          description: "Acudes a un requerimiento ciudadano donde dos vecinos están a punto de agredirse físicamente. Uno acusa al otro de problemas de herencia y de arrojar basuras en su puerta. Debes aplicar la mediación policial In Situ para resolver el conflicto.",
+          role: "Policía Mediador del Cuadrante.",
+          objectives: [
+            "Desescalar la agresividad y separar a las partes garantizando la seguridad.",
+            "Mantener la neutralidad y aplicar la escucha activa sin emitir juicios.",
+            "Guiar a las partes para que construyan un acuerdo de convivencia voluntario."
+          ]
+        },
+{
+          title: "Conflicto Vecinal por Ruido y Basuras",
+          description: "Acudes a un requerimiento adulto mayor donde dos vecinos están a punto de agredirse físicamente. Uno acusa al otro de ruido excesivo y de arrojar basuras en su puerta. Debes aplicar la mediación policial In Situ para resolver el conflicto.",
+          role: "Policía Mediador del Cuadrante.",
+          objectives: [
+            "Desescalar la agresividad y separar a las partes garantizando la seguridad.",
+            "Mantener la neutralidad y aplicar la escucha activa sin emitir juicios.",
+            "Guiar a las partes para que construyan un acuerdo de convivencia voluntario."
+          ]
+        },
+{
+          title: "Conflicto Vecinal por Ruido y Basuras",
+          description: "Acudes a un requerimiento turista extranjero donde dos vecinos están a punto de agredirse físicamente. Uno acusa al otro de ruido excesivo y de arrojar basuras en su puerta. Debes aplicar la mediación policial In Situ para resolver el conflicto.",
+          role: "Policía Mediador del Cuadrante.",
+          objectives: [
+            "Desescalar la agresividad y separar a las partes garantizando la seguridad.",
+            "Mantener la neutralidad y aplicar la escucha activa sin emitir juicios.",
+            "Guiar a las partes para que construyan un acuerdo de convivencia voluntario."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Por qué es fundamental que el policía no tome partido ni juzgue a ninguno de los vecinos durante el conflicto?",
             placeholder: "Analiza el principio de imparcialidad y confianza...",
@@ -754,7 +1342,8 @@ const COURSES_DATA = [
           law: "Reglamento de Uniformes y Régimen Disciplinario"
         },
         imageSrc: "uso_fuerza_taser_1784399968366.png",
-        scenario: {
+        scenarios: [
+{
           title: "Revista de Presentación y Solicitud de Apoyo por Radio",
           description: "Estás en el turno de vigilancia y un comandante pasa revista. Encuentra que tienes el uniforme incompleto. Minutos después, debes reportar una situación sospechosa por radio y pedir apoyo urgente. Demuestra tu pericia en ambas situaciones.",
           role: "Patrullero en servicio de vigilancia.",
@@ -764,7 +1353,48 @@ const COURSES_DATA = [
             "Transmitir un mensaje por radio de forma clara, concisa y bajo los protocolos de comunicación."
           ]
         },
-        designThinking: {
+{
+          title: "Revista de Presentación y Solicitud de Apoyo por Radio",
+          description: "Estás en el turno de vigilancia y un comandante pasa revista. Encuentra que tienes el uniforme incompleto. Minutos después, debes reportar una situación sospechosa por radio y pedir apoyo urgente. Demuestra tu pericia en ambas situaciones.",
+          role: "Patrullero en servicio de vigilancia.",
+          objectives: [
+            "Reconocer las obligaciones y prohibiciones del porte del uniforme.",
+            "Identificar la correcta ubicación del equipo en el cinturón multipropósito.",
+            "Transmitir un mensaje por radio de forma clara, concisa y bajo los protocolos de comunicación."
+          ]
+        },
+{
+          title: "Revista de Presentación y Solicitud de Apoyo por Radio",
+          description: "Estás en el turno de vigilancia y un comandante pasa revista. Encuentra que tienes el uniforme incompleto. Minutos después, debes reportar una situación sospechosa por radio y pedir apoyo urgente. Demuestra tu pericia en ambas situaciones.",
+          role: "Patrullero en servicio de vigilancia.",
+          objectives: [
+            "Reconocer las obligaciones y prohibiciones del porte del uniforme.",
+            "Identificar la correcta ubicación del equipo en el cinturón multipropósito.",
+            "Transmitir un mensaje por radio de forma clara, concisa y bajo los protocolos de comunicación."
+          ]
+        },
+{
+          title: "Revista de Presentación y Solicitud de Apoyo por Radio",
+          description: "Estás en el turno de vigilancia y un comandante pasa revista. Encuentra que tienes el uniforme incompleto. Minutos después, debes reportar una situación sospechosa por radio y pedir apoyo urgente. Demuestra tu pericia en ambas situaciones.",
+          role: "Patrullero en servicio de vigilancia.",
+          objectives: [
+            "Reconocer las obligaciones y prohibiciones del porte del uniforme.",
+            "Identificar la correcta ubicación del equipo en el cinturón multipropósito.",
+            "Transmitir un mensaje por radio de forma clara, concisa y bajo los protocolos de comunicación."
+          ]
+        },
+{
+          title: "Revista de Presentación y Solicitud de Apoyo por Radio",
+          description: "Estás en el turno de vigilancia y un comandante pasa revista. Encuentra que tienes el uniforme incompleto. Minutos después, debes reportar una situación sospechosa por radio y pedir apoyo urgente. Demuestra tu pericia en ambas situaciones.",
+          role: "Patrullero en servicio de vigilancia.",
+          objectives: [
+            "Reconocer las obligaciones y prohibiciones del porte del uniforme.",
+            "Identificar la correcta ubicación del equipo en el cinturón multipropósito.",
+            "Transmitir un mensaje por radio de forma clara, concisa y bajo los protocolos de comunicación."
+          ]
+        }
+],
+designThinking: {
           empatizar: {
             question: "¿Cómo afecta a la percepción de seguridad del ciudadano verte usar el celular para asuntos personales o portar el uniforme desorganizado?",
             placeholder: "Analiza el impacto en la imagen institucional y el respeto...",
