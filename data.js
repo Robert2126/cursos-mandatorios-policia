@@ -1,5 +1,5 @@
 // Base de datos de los Cursos Mandatorios de la Policía Nacional de Colombia
-// Actualizada con los contenidos, estándares mínimos y links de videos oficiales
+// Actualizada con los contenidos, estándares mínimos, links de videos, transcripciones, métricas e imágenes de referencia
 
 const COURSES_DATA = [
   {
@@ -11,6 +11,13 @@ const COURSES_DATA = [
         id: "comunicacion-asertiva",
         title: "1. Atención y Comunicación Asertiva",
         videoUrl: "https://www.youtube.com/embed/cl7iUeFvy5E",
+        videoDescription: "En este video se instruye sobre la atención presencial enfocada en la empatía y la comunicación asertiva en la actividad de policía. Se explican los factores proxémicos (espacio personal), la importancia del contacto visual, la postura corporal de apertura y la modulación del tono de voz para desescalar conflictos con la ciudadanía.",
+        metrics: {
+          type: "Atención Ciudadana / Prevención",
+          means: "Diálogo / Mediación / SEA Policía",
+          law: "Resolución 06558 de 2024 / Ley 1801 de 2016"
+        },
+        imageSrc: "atencion_caso_comercial_1784399958164.png",
         scenario: {
           title: "Promover la comunicación asertiva en la actividad de policía",
           description: "Durante una patrulla en zona comercial, un ciudadano muy exaltado y molesto se acerca gritando que un comerciante lo estafó. El ciudadano exige que arrestes inmediatamente al comerciante. Si respondes a la defensiva o de forma autoritaria el conflicto escalará. Debes aplicar la comunicación asertiva y el lenguaje no verbal adecuado para calmar al ciudadano y mediar la situación.",
@@ -54,6 +61,13 @@ const COURSES_DATA = [
         id: "portafolio-servicios",
         title: "2. Portafolio de Servicios y Trámites",
         videoUrl: "https://www.youtube.com/embed/dkWStFwfvOw",
+        videoDescription: "El video explica de forma detallada el portafolio de servicios de la Policía Nacional de Colombia, el uso correcto de canales digitales como la plataforma ADenunciar (en convenio con la Fiscalía General), las líneas de atención a emergencias (123, 165) y cómo orientar presencialmente a grupos poblacionales con atención preferencial.",
+        metrics: {
+          type: "Orientación y Trámite Administrativo",
+          means: "Canales Digitales (ADenunciar) / Centro de Mediación",
+          law: "Ley 1437 de 2011 / Decreto 2106 de 2019"
+        },
+        imageSrc: "atencion_caso_comercial_1784399958164.png",
         scenario: {
           title: "Orientación de Trámites y Canales de Atención",
           description: "Un ciudadano de la tercera edad acude desorientado al CAI. Manifiesta haber extraviado sus documentos personales (cédula y licencia de conducción) y no sabe cómo reportarlo para evitar suplantaciones de identidad. Debes orientarlo acerca de los canales definidos por la Policía Nacional.",
@@ -104,6 +118,13 @@ const COURSES_DATA = [
         id: "respeto-proteccion-dh",
         title: "3. Habilidades y Destrezas en la Protección de la Vida",
         videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
+        videoDescription: "Este video explica el estándar de protección al derecho a la vida y la integridad física. Instruye sobre las garantías y precauciones durante un allanamiento o ingreso excepcional por voces de auxilio (Art. 32 de la Constitución y la Ley 1801). Enfatiza en el respeto incondicional por la dignidad del ciudadano bajo custodia.",
+        metrics: {
+          type: "Procedimiento de Auxilio e Ingreso",
+          means: "Ingreso sin Orden Escrita / Auxilio de Vida",
+          law: "Artículo 32 de la Constitución Política de Colombia / Ley 1801"
+        },
+        imageSrc: "uso_fuerza_taser_1784399968366.png",
         scenario: {
           title: "Protección del Derecho a la Vida en Procedimientos Policiales",
           description: "La patrulla acude a una riña intrafamiliar donde un sujeto está agrediendo físicamente a su pareja dentro de una vivienda y amenaza con matarla. El agresor grita que nadie puede entrar porque es propiedad privada. Tu prioridad absoluta es proteger la vida de la víctima respetando los marcos constitucionales.",
@@ -116,7 +137,7 @@ const COURSES_DATA = [
         },
         designThinking: {
           empatizar: {
-            question: "¿Cuáles son los riesgos de vida inminentes para la víctima? ¿Cómo se afecta la integridad de los involucrados?",
+            question: "@Cuáles son los riesgos de vida inminentes para la víctima? ¿Cómo se afecta la integridad de los involucrados?",
             placeholder: "Analiza la gravedad de la agresión y la vulnerabilidad de la víctima en este escenario...",
             keywords: ["vida", "víctima", "violencia intrafamiliar", "integridad", "amenaza", "protección"]
           },
@@ -154,6 +175,13 @@ const COURSES_DATA = [
         id: "modelo-uso-fuerza",
         title: "4. Habilidades y Destrezas en el Uso de la Fuerza",
         videoUrl: "https://www.youtube.com/embed/oS_bI6arJkc",
+        videoDescription: "El video demuestra las técnicas físicas y tácticas de esposamiento (manos a la cabeza, manos atrás, reducción a piso) y los esquemas de movimientos con la tonfa policial y posiciones tácticas con armas de fuego. Adicionalmente, enseña el concepto de la triangulación de seguridad (agente de contacto y de seguridad).",
+        metrics: {
+          type: "Procedimiento de Control Táctico / Reducción",
+          means: "Uso de Esposas / Dispositivos Menos Letales / Bastón Tonfa",
+          law: "Resolución 02903 de 2017 (Reglamento Uso de la Fuerza)"
+        },
+        imageSrc: "uso_fuerza_taser_1784399968366.png",
         scenario: {
           title: "Uso Proporcional, Esposamiento y Posiciones Tácticas",
           description: "Durante un patrullaje nocturno, interceptas a un sospechoso que coincide con la descripción de un autor de hurtos recientes. Al solicitarle un registro, el ciudadano reacciona de forma hostil, empuja al uniformado e intenta sacar un objeto metálico de su cinturón. Debes aplicar el modelo diferenciado y las técnicas tácticas (triangulación, tonfa, esposamiento).",
@@ -204,6 +232,13 @@ const COURSES_DATA = [
         id: "mediacion-policial",
         title: "5. Mediación Policial y Código de Convivencia",
         videoUrl: "https://www.youtube.com/embed/ck7LS7n7B8Y",
+        videoDescription: "El video expone cómo opera la mediación policial en el marco de la convivencia ciudadana. Muestra técnicas de resolución alternativa de conflictos sociales, vecinales, escolares y familiares, y el diligenciamiento legal del Acta de Mediación conforme a la Ley 1801 de 2016.",
+        metrics: {
+          type: "Resolución Alternativa de Conflictos",
+          means: "Mediación Comunitaria / Acta de Convivencia",
+          law: "Ley 1801 de 2016 (Código de Seguridad y Convivencia)"
+        },
+        imageSrc: "mediacion_policial_calle_1784399979535.png",
         scenario: {
           title: "Mediación Policial frente al Servicio Público de Policía",
           description: "Un grupo de vecinos bloquea una vía principal en protesta porque llevan tres días sin servicio de agua potable. Se genera un caos vehicular inmenso y hay agresiones verbales entre conductores atrapados y los manifestantes. Debes intervenir para desescalar el conflicto aplicando el diálogo y la mediación.",
@@ -247,6 +282,13 @@ const COURSES_DATA = [
         id: "captura-incautacion",
         title: "6. Procedimientos de Captura e Incautación",
         videoUrl: "https://www.youtube.com/embed/QieQW7-4NRc",
+        videoDescription: "El video instruye en los pasos del procedimiento judicial de captura y la incautación de armas bajo el Decreto 2535. Explica cómo realizar un registro minucioso, la lectura formal de derechos del capturado (Artículo 303 de CPP), y el inicio seguro de la cadena de custodia de elementos incautados.",
+        metrics: {
+          type: "Procedimiento Judicial / Administrativo",
+          means: "Captura en Flagrancia / Incautación de Armamento",
+          law: "Decreto 2535 de 1993 / Artículo 303 de CPP"
+        },
+        imageSrc: "mediacion_policial_calle_1784399979535.png",
         scenario: {
           title: "Incautación de Armas (Decreto 2535) y Procedimiento de Captura",
           description: "Durante una requisa en un establecimiento público, hallas en el bolso de un ciudadano una pistola 9mm con su cargador abastecido. El ciudadano no presenta el permiso para porte ni tenencia del arma de fuego. Debes proceder a realizar la captura por porte ilegal y la respectiva incautación.",
@@ -290,6 +332,13 @@ const COURSES_DATA = [
         id: "puesto-control-transito",
         title: "7. Puesto de Control y Accidentes de Tránsito",
         videoUrl: "https://www.youtube.com/embed/aXXeg6wiOF4",
+        videoDescription: "El video instruye en las directrices de seguridad vial: el correcto montaje y señalización de un Puesto de Control en carretera (distancias, conos, chalecos) y el protocolo de primer respondiente en caso de colisiones viales con lesionados, incluyendo la preservación técnica del croquis.",
+        metrics: {
+          type: "Seguridad Vial / Control Vial",
+          means: "Puesto de Control / Señalización Vial / Croquis",
+          law: "Ley 769 de 2002 (Código Nacional de Tránsito)"
+        },
+        imageSrc: "puesto_control_transito_p_1784399989800.png",
         scenario: {
           title: "Instalación de Puesto de Control y Choque con Lesionados",
           description: "Estás asignado a un Puesto de Control para la prevención vial. De repente, a 50 metros del puesto, ocurre una colisión frontal entre dos vehículos particulares. Uno de los conductores está atrapado dentro del vehículo y el otro presenta aliento alcohólico e intenta huir a pie. Debes priorizar las acciones operativas y de tránsito.",
@@ -333,6 +382,13 @@ const COURSES_DATA = [
         id: "porte-uniforme",
         title: "8. Porte de Uniforme y Elementos de Dotación",
         videoUrl: "https://www.youtube.com/embed/oS_bI6arJkc",
+        videoDescription: "En este video se hace énfasis en la importancia reglamentaria y legal del uso correcto del uniforme y los elementos de dotación (taser, tonfa, chaleco blindado, radio) por seguridad y autocuidado. Asimismo, explica la responsabilidad disciplinaria asociada al abandono o mal uso de los recursos públicos de policía.",
+        metrics: {
+          type: "Inspección Disciplinaria / Autocuidado",
+          means: "Elementos de Protección / Distintivos Reglamentarios",
+          law: "Resolución 3372 de 2009 (Reglamento de Uniformes e Insignias)"
+        },
+        imageSrc: "uso_fuerza_taser_1784399968366.png",
         scenario: {
           title: "Uso Correcto de Uniformes, Accesorios y Medios Tecnológicos",
           description: "Vas a salir a un servicio de patrullaje nocturno en una zona de alta delictividad. El comandante de guardia observa que portas el chaleco antibalas mal ajustado y no llevas tu radio de comunicaciones ni el dispositivo taser de dotación. Debes fundamentar disciplinariamente el uso del uniforme y equipos.",

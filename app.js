@@ -233,15 +233,38 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("instruction-prototipar").textContent = moduleData.designThinking.prototipar.question;
     inputPrototipar.placeholder = moduleData.designThinking.prototipar.placeholder;
 
-    // Configurar Video de Apoyo
+    // Configurar Video de Apoyo y sus métricas
     const videoCard = document.getElementById("module-video-card");
     const videoIframe = document.getElementById("module-video-iframe");
+    const videoDescText = document.getElementById("module-video-description-text");
+    const metricProcType = document.getElementById("metric-proc-type");
+    const metricProcMeans = document.getElementById("metric-proc-means");
+    const metricProcLaw = document.getElementById("metric-proc-law");
+
     if (moduleData.videoUrl) {
       videoIframe.src = moduleData.videoUrl;
+      videoDescText.textContent = moduleData.videoDescription || "Sin transcripción disponible.";
+      
+      // Cargar Métricas
+      metricProcType.textContent = moduleData.metrics?.type || "General";
+      metricProcMeans.textContent = moduleData.metrics?.means || "Estándar";
+      metricProcLaw.textContent = moduleData.metrics?.law || "Normativa General";
+
       videoCard.style.display = "block";
     } else {
       videoIframe.src = "";
       videoCard.style.display = "none";
+    }
+
+    // Configurar Imagen de Caso
+    const caseImageContainer = document.getElementById("module-case-image-container");
+    const caseImage = document.getElementById("module-case-image");
+    if (moduleData.imageSrc) {
+      caseImage.src = moduleData.imageSrc;
+      caseImageContainer.style.display = "block";
+    } else {
+      caseImage.src = "";
+      caseImageContainer.style.display = "none";
     }
 
     // Restaurar respuestas previas si existen
@@ -587,6 +610,71 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(`Has completado la evaluación teórica.\nRespuestas Correctas: ${state.questionsScore.correct}\nRespuestas Incorrectas: ${state.questionsScore.incorrect}`);
         showView(welcomeView);
       }
+    });
+
+    // Controladores de Eventos del Chat Flotante de IA
+    const aiFloatingBtn = document.getElementById("ai-floating-btn");
+    const aiFloatingChat = document.getElementById("ai-floating-chat");
+    const closeFloatingChatBtn = document.getElementById("close-floating-chat-btn");
+    const floatingChatBody = document.getElementById("floating-chat-body");
+    const floatingChatInput = document.getElementById("floating-chat-input");
+    const floatingChatSendBtn = document.getElementById("floating-chat-send-btn");
+
+    aiFloatingBtn.addEventListener("click", () => {
+      if (aiFloatingChat.style.display === "flex") {
+        aiFloatingChat.style.display = "none";
+      } else {
+        aiFloatingChat.style.display = "flex";
+        floatingChatBody.scrollTop = floatingChatBody.scrollHeight;
+      }
+    });
+
+    closeFloatingChatBtn.addEventListener("click", () => {
+      aiFloatingChat.style.display = "none";
+    });
+
+    function sendFloatingMessage() {
+      const text = floatingChatInput.value.trim();
+      if (!text) return;
+
+      // Mensaje de usuario
+      const userMsg = document.createElement("div");
+      userMsg.className = "chat-message user";
+      userMsg.innerHTML = `<span class="chat-message-sender">Oficial</span><p>${text}</p>`;
+      floatingChatBody.appendChild(userMsg);
+      floatingChatInput.value = "";
+      floatingChatBody.scrollTop = floatingChatBody.scrollHeight;
+
+      // Respuesta de IA simulada basada en doctrina policial colombiana
+      setTimeout(() => {
+        let reply = "Entendido, Oficial. Analizando el marco reglamentario de la Policía Nacional de Colombia. ";
+        const textLower = text.toLowerCase();
+
+        if (textLower.includes("ley 1801") || textLower.includes("convivencia") || textLower.includes("código")) {
+          reply += "La Ley 1801 de 2016 establece las categorías de convivencia: seguridad, tranquilidad, ambiente y salud pública. Recuerda que las medidas correctivas son preventivas y no penales.";
+        } else if (textLower.includes("taser") || textLower.includes("uso de la fuerza") || textLower.includes("fuerza")) {
+          reply += "El uso de la fuerza se rige bajo los principios de necesidad, proporcionalidad, legalidad y temporalidad (Resolución 02903 de 2017). Los dispositivos menos letales (como el taser) requieren una distancia mínima de seguridad de 7 metros antes del despliegue.";
+        } else if (textLower.includes("derechos humanos") || textLower.includes("dh") || textLower.includes("vida")) {
+          reply += "En toda actuación, la protección al derecho a la vida es tu prioridad absoluta. El ingreso a domicilio sin orden judicial (Art. 32 Constitucional) se fundamenta únicamente bajo imperiosa necesidad o voces de auxilio.";
+        } else if (textLower.includes("esposamiento") || textLower.includes("esposas")) {
+          reply += "El esposamiento es una medida preventiva de seguridad. Debes realizarlo con el sujeto en posición manos atrás, asegurando el doble seguro en los anillos para evitar autolesiones y reclamos disciplinarios.";
+        } else if (textLower.includes("uniforme") || textLower.includes("tonfa")) {
+          reply += "El reglamento de uniformes (Resolución 3372 de 2009) establece que el porte del uniforme es impecable. El bastón tonfa debe ubicarse siempre al lado opuesto del arma de fuego en tu cinturón multipropósito.";
+        } else {
+          reply += "Recuerda que en la labor comunitaria, el diálogo (SEA Policía: Saludar, Escuchar, Actuar) es tu principal herramienta antes de recurrir a medidas físicas o de fuerza.";
+        }
+
+        const iaMsg = document.createElement("div");
+        iaMsg.className = "chat-message ia";
+        iaMsg.innerHTML = `<span class="chat-message-sender">Asistente IA</span><p>${reply}</p>`;
+        floatingChatBody.appendChild(iaMsg);
+        floatingChatBody.scrollTop = floatingChatBody.scrollHeight;
+      }, 1200);
+    }
+
+    floatingChatSendBtn.addEventListener("click", sendFloatingMessage);
+    floatingChatInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") sendFloatingMessage();
     });
 
     // Reiniciar Progreso

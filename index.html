@@ -104,6 +104,12 @@
               <span class="scenario-icon">🎬</span>
               <h4>Escenario de Convivencia / Procedimiento</h4>
             </div>
+            
+            <!-- Imagen de referencia del caso -->
+            <div class="case-image-container" id="module-case-image-container" style="display: none; margin-bottom: 1.25rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-glass);">
+              <img id="module-case-image" src="" alt="Imagen de referencia del caso policial" style="width: 100%; max-height: 320px; object-fit: cover; display: block;" />
+            </div>
+
             <p id="module-scenario-desc">Descripción del escenario...</p>
             <div class="role-box">
               <strong>Tu Rol Operativo:</strong> <span id="module-role-text">Rol...</span>
@@ -125,6 +131,28 @@
           </div>
           <div class="video-wrapper">
             <iframe id="module-video-iframe" src="" title="Video de apoyo policial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <!-- Descripción del contenido del video -->
+          <div class="video-transcript-box" style="margin-top: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 8px; border-left: 3px solid var(--accent-gold);">
+            <strong style="font-size: 0.85rem; color: var(--accent-gold); display: block; margin-bottom: 0.25rem;">📝 Resumen de Audio y Contenido del Video:</strong>
+            <p id="module-video-description-text" style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">Descripción...</p>
+          </div>
+
+          <!-- Métricas del Procedimiento (Cuantificación educativa) -->
+          <div class="video-metrics-box" style="margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+            <div style="background: rgba(0,0,0,0.15); padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border-glass);">
+              <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent-color); font-weight: 700; display: block;">Tipo de Procedimiento</span>
+              <strong id="metric-proc-type" style="font-size: 0.95rem; font-family: var(--font-display);">Administrativo</strong>
+            </div>
+            <div style="background: rgba(0,0,0,0.15); padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border-glass);">
+              <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent-color); font-weight: 700; display: block;">Medios de Policía</span>
+              <strong id="metric-proc-means" style="font-size: 0.95rem; font-family: var(--font-display);">Materiales / Inmateriales</strong>
+            </div>
+            <div style="background: rgba(0,0,0,0.15); padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border-glass);">
+              <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent-color); font-weight: 700; display: block;">Marco Normativo Principal</span>
+              <strong id="metric-proc-law" style="font-size: 0.95rem; font-family: var(--font-display);">Ley 1801</strong>
+            </div>
           </div>
         </div>
 
@@ -300,6 +328,34 @@
   <footer class="app-footer">
     <p>© 2026 - Plataforma de Aprendizaje Activo y Convivencia Policial - Policía Nacional de Colombia</p>
   </footer>
+
+  <!-- Asistente de IA Flotante -->
+  <button class="ai-floating-btn" id="ai-floating-btn" aria-label="Consultar Asistente de IA" title="Consultar Asistente de IA">
+    <span>🤖</span>
+  </button>
+
+  <div class="ai-floating-chat" id="ai-floating-chat">
+    <div class="floating-chat-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span class="shield-icon" style="font-size: 1.3rem;">🛡️</span>
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display);">Asesor de Doctrina IA</h4>
+          <p style="font-size: 0.65rem; opacity: 0.8;">Normativa & Procedimientos</p>
+        </div>
+      </div>
+      <button class="close-chat-btn" id="close-floating-chat-btn">&times;</button>
+    </div>
+    <div class="floating-chat-body" id="floating-chat-body">
+      <div class="chat-message ia">
+        <span class="chat-message-sender">Asistente IA</span>
+        <p>¡Hola, Oficial! Estoy aquí para resolver cualquier duda que tengas sobre la Ley 1801, el Uso de la Fuerza, Derechos Humanos o técnicas de Atención al Ciudadano. ¿En qué procedimiento te asesoro hoy?</p>
+      </div>
+    </div>
+    <div class="floating-chat-footer">
+      <input type="text" id="floating-chat-input" placeholder="Pregunta sobre leyes o procedimientos..." />
+      <button id="floating-chat-send-btn">➔</button>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="data.js"></script>
