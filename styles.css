@@ -742,25 +742,25 @@ body {
 }
 
 .btn-primary {
-  background: var(--police-accent);
+  background: var(--accent-gold); /* Verde azulado de Cambridge */
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: #2563eb;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  background: var(--accent-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 176, 171, 0.3);
 }
 
 .btn-secondary {
-  background: var(--accent-color);
-  color: var(--bg-primary);
+  background: var(--police-blue); /* Púrpura de Cambridge */
+  color: #fff;
 }
 
 .btn-secondary:hover {
-  background: #0891b2;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+  background: #3c0037;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(81, 0, 74, 0.3);
 }
 
 .btn-success {
@@ -769,8 +769,8 @@ body {
 }
 
 .btn-success:hover {
-  background: #059669;
-  transform: translateY(-2px);
+  background: #14613e;
+  transform: translateY(-1px);
 }
 
 .btn-outline {
@@ -780,14 +780,15 @@ body {
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--text-secondary);
+  background: rgba(0, 47, 108, 0.04);
+  border-color: var(--police-blue);
+  color: var(--police-blue);
 }
 
 .btn-large {
   padding: 0.85rem 2rem;
   font-size: 1rem;
-  border-radius: 30px;
+  border-radius: 4px; /* Consistente con el borde recto de Cambridge */
 }
 
 /* Estilos de opción para cuestionario */
