@@ -14,35 +14,41 @@
 </head>
 <body class="light-mode">
 
-  <!-- Header -->
-  <header class="app-header">
-    <div class="header-logo">
-      <div class="shield-icon">🛡️</div>
-      <div class="header-titles">
-        <h1>CURSOS MANDATORIOS</h1>
-        <h2>Policía Nacional de Colombia</h2>
+  <!-- Cambridge-style Header Structure -->
+  <header class="cambridge-header">
+    <!-- Nivel 1: Barra superior de marca blanca -->
+    <div class="topbar-header" style="background: #ffffff; padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e1e6eb;">
+      <div class="logo-area" style="display: flex; align-items: center; gap: 0.5rem; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 700; color: #51004a; font-size: 1.4rem;">
+        <span style="border-right: 2px solid #51004a; padding-right: 0.5rem; letter-spacing: 1px;">🛡️ POLICÍA DE COLOMBIA</span>
+        <span style="font-size: 1rem; color: #4a5568; font-weight: 400; padding-left: 0.25rem;">Dirección de Educación Policial</span>
+      </div>
+      <div class="topbar-actions" style="display: flex; align-items: center; gap: 1rem;">
+        <!-- Theme Switcher -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar Tema" title="Cambiar Tema">
+          <span class="mode-icon">🌙</span>
+        </button>
+        <!-- Botón Evaluación Teórica -->
+        <button class="btn btn-outline" id="go-questions-btn" style="gap: 0.5rem; display: flex; align-items: center; font-size: 0.85rem; padding: 0.5rem 1rem;">
+          <span>📝</span> Evaluación Teórica (100 Q)
+        </button>
       </div>
     </div>
-    
-    <div class="header-actions">
-      <!-- Progreso General -->
-      <div class="global-progress">
-        <span class="progress-label">Progreso General:</span>
-        <div class="progress-bar-container">
-          <div class="progress-bar-fill" id="global-progress-fill" style="width: 0%;"></div>
-        </div>
-        <span class="progress-percentage" id="global-progress-text">0%</span>
+
+    <!-- Nivel 2: Banner cian/verde azulado vibrante de Cambridge con título y buscador -->
+    <div class="subheader-banner" style="background: #00b0ab; padding: 1.5rem 2rem; color: #ffffff; display: flex; justify-content: space-between; align-items: center;">
+      <div class="banner-titles">
+        <h1 style="font-size: 1.8rem; font-weight: 600; margin: 0; font-family: var(--font-display); letter-spacing: 0.5px;">Cursos Mandatorios</h1>
+        <p style="font-size: 0.95rem; margin: 0.25rem 0 0 0; opacity: 0.9;">Aprendizaje y Evaluación Integrados de la Actividad de Policía</p>
       </div>
-
-      <!-- Theme Switcher -->
-      <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar Tema" title="Cambiar Tema">
-        <span class="mode-icon">🌙</span>
-      </button>
-
-      <!-- Botón Evaluación Teórica -->
-      <button class="btn btn-outline" id="go-questions-btn" style="gap: 0.5rem; display: flex; align-items: center;">
-        <span>📝</span> Evaluación Teórica (100 Q)
-      </button>
+      
+      <!-- Progreso General en el Banner -->
+      <div class="global-progress" style="background: rgba(0, 0, 0, 0.15); border: none; padding: 0.5rem 1.25rem; border-radius: 4px;">
+        <span class="progress-label" style="color: #ffffff;">Progreso General:</span>
+        <div class="progress-bar-container" style="background: rgba(255, 255, 255, 0.2); width: 140px;">
+          <div class="progress-bar-fill" id="global-progress-fill" style="width: 0%; background: #ffffff;"></div>
+        </div>
+        <span class="progress-percentage" id="global-progress-text" style="color: #ffffff; font-weight: 700;">0%</span>
+      </div>
     </div>
   </header>
 
