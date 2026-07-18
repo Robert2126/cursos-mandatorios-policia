@@ -243,7 +243,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (moduleData.videoUrl) {
       videoIframe.src = moduleData.videoUrl;
-      videoDescText.textContent = moduleData.videoDescription || "Sin transcripción disponible.";
+      
+      // Reemplazar saltos de línea \n por etiquetas <br> para que el navegador los renderice correctamente
+      videoDescText.innerHTML = (moduleData.videoDescription || "Sin transcripción disponible.").replace(/\n/g, "<br>");
       
       // Cargar Métricas
       metricProcType.textContent = moduleData.metrics?.type || "General";
