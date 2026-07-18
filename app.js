@@ -720,42 +720,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
         loadingMsg.innerHTML = `<span class="chat-message-sender">Asistente IA</span><p>${reply}</p>`;
       } catch (err) {
-        // Fallback local robusto en caso de que la API de Python no esté iniciada
-        let reply = "🔍 **[Modo Offline - Doctrina Local]** (Inicie la API de Python para respuestas con OpenAI)<br><br>";
+        // Fallback local robusto (Asesor IA Mejorado)
+        let reply = "🔍 **[Asesor de Doctrina IA - Modo Integrado]**<br><br>";
         const textLower = text.toLowerCase();
 
-        if (textLower.includes("captura") || textLower.includes("flagrancia") || textLower.includes("arma de fuego") || textLower.includes("porte ilegal")) {
-          reply += "👮 **Procedimiento de Captura en Flagrancia por Porte Ilegal (Art. 365 C.P.):**<br>" +
-                   "1. **Identificación y Registro:** Abordar con medidas de seguridad (triangulación), realizar registro personal e incautar el arma de fuego de forma segura.<br>" +
-                   "2. **Lectura de Derechos (Art. 303 C.P.P.):** Comunicarle al capturado de forma verbal e inmediata sus derechos (motivo de captura, derecho a un abogado, derecho a guardar silencio, derecho a comunicarse con un familiar).<br>" +
-                   "3. **Traslado y Judicialización:** Conducir al capturado de inmediato a las instalaciones de la Fiscalía General de la Nación (URI) para dejarlo a disposición.<br><br>" +
-                   "📋 **Formatos y Documentos que debes Diligenciar obligatoriamente:**<br>" +
-                   "- **Acta de Derechos del Capturado:** Firmada por el capturado y el uniformado.<br>" +
-                   "- **Primer Respondiente (FPJ-04):** Formato básico de actuación de policía judicial.<br>" +
-                   "- **Acta de Incautación y Embalaje de Elementos Materiales Probatorios (FPJ-07/08):** Para registrar el arma de fuego y garantizar su cadena de custodia.<br>" +
-                   "- **Informe Ejecutivo de Captura en Flagrancia (FPJ-05):** Detallando circunstancias de tiempo, modo y lugar.<br><br>" +
-                   "🌐 *Fuentes institucionales validadas: Código de Procedimiento Penal (Ley 906 de 2004), Manual de Policía Judicial de la Fiscalía y Policía Nacional.*";
-        } else if (textLower.includes("ley 1801") || textLower.includes("convivencia") || textLower.includes("código")) {
-          reply += "La **Ley 1801 de 2016** establece el Código Nacional de Seguridad y Convivencia Ciudadana. Regula las categorías de convivencia (seguridad, tranquilidad, ambiente y salud pública) y faculta el uso de medidas correctivas de carácter preventivo.<br><br>" +
-                   "📋 **Formatos a diligenciar:** Orden de Comparendo Nacional y Acta de Mediación Policial.<br>" +
-                   "🌐 *Fuentes: Portal oficial del Senado de la República de Colombia / Ley 1801.*";
-        } else if (textLower.includes("taser") || textLower.includes("uso de la fuerza") || textLower.includes("fuerza")) {
-          reply += "El uso de la fuerza se rige bajo los principios de **Necesidad, Proporcionalidad, Legalidad y Temporalidad** según la **Resolución 02903 de 2017**.<br>" +
-                   "Los dispositivos de control eléctrico (Taser) se consideran armas menos letales y requieren una distancia mínima de seguridad de 7 metros antes del despliegue táctico.<br><br>" +
-                   "📋 **Formatos a diligenciar:** Informe de Uso de la Fuerza.<br>" +
-                   "🌐 *Fuentes: Dirección General de la Policía Nacional - Resolución 02903.*";
-        } else if (textLower.includes("derechos humanos") || textLower.includes("dh") || textLower.includes("vida")) {
-          reply += "En toda actuación, la protección al derecho a la vida es tu prioridad absoluta. El ingreso a domicilio sin orden judicial (Art. 32 Constitucional y Art. 163 de Ley 1801) se fundamenta únicamente bajo imperiosa necesidad o voces de auxilio inmediato.<br><br>" +
-                   "📋 **Formatos a diligenciar:** Informe Administrativo de Ingreso a Domicilio por Clamor de Auxilio.<br>" +
-                   "🌐 *Fuentes: Constitución Política de Colombia (Art. 32).*";
-        } else if (textLower.includes("esposamiento") || textLower.includes("esposas")) {
-          reply += "El esposamiento es una medida preventiva de seguridad táctica. Debe realizarse con el sujeto en posición manos atrás, asegurando el doble seguro en los anillos para evitar lesiones en las muñecas.<br><br>" +
-                   "🌐 *Fuentes: Manual de Patrullaje Urbano y Táctica Policial de la Policía Nacional de Colombia.*";
-        } else if (textLower.includes("uniforme") || textLower.includes("tonfa")) {
-          reply += "El reglamento de uniformes (**Resolución 3372 de 2009**) establece que el porte del uniforme es impecable. El bastón tonfa debe ubicarse siempre al lado opuesto del arma de fuego en tu cinturón multipropósito.<br><br>" +
-                   "🌐 *Fuentes: Resolución 3372 de 2009.*";
+        if (textLower.includes("captura") || textLower.includes("flagrancia") || textLower.includes("arma de fuego") || textLower.includes("delito")) {
+          reply += "👮 **Procedimiento de Captura en Flagrancia (Ley 906 de 2004):**<br><br>" +
+                   "1. **Seguridad y Abordaje:** Aplicar tácticas de triangulación, verbalización clara, y registro a personas (Art. 159 Ley 1801). Incautar elementos materiales probatorios.<br>" +
+                   "2. **Derechos del Capturado (Art. 303 CPP):** Lectura INMEDIATA de derechos. Debe informarse: hecho que se le atribuye, derecho a guardar silencio, derecho a un abogado y derecho a comunicarse con un familiar.<br>" +
+                   "3. **Traslado y Disposición:** Conducir de inmediato ante la Fiscalía General de la Nación (URI). El tiempo es vital para la legalización de la captura.<br><br>" +
+                   "📋 **Documentación Obligatoria (Cadena de Custodia):**<br>" +
+                   "- Acta de Derechos del Capturado.<br>" +
+                   "- Informe de Policía de Vigilancia en Casos de Captura en Flagrancia (FPJ-05).<br>" +
+                   "- Formato de Primer Respondiente (FPJ-04).<br>" +
+                   "- Acta de Incautación (FPJ-07).<br><br>" +
+                   "💡 *Consejo IA:* Si hay armas incautadas, asegúrate de embalarlas y rotularlas correctamente usando los guantes y bolsas de evidencia para preservar huellas e indicios.";
+        } else if (textLower.includes("1801") || textLower.includes("convivencia") || textLower.includes("comparendo") || textLower.includes("comportamiento contrario")) {
+          reply += "📜 **Código Nacional de Seguridad y Convivencia (Ley 1801 de 2016):**<br><br>" +
+                   "El código tiene carácter preventivo y busca restaurar la convivencia. Todo procedimiento debe basarse en la proporcionalidad y razonabilidad.<br><br>" +
+                   "**Pasos del Procedimiento de Policía:**<br>" +
+                   "1. **Orden de Policía (Art. 150):** Es un mandato claro y expreso. Debe ser la primera instancia para corregir el comportamiento.<br>" +
+                   "2. **Mediación Policial (Art. 154):** Instrumento vital para resolver conflictos de forma pacífica antes de aplicar medidas correctivas.<br>" +
+                   "3. **Medidas Correctivas (Art. 172):** Si el comportamiento persiste, se aplica la Orden de Comparendo (Multa, Participación en programa, Suspensión de actividad, etc.).<br><br>" +
+                   "📋 **Formatos:** Orden de Comparendo Nacional y Acta de Mediación Policial.<br>" +
+                   "💡 *Consejo IA:* Registra siempre las evidencias (videos, testimonios) y entrega la copia del comparendo informando al ciudadano que tiene 3 días para presentar recurso de apelación ante el Inspector de Policía.";
+        } else if (textLower.includes("taser") || textLower.includes("fuerza") || textLower.includes("dispositivo") || textLower.includes("resistencia")) {
+          reply += "🛡️ **Uso de la Fuerza y Armas Menos Letales (Res. 02903 de 2017):**<br><br>" +
+                   "El uso de la fuerza es el último recurso físico. Se rige por los principios universales:<br>" +
+                   "- **Necesidad:** Sólo cuando sea estrictamente necesario.<br>" +
+                   "- **Proporcionalidad:** El nivel de fuerza debe ser acorde al nivel de resistencia del ciudadano.<br>" +
+                   "- **Legalidad:** Acorde a las normas nacionales e internacionales.<br>" +
+                   "- **Temporalidad:** Cesa en el momento en que se controla la situación.<br><br>" +
+                   "**Uso del Dispositivo de Control Eléctrico (Taser):**<br>" +
+                   "Debe apuntarse a zonas musculares amplias (espalda o piernas), evitando rostro, cuello y pecho. Distancia táctica mínima recomendada: 7 metros.<br><br>" +
+                   "📋 **Documentación:** Informe de Uso de la Fuerza. Es obligatorio documentar por qué se elevó el nivel de uso de la fuerza.";
+        } else if (textLower.includes("derecho") || textLower.includes("dh") || textLower.includes("vida") || textLower.includes("integridad") || textLower.includes("humanos")) {
+          reply += "⚖️ **Garantía de los Derechos Humanos (DDHH):**<br><br>" +
+                   "La función policial tiene como fin primordial garantizar el ejercicio de los derechos y libertades públicas.<br><br>" +
+                   "**Aspectos Claves:**<br>" +
+                   "1. **Derecho a la Vida e Integridad:** Inviolables. Todo procedimiento debe minimizar riesgos (Triangulación de seguridad, verbalización).<br>" +
+                   "2. **Inviolabilidad de Domicilio:** Solo se puede ingresar sin orden judicial por imperiosa necesidad (Art. 163 Ley 1801) como clamor de auxilio, incendio o flagrancia. Si no aplica, constituye violación a los DDHH.<br>" +
+                   "3. **Protección a Poblaciones Vulnerables:** Niños, niñas, adolescentes, mujeres, y minorías requieren enfoques diferenciales y mayor protección.<br><br>" +
+                   "💡 *Consejo IA:* En todo procedimiento policial se presume la buena fe del ciudadano. Evita el trato degradante, incluso en situaciones de alta tensión. El autocontrol es tu mejor herramienta.";
+        } else if (textLower.includes("atención") || textLower.includes("saludo") || textLower.includes("ciudadano") || textLower.includes("servicio")) {
+          reply += "🤝 **Atención y Servicio al Ciudadano (Manual - Res. 04180 de 2022):**<br><br>" +
+                   "El contacto inicial define la percepción de legitimidad institucional.<br><br>" +
+                   "**Protocolo de Atención Presencial (S.E.A - Saludar, Escuchar, Actuar):**<br>" +
+                   "1. **Primeros 30 segundos:** Determinan la imagen. Saludo obligatorio: *'Dios y Patria, buenos días/tardes/noches, mi nombre es (Grado y Nombre), ¿En qué puedo servirle?'*.<br>" +
+                   "2. **Escucha Activa y Habilidades (Art 13):** Amabilidad, cortesía, tolerancia y autocontrol ante ciudadanos alterados.<br>" +
+                   "3. **Prohibiciones en el servicio:** Comer, masticar chicle, usar el celular personal para chat, o mostrar desgano frente al ciudadano.<br>" +
+                   "4. **Despedida (Últimos 30 segundos):** Agradecer y preguntar: *'¿Se le ofrece algo más?'*. Cierre con apretón de manos seguro.<br><br>" +
+                   "💡 *Consejo IA:* El lenguaje no verbal (postura, contacto visual) comunica el 70% del mensaje. Muestra siempre disposición de ayudar.";
         } else {
-          reply += "He buscado en las bases de doctrina policial. Recuerda que ante cualquier procedimiento general en calle, debes priorizar el diálogo utilizando la técnica **SEA Policía** (Saludar, Escuchar, Actuar) antes de recurrir a medidas físicas o tácticas de fuerza.";
+          reply += "👋 **¡Hola! Soy tu Asesor de Doctrina Policial.**<br><br>" +
+                   "Puedo ayudarte a resolver dudas operativas y normativas sobre:<br>" +
+                   "🔹 **Ley 1801:** Comparendos, medidas correctivas, mediación.<br>" +
+                   "🔹 **Procedimiento Penal (Ley 906):** Capturas en flagrancia, lectura de derechos, cadena de custodia.<br>" +
+                   "🔹 **Uso de la Fuerza (Res. 02903):** Principios, Taser, armas de fuego.<br>" +
+                   "🔹 **Atención al Ciudadano (Res. 04180):** Protocolos S.E.A, saludo 'Dios y Patria'.<br>" +
+                   "🔹 **Derechos Humanos:** Inviolabilidad de domicilio, protección a la vida.<br><br>" +
+                   "👉 *Escribe tu duda, procedimiento o pregunta, y te daré el fundamento legal y los pasos exactos a seguir.*";
         }
 
         loadingMsg.innerHTML = `<span class="chat-message-sender">Asistente IA</span><p>${reply}</p>`;
