@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const globalProgressFill = document.getElementById("global-progress-fill");
   const globalProgressText = document.getElementById("global-progress-text");
   const goHomeBtn = document.getElementById("go-home-btn");
+  const goHomeBannerBtn = document.getElementById("go-home-banner-btn");
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const sidebarNav = document.getElementById("sidebar-nav");
   
@@ -778,6 +779,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (goHomeBtn) {
       goHomeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showView(welcomeView);
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => item.classList.remove('active'));
+      });
+    }
+
+    if (goHomeBannerBtn) {
+      goHomeBannerBtn.addEventListener("click", (e) => {
         e.preventDefault();
         showView(welcomeView);
         const navItems = document.querySelectorAll('.nav-item');
