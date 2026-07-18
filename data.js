@@ -11,7 +11,7 @@ const COURSES_DATA = [
         id: "comunicacion-asertiva",
         title: "1. Atención y Comunicación Asertiva",
         videoUrl: "https://www.youtube.com/embed/cl7iUeFvy5E",
-        videoDescription: "En este video se instruye sobre la atención presencial enfocada en la empatía y la comunicación asertiva en la actividad de policía. Se explican los factores proxémicos (espacio personal), la importancia del contacto visual, la postura corporal de apertura y la modulación del tono de voz para desescalar conflictos con la ciudadanía.",
+        videoDescription: "Instrucciones Clave sobre la Atención al Ciudadano y Comunicación Asertiva:\n\n1. Enfoque Humano y Empatía: Toda interacción de policía debe fundamentarse en el trato digno, la empatía y la resolución pacífica de conflictos, colocando al ciudadano en el centro de la atención pública.\n2. Comunicación No Verbal (Lenguaje Corporal): Se detallan los factores proxémicos. Mantener una distancia táctica y segura de al menos 1.5 metros, adoptar una postura de manos abiertas (nunca de brazos cruzados o manos en los bolsillos que demuestran desinterés o agresión) y sostener contacto visual asertivo.\n3. Modulación y Control de Voz: Utilizar un tono de voz calmado, firme y pausado. Evitar gritar o responder de manera impositiva, lo cual escala inmediatamente la hostilidad de los implicados.\n4. Método de Escucha Activa: Escuchar sin interrumpir el relato inicial del ciudadano para entender sus necesidades emocionales y jurídicas reales antes de formular un plan de acción policial.",
         metrics: {
           type: "Atención Ciudadana / Prevención",
           means: "Diálogo / Mediación / SEA Policía",
