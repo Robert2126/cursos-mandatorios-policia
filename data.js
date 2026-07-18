@@ -17,6 +17,7 @@ const COURSES_DATA = [
           means: "Saludar, Escuchar, Actuar (SEA Policía) / Habilidades del Art. 13",
           law: "Resolución 04180 de 2022 (Manual de Atención al Ciudadano)"
         },
+        videoUrl: "https://www.youtube.com/embed/cl7iUeFvy5E",
         imageSrc: "ai_caso_atencion_presencial_1784407699958.png",
         scenarios: [
 {
@@ -108,6 +109,7 @@ designThinking: {
           means: "Turno Preferencial / Trato Digno sin Diminutivos",
           law: "Resolución 04180 de 2022 / Ley 1346 de 2009"
         },
+        videoUrl: "https://www.youtube.com/embed/cl7iUeFvy5E",
         imageSrc: "ai_caso_mecanismos_constitucionales_1784407738502.png",
         scenarios: [
 {
@@ -199,6 +201,7 @@ designThinking: {
           means: "98 Oficinas OAC / 13 Centros de Conciliación / Línea 123",
           law: "Ley 1755 de 2015 / Resolución 04180 de 2022"
         },
+        videoUrl: "https://www.youtube.com/embed/dkWStFwfvOw",
         imageSrc: "ai_caso_procedimientos_convivencia_1784407753498.png",
         scenarios: [
 {
@@ -297,6 +300,7 @@ designThinking: {
           means: "Ingreso sin Orden Escrita / Auxilio de Vida",
           law: "Artículo 32 de la Constitución Política de Colombia / Ley 1801"
         },
+        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         imageSrc: "uso_fuerza_taser_1784399968366.png",
         scenarios: [
 {
@@ -395,6 +399,7 @@ designThinking: {
           means: "Uso de Esposas / Dispositivos Menos Letales / Bastón Tonfa",
           law: "Resolución 02903 de 2017 (Reglamento Uso de la Fuerza)"
         },
+        videoUrl: "https://www.youtube.com/embed/oS_bI6arJkc",
         imageSrc: "uso_fuerza_taser_1784399968366.png",
         scenarios: [
 {
@@ -493,6 +498,7 @@ designThinking: {
           means: "Mediación Comunitaria / Acta de Convivencia",
           law: "Ley 1801 de 2016 (Código de Seguridad y Convivencia)"
         },
+        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         imageSrc: "ai_caso_mediacion_vecinal_1784407707633.png",
         scenarios: [
 {
@@ -584,6 +590,7 @@ designThinking: {
           means: "Captura en Flagrancia / Incautación de Armamento",
           law: "Decreto 2535 de 1993 / Artículo 303 de CPP"
         },
+        videoUrl: "https://www.youtube.com/embed/QieQW7-4NRc",
         imageSrc: "mediacion_policial_calle_1784399979535.png",
         scenarios: [
 {
@@ -675,6 +682,7 @@ designThinking: {
           means: "Puesto de Control / Señalización Vial / Croquis",
           law: "Ley 769 de 2002 (Código Nacional de Tránsito)"
         },
+        videoUrl: "https://www.youtube.com/embed/aXXeg6wiOF4",
         imageSrc: "puesto_control_transito_p_1784399989800.png",
         scenarios: [
 {
@@ -766,6 +774,7 @@ designThinking: {
           means: "Elementos de Protección / Distintivos Reglamentarios",
           law: "Resolución 3372 de 2009 (Reglamento de Uniformes e Insignias)"
         },
+        videoUrl: "https://www.youtube.com/embed/oS_bI6arJkc",
         imageSrc: "uso_fuerza_taser_1784399968366.png",
         scenarios: [
 {
@@ -864,6 +873,7 @@ designThinking: {
           means: "Uso de la Fuerza Proporcional / Auxilio a Heridos",
           law: "Constitución Política, DD.HH y D.I.H."
         },
+        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         imageSrc: "ai_caso_ddhh_primeros_auxilios_1784407714247.png",
         scenarios: [
 {
@@ -955,6 +965,7 @@ designThinking: {
           means: "Trato Digno / Ruta VBG / Cero Estereotipos",
           law: "Constitución Política (Principio de Igualdad y No Discriminación)"
         },
+        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         imageSrc: "ai_caso_enfoque_genero_1784407721258.png",
         scenarios: [
 {
@@ -1046,6 +1057,7 @@ designThinking: {
           means: "Acción de Tutela / Habeas Corpus / Derecho Petición",
           law: "Constitución Política de Colombia"
         },
+        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         imageSrc: "ai_caso_mecanismos_constitucionales_1784407738502.png",
         scenarios: [
 {
@@ -1144,6 +1156,7 @@ designThinking: {
           means: "Puesto de Control / Acordonamiento / Primer Respondiente",
           law: "Código Nacional de Tránsito (Ley 769 de 2002)"
         },
+        videoUrl: "https://www.youtube.com/embed/aXXeg6wiOF4",
         imageSrc: "ai_caso_transito_puesto_control_1784407746273.png",
         scenarios: [
 {
@@ -1235,6 +1248,7 @@ designThinking: {
           means: "Mediación Policial In Situ / Escucha Activa",
           law: "Ley 1801 de 2016 (Código Nacional de Seguridad y Convivencia)"
         },
+        videoUrl: "https://www.youtube.com/embed/OureU4LT2is",
         imageSrc: "ai_caso_mediacion_vecinal_1784407707633.png",
         scenarios: [
 {
@@ -1326,6 +1340,7 @@ designThinking: {
           means: "Uso correcto del uniforme / Radio / Dotación",
           law: "Reglamento de Uniformes y Régimen Disciplinario"
         },
+        videoUrl: "https://www.youtube.com/embed/oS_bI6arJkc",
         imageSrc: "ai_caso_porte_uniforme_radio_1784407761368.png",
         scenarios: [
 {

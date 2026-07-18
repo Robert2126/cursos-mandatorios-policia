@@ -271,13 +271,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const scenarioImg = document.getElementById("module-scenario-img");
     const scenarioVideo = document.getElementById("module-scenario-video");
     
-    // Si el caso dinámico tiene video, o si el módulo principal tiene videoUrl
-    const mediaUrl = state.currentScenario.videoUrl || moduleData.videoUrl;
+    // El escenario debe mostrar la imagen generada por IA
+    // Solo mostraría video en la cabecera si el caso específico lo incluye
+    const scenarioMediaUrl = state.currentScenario.videoUrl;
     
-    if (mediaUrl && (mediaUrl.includes("youtube.com") || mediaUrl.includes(".mp4"))) {
+    if (scenarioMediaUrl && (scenarioMediaUrl.includes("youtube.com") || scenarioMediaUrl.includes(".mp4"))) {
       scenarioImg.style.display = "none";
       scenarioVideo.style.display = "block";
-      scenarioVideo.src = mediaUrl;
+      scenarioVideo.src = scenarioMediaUrl;
     } else if (moduleData.imageSrc || state.currentScenario.imageSrc) {
       scenarioVideo.src = "";
       scenarioVideo.style.display = "none";
