@@ -428,8 +428,9 @@ document.addEventListener("DOMContentLoaded", () => {
       iaStatusText.textContent = "Evaluación finalizada.";
       evalActions.style.display = "flex";
 
-      // Guardar en el estado si aprueba
+      // Lógica de avance estricto: Solo mostrar Siguiente si aprueba
       if (finalScore >= 80) {
+        nextModuleBtn.style.display = "inline-block";
         state.progress[currentModule.id] = {
           completed: true,
           score: finalScore,
@@ -441,6 +442,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         };
         saveProgress();
+      } else {
+        nextModuleBtn.style.display = "none";
       }
     }, 2000);
   }
