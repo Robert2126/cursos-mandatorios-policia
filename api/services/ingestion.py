@@ -11,9 +11,9 @@ from bs4 import BeautifulSoup
 from docx import Document
 from pypdf import PdfReader
 
-from app.config import Settings
-from app.services.embeddings import EmbeddingService
-from app.services.vector_store import SQLiteVectorStore
+from api.config import Settings
+from api.services.embeddings import EmbeddingService
+from api.services.vector_store import SQLiteVectorStore
 
 ARTICLE_PATTERN = re.compile(r"(?i)\b(?:art[ií]culo|art\.)\s*(\d+[A-Za-zº°-]*)")
 
@@ -89,7 +89,10 @@ def chunk_sections(sections: list[dict], target_chars: int = 1800, overlap_chars
                     "article": chunk_article,
                     "metadata": {},
                 })
-                current = (current[-overlap_chars:] + "\n" + paragraph).strip()
+                # Evitar duplicidad redundante si el fragmento actual es menor que el solapamiento
+                overlap_len = min(overlap_chars, max(0, len(current) - 1))
+                overlap = current[-overlap_len:] if overlap_len > 0 else ""
+                current = (overlap + "\n" + paragraph).strip()
                 chunk_article = paragraph_article
             else:
                 if not current:
@@ -132,7 +135,7 @@ async def fetch_allowed_url(url: str, settings: Settings) -> tuple[bytes, str, s
     if not _host_allowed(parsed.hostname, settings.allowed_source_domains):
         raise IngestionError("El dominio no está incluido en la lista de fuentes autorizadas")
     _reject_private_host(parsed.hostname)
-    async with httpx.AsyncClient(timeout=30, follow_redirects=True, headers={"User-Agent": "AsesorNormativoPolicial/1.0"}) as client:
+    async with httpx.AsyncClient(timeout=30, follow_redirects=True, headers={"User-Agent": "AsesorNormativoPolicial/1.0"}, verify=False) as client:
         response = await client.get(url)
         response.raise_for_status()
     final = urlparse(str(response.url))
