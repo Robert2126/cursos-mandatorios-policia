@@ -733,79 +733,153 @@ document.addEventListener("DOMContentLoaded", () => {
 
         loadingMsg.innerHTML = `<span class="chat-message-sender">Asistente IA</span><p>${parseMarkdown(reply)}</p>`;
       } catch (err) {
-        // Fallback local robusto (Asesor IA Mejorado)
-        let reply = "🔍 **[Asesor de Doctrina IA - Modo Integrado]**\n\n";
+        // Fallback local robusto (Asesor IA Mejorado): analiza la pregunta contra
+        // varios temas del programa y responde con el que mejor coincida, en vez
+        // de repetir siempre la misma respuesta genérica.
         const textLower = text.toLowerCase();
 
-        if (textLower.includes("captura") || textLower.includes("flagrancia") || textLower.includes("arma de fuego") || textLower.includes("delito")) {
-          reply += "👮 **Procedimiento de Captura en Flagrancia (Artículos 301, 302 y 303 del Código de Procedimiento Penal):**\n\n" +
-                   "• **Definición de Flagrancia (Art. 301):** Ocurre cuando la persona es sorprendida en el momento de cometer la conducta punible, o es señalada por la víctima o un testigo inmediatamente después, o se le encuentran elementos que la vinculan directamente con el delito cometido hace instantes.\n\n" +
-                   "• **Procedimiento Operativo Paso a Paso:**\n" +
-                   "  1. **Uso Proporcional de la Fuerza (Res. 02903/17):** Abordar al presunto delincuente mediante técnicas de verbalización táctica, asegurando la zona de contacto y empleando el modelo de triangulación con tu compañero de patrulla.\n" +
-                   "  2. **Registro de Seguridad y Control (Art. 159 - Ley 1801):** Realizar un registro corporal minucioso inmediato para descartar y confiscar cualquier arma, elemento de peligro o Elementos Materiales Probatorios (EMP).\n" +
-                   "  3. **Lectura Inmediata de los Derechos del Capturado (Art. 303 CPP):** Recitar con voz clara los derechos constitucionales (motivo de la captura, derecho a guardar silencio, derecho a comunicarse con un allegado de forma inmediata y derecho a designar un abogado defensor).\n" +
-                   "  4. **Puesta a Disposición de la Fiscalía:** Redactar de forma inmediata la documentación legal para evitar el vencimiento de los términos (límite de 36 horas para la audiencia de legalización ante el Juez de Control de Garantías).\n\n" +
-                   "• **Documentación Exigida por la Ley (Cadena de Custodia):**\n" +
-                   "  - Acta de Lectura de Derechos del Capturado.\n" +
-                   "  - Informe Policial de Vigilancia en Casos de Captura (Formato FPJ-05).\n" +
-                   "  - Formato de Primer Respondiente (Formato FPJ-04).\n" +
-                   "  - Acta de Incautación de Elementos de Prueba (Formato FPJ-07).\n\n" +
-                   "💡 *Consejo IA:* La omisión en la lectura inmediata de derechos es la principal causa de ilegalidad de captura decretada por jueces de control de garantías. Preserva siempre la integridad física del capturado y del personal policial aplicando el doble seguro en las esposas.";
-        } else if (textLower.includes("1801") || textLower.includes("convivencia") || textLower.includes("comparendo") || textLower.includes("comportamiento contrario")) {
-          reply += "📜 **Procedimientos de Convivencia y Medidas Correctivas (Ley 1801 de 2016):**\n\n" +
-                   "• **Enfoque Preventivo y Doctrinal:** Las medidas de la Policía Nacional no tienen carácter penal o punitivo, sino netamente preventivo para restablecer el orden y la convivencia pacífica.\n\n" +
-                   "• **Orden de Prelación del Procedimiento:**\n" +
-                   "  1. **Mediación Policial (Art. 154):** Debe ser siempre tu primera opción para dirimir disputas vecinales o comportamientos contrarios a la convivencia mediante el diálogo asistido por el uniformado.\n" +
-                   "  2. **Orden de Policía (Art. 150):** Mandato verbal o escrito que emite la autoridad para prevenir un comportamiento perjudicial.\n" +
-                   "  3. **Medidas Correctivas (Art. 172):** Si el comportamiento persiste, se impone la Orden de Comparendo (Multas generales, decomiso, disolución de reuniones, etc.).\n\n" +
-                   "• **Proceso de Apelación y Garantía del Debido Proceso (Art. 222):**\n" +
-                   "  - El ciudadano tiene el derecho constitucional de interponer el recurso de apelación dentro de los 3 días hábiles siguientes ante el Inspector de Policía.\n" +
-                   "  - Debes entregar copia física del comparendo de forma obligatoria.\n\n" +
-                   "💡 *Consejo IA:* Toda Orden de Comparendo o Acta de Mediación debe fundamentarse con pruebas objetivas (videos del dispositivo corporal 'bodycam', testimonios o actas firmadas por las partes). Esto asegura la legalidad del procedimiento frente a futuras demandas administrativas.";
-        } else if (textLower.includes("taser") || textLower.includes("fuerza") || textLower.includes("dispositivo") || textLower.includes("resistencia")) {
-          reply += "🛡️ **Doctrina del Uso de la Fuerza y Armas Menos Letales (Resolución 02903 de 2017):**\n\n" +
-                   "• **Principios Universales Obligatorios:**\n" +
-                   "  - **Necesidad:** Solo se aplica la fuerza cuando los medios persuasivos (verbalización) hayan sido agotados o sean ineficaces.\n" +
-                   "  - **Proporcionalidad:** El nivel de fuerza debe modularse de acuerdo con el nivel de resistencia del ciudadano (resistencia pasiva, activa o agresión letal).\n" +
-                   "  - **Legalidad:** Actuar bajo el marco de la Constitución y las normas institucionales.\n" +
-                   "  - **Temporalidad:** El uso de la fuerza debe cesar inmediatamente una vez se haya controlado la amenaza.\n\n" +
-                   "• **Protocolo de Empleo de Dispositivos de Control Eléctrico (Taser):**\n" +
-                   "  1. El dispositivo es una herramienta disuasiva menos letal para amenazas de resistencia activa.\n" +
-                   "  2. Apuntar preferiblemente a zonas musculares amplias (espalda o cuadrantes inferiores), evitando siempre el tórax/pecho, la cabeza y los genitales para prevenir paros cardiorrespiratorios o lesiones permanentes.\n" +
-                   "  3. Mantener una distancia táctica segura (entre 2 y 7 metros).\n" +
-                   "  4. Reducir al sujeto e iniciar inmediatamente el procedimiento de esposado.\n\n" +
-                   "📋 **Documentación Obligatoria:** Todo policía que emplee la fuerza de forma física o mediante elementos de dotación (taser, bastón policial, arma de fuego) tiene el deber legal de redactar el **Informe del Uso de la Fuerza** detallando paso a paso las razones objetivas y de proporcionalidad del procedimiento.";
-        } else if (textLower.includes("derecho") || textLower.includes("dh") || textLower.includes("vida") || textLower.includes("integridad") || textLower.includes("humanos")) {
-          reply += "⚖️ **Garantía y Protección de los Derechos Humanos (DDHH) en el Servicio Policial:**\n\n" +
-                   "• **Fundamento Constitucional (Art. 2 y 218 Constitución Política):** La Policía Nacional tiene como misión constitucional garantizar el libre ejercicio de los derechos y libertades públicas, actuando siempre con absoluto respeto a la dignidad humana.\n\n" +
-                   "• **Inviolabilidad del Domicilio y la Excepción Legal (Art. 163 - Ley 1801):**\n" +
-                   "  - El ingreso sin orden judicial previa es una de las excepciones más reguladas. Solo es constitucionalmente admisible en casos taxativos:\n" +
-                   "    1. Para socorrer a alguien que pida auxilio (clamor de auxilio).\n" +
-                   "    2. Para extinguir incendio o evitar inundación.\n" +
-                   "    3. Para cazar un animal peligroso o rabioso.\n" +
-                   "    4. En casos de flagrancia donde el delincuente se refugie en su propio domicilio.\n" +
-                   "  - Cualquier ingreso por fuera de estas causales constituye violación ilícita de domicilio y acarrea sanciones penales y disciplinarias.\n\n" +
-                   "💡 *Consejo IA:* Actúa bajo el principio de no discriminación y enfoque de género. Ante poblaciones especialmente protegidas (menores de edad, mujeres gestantes, adultos mayores) el deber de protección es redoblado. Toda intervención debe documentarse con grabaciones de audio y video.";
-        } else if (textLower.includes("atención") || textLower.includes("saludo") || textLower.includes("ciudadano") || textLower.includes("servicio")) {
-          reply += "🤝 **Protocolo de Atención y Servicio al Ciudadano (Manual - Resolución 04180 de 2022):**\n\n" +
-                   "• **El Enfoque S.E.A (Saludar, Escuchar, Actuar):**\n" +
-                   "  - **Saludar:** Saludo obligatorio e institucional: *'Dios y Patria, buenos días/tardes/noches, mi nombre es (Grado y Nombre Completo), ¿En qué puedo servirle?'*.\n" +
-                   "  - **Escuchar:** Mantener una postura corporal abierta, contacto visual directo y escucha activa, demostrando empatía y paciencia ante un ciudadano alterado (Habilidades del Art. 13).\n" +
-                   "  - **Actuar:** Brindar una solución oportuna dentro del marco legal, o remitir al ciudadano a la dependencia correspondiente con información clara.\n\n" +
-                   "• **Regla de los Primeros y Últimos 30 Segundos:**\n" +
-                   "  - Los primeros 30 segundos son críticos para desescalar el conflicto o generar confianza.\n" +
-                   "  - Los últimos 30 segundos afianzan la credibilidad institucional. Terminar con la pregunta: *'¿Se le ofrece algo más?'* y realizar una despedida cortés.\n\n" +
-                   "🚫 **Prohibiciones Específicas del Puesto de Trabajo:** Comer en el puesto de facción, masticar chicle, realizar maquillajes, usar dispositivos móviles personales para fines ajenos al servicio o entablar conversaciones personales frente al ciudadano.\n\n" +
-                   "💡 *Consejo IA:* Recuerda que el lenguaje no verbal comunica más del 70% de la disposición de servicio. Controla tu tono de voz y postura corporal en todo momento.";
+        const topics = [
+          {
+            keywords: ["captura", "flagrancia", "arma de fuego", "delito", "incautacion", "incautación", "2535", "detenido", "detencion", "detención", "custodia"],
+            body: "👮 **Procedimiento de Captura en Flagrancia e Incautación de Armas (Artículos 301, 302 y 303 CPP / Decreto 2535):**\n\n" +
+                  "• **Definición de Flagrancia (Art. 301):** Ocurre cuando la persona es sorprendida en el momento de cometer la conducta punible, o es señalada por la víctima o un testigo inmediatamente después, o se le encuentran elementos que la vinculan directamente con el delito cometido hace instantes.\n\n" +
+                  "• **Procedimiento Operativo Paso a Paso:**\n" +
+                  "  1. **Uso Proporcional de la Fuerza (Res. 02903/17):** Abordar al presunto delincuente mediante técnicas de verbalización táctica, asegurando la zona de contacto y empleando el modelo de triangulación con tu compañero de patrulla.\n" +
+                  "  2. **Registro de Seguridad y Control (Art. 159 - Ley 1801):** Realizar un registro corporal minucioso inmediato para descartar y confiscar cualquier arma, elemento de peligro o Elementos Materiales Probatorios (EMP).\n" +
+                  "  3. **Lectura Inmediata de los Derechos del Capturado (Art. 303 CPP):** Recitar con voz clara los derechos constitucionales (motivo de la captura, derecho a guardar silencio, derecho a comunicarse con un allegado de forma inmediata y derecho a designar un abogado defensor).\n" +
+                  "  4. **Puesta a Disposición de la Fiscalía:** Redactar de forma inmediata la documentación legal para evitar el vencimiento de los términos (límite de 36 horas para la audiencia de legalización ante el Juez de Control de Garantías).\n\n" +
+                  "• **Incautación de Armas (Decreto 2535):** Todo elemento incautado debe registrarse formalmente, iniciando de inmediato la cadena de custodia.\n\n" +
+                  "• **Documentación Exigida por la Ley (Cadena de Custodia):**\n" +
+                  "  - Acta de Lectura de Derechos del Capturado.\n" +
+                  "  - Informe Policial de Vigilancia en Casos de Captura (Formato FPJ-05).\n" +
+                  "  - Formato de Primer Respondiente (Formato FPJ-04).\n" +
+                  "  - Acta de Incautación de Elementos de Prueba (Formato FPJ-07).\n\n" +
+                  "💡 *Consejo IA:* La omisión en la lectura inmediata de derechos es la principal causa de ilegalidad de captura decretada por jueces de control de garantías. Preserva siempre la integridad física del capturado y del personal policial aplicando el doble seguro en las esposas."
+          },
+          {
+            keywords: ["1801", "convivencia", "comparendo", "comportamiento contrario", "mediacion", "mediación", "conflicto", "vecinal", "riña", "vecino"],
+            body: "📜 **Procedimientos de Convivencia, Mediación Policial y Medidas Correctivas (Ley 1801 de 2016):**\n\n" +
+                  "• **Enfoque Preventivo y Doctrinal:** Las medidas de la Policía Nacional no tienen carácter penal o punitivo, sino netamente preventivo para restablecer el orden y la convivencia pacífica.\n\n" +
+                  "• **Orden de Prelación del Procedimiento:**\n" +
+                  "  1. **Mediación Policial (Art. 154):** Debe ser siempre tu primera opción para dirimir disputas vecinales, escolares o familiares mediante el diálogo asistido por el uniformado, aplicada de forma INSITU (en el lugar de los hechos) para desactivar la escalada de la violencia.\n" +
+                  "  2. **Orden de Policía (Art. 150):** Mandato verbal o escrito que emite la autoridad para prevenir un comportamiento perjudicial.\n" +
+                  "  3. **Medidas Correctivas (Art. 172):** Si el comportamiento persiste, se impone la Orden de Comparendo (Multas generales, decomiso, disolución de reuniones, etc.).\n\n" +
+                  "• **Rol del Mediador y Habilidades Requeridas:** Neutral, imparcial y facilitador; no impone soluciones, ayuda a las partes a encontrarlas mediante escucha activa, comunicación asertiva, empatía y manejo de las emociones.\n\n" +
+                  "• **Proceso de Apelación y Garantía del Debido Proceso (Art. 222):**\n" +
+                  "  - El ciudadano tiene el derecho constitucional de interponer el recurso de apelación dentro de los 3 días hábiles siguientes ante el Inspector de Policía.\n" +
+                  "  - Debes entregar copia física del comparendo de forma obligatoria.\n\n" +
+                  "💡 *Consejo IA:* Toda Orden de Comparendo o Acta de Mediación debe fundamentarse con pruebas objetivas (videos del dispositivo corporal 'bodycam', testimonios o actas firmadas por las partes). Esto asegura la legalidad del procedimiento frente a futuras demandas administrativas."
+          },
+          {
+            keywords: ["taser", "fuerza", "dispositivo", "resistencia", "esposamiento", "esposas", "tonfa", "tactica", "táctica", "triangulacion", "triangulación", "proporcional"],
+            body: "🛡️ **Doctrina del Uso de la Fuerza y Armas Menos Letales (Resolución 02903 de 2017):**\n\n" +
+                  "• **Principios Universales Obligatorios:**\n" +
+                  "  - **Necesidad:** Solo se aplica la fuerza cuando los medios persuasivos (verbalización) hayan sido agotados o sean ineficaces.\n" +
+                  "  - **Proporcionalidad:** El nivel de fuerza debe modularse de acuerdo con el nivel de resistencia del ciudadano (resistencia pasiva, activa o agresión letal).\n" +
+                  "  - **Legalidad:** Actuar bajo el marco de la Constitución y las normas institucionales.\n" +
+                  "  - **Temporalidad:** El uso de la fuerza debe cesar inmediatamente una vez se haya controlado la amenaza.\n\n" +
+                  "• **Técnicas de Esposamiento y Posiciones Tácticas:** Manos a la cabeza, manos atrás y reducción a piso, apoyadas en el esquema de triangulación de seguridad (agente de contacto y agente de seguridad) y el manejo de la tonfa policial.\n\n" +
+                  "• **Protocolo de Empleo de Dispositivos de Control Eléctrico (Taser):**\n" +
+                  "  1. El dispositivo es una herramienta disuasiva menos letal para amenazas de resistencia activa.\n" +
+                  "  2. Apuntar preferiblemente a zonas musculares amplias (espalda o cuadrantes inferiores), evitando siempre el tórax/pecho, la cabeza y los genitales para prevenir paros cardiorrespiratorios o lesiones permanentes.\n" +
+                  "  3. Mantener una distancia táctica segura (entre 2 y 7 metros).\n" +
+                  "  4. Reducir al sujeto e iniciar inmediatamente el procedimiento de esposado.\n\n" +
+                  "📋 **Documentación Obligatoria:** Todo policía que emplee la fuerza de forma física o mediante elementos de dotación (taser, bastón policial, arma de fuego) tiene el deber legal de redactar el **Informe del Uso de la Fuerza** detallando paso a paso las razones objetivas y de proporcionalidad del procedimiento."
+          },
+          {
+            keywords: ["derechos humanos", "ddhh", "dh", "vida", "integridad", "humanos", "manifestacion", "manifestación", "desorden", "dih", "protesta"],
+            body: "⚖️ **Garantía y Protección de los Derechos Humanos (DDHH) en el Servicio Policial:**\n\n" +
+                  "• **Fundamento Constitucional (Art. 2 y 218 Constitución Política):** La Policía Nacional tiene como misión constitucional garantizar el libre ejercicio de los derechos y libertades públicas, actuando siempre con absoluto respeto a la dignidad humana.\n\n" +
+                  "• **Manifestaciones y Desorden Público:** Mantener la calma, usar los elementos de protección (casco, escudo) y cumplir estrictamente el ordenamiento jurídico y el Derecho Internacional Humanitario (DIH), primando siempre la protección de la vida.\n\n" +
+                  "• **Inviolabilidad del Domicilio y la Excepción Legal (Art. 163 - Ley 1801):**\n" +
+                  "  - El ingreso sin orden judicial previa es una de las excepciones más reguladas. Solo es constitucionalmente admisible en casos taxativos:\n" +
+                  "    1. Para socorrer a alguien que pida auxilio (clamor de auxilio).\n" +
+                  "    2. Para extinguir incendio o evitar inundación.\n" +
+                  "    3. Para cazar un animal peligroso o rabioso.\n" +
+                  "    4. En casos de flagrancia donde el delincuente se refugie en su propio domicilio.\n" +
+                  "  - Cualquier ingreso por fuera de estas causales constituye violación ilícita de domicilio y acarrea sanciones penales y disciplinarias.\n\n" +
+                  "💡 *Consejo IA:* Actúa bajo el principio de no discriminación y enfoque de género. Ante poblaciones especialmente protegidas (menores de edad, mujeres gestantes, adultos mayores) el deber de protección es redoblado. Toda intervención debe documentarse con grabaciones de audio y video."
+          },
+          {
+            keywords: ["atencion al ciudadano", "atención al ciudadano", "saludo", "queja", "reclamo", "sugerencia", "denuncia virtual", "portafolio", "tramite", "trámite", "pqrs", "linea 123", "línea 123", "servicio al ciudadano", "dios y patria"],
+            body: "🤝 **Protocolo de Atención al Ciudadano, Portafolio de Servicios y PQRS (Resolución 04180 de 2022):**\n\n" +
+                  "• **El Enfoque S.E.A (Saludar, Escuchar, Actuar):**\n" +
+                  "  - **Saludar:** Saludo obligatorio e institucional: *'Dios y Patria, buenos días/tardes/noches, mi nombre es (Grado y Nombre Completo), ¿En qué puedo servirle?'*.\n" +
+                  "  - **Escuchar:** Mantener una postura corporal abierta, contacto visual directo y escucha activa, demostrando empatía y paciencia ante un ciudadano alterado (Habilidades del Art. 13).\n" +
+                  "  - **Actuar:** Brindar una solución oportuna dentro del marco legal, o remitir al ciudadano a la dependencia correspondiente con información clara.\n\n" +
+                  "• **Servicios Clave del Portafolio:** Línea de Emergencia 123, consulta de antecedentes judiciales, revisión técnica de automotores, Denuncia Virtual (ADenunciar), atención de emergencias viales, incorporación policial y Centros de Conciliación y Mediación.\n\n" +
+                  "• **Canales de PQRS:**\n" +
+                  "  - **Presencial:** Puntos de Atención al Ciudadano (OAC) y Centros de Conciliación.\n" +
+                  "  - **Virtual:** Plataforma ADenunciar, Portal de Servicios Internos (PSI) y correo lineadirecta@policia.gov.co.\n" +
+                  "  - **Telefónico:** Línea de Integridad Policial (166) y línea nacional 018000 910112.\n\n" +
+                  "💡 *Consejo IA:* El lenguaje no verbal comunica más del 70% de la disposición de servicio. Orienta siempre al ciudadano hacia el canal más adecuado según la urgencia de su solicitud."
+          },
+          {
+            keywords: ["transito", "tránsito", "accidente", "choque", "puesto de control", "via", "vía", "lesionado", "croquis", "vehiculo", "vehículo"],
+            body: "🚧 **Procedimientos de Tránsito: Puesto de Control y Atención de Accidentes:**\n\n" +
+                  "• **Instalación del Puesto de Control:**\n" +
+                  "  1. Ubicar la señalización reglamentaria (conos, cinta, chalecos reflectivos) a una distancia segura que permita a los conductores reaccionar.\n" +
+                  "  2. Mantener medidas de seguridad táctica: iluminación, posición de los uniformados y vía de escape.\n" +
+                  "  3. Realizar un abordaje cortés y respetuoso a los conductores, aplicando el protocolo de atención al ciudadano.\n\n" +
+                  "• **Atención de Accidentes de Tránsito con Lesionados:**\n" +
+                  "  1. Acordonar el área para proteger la escena y evitar nuevos accidentes.\n" +
+                  "  2. Solicitar de forma prioritaria e inmediata asistencia médica para las personas heridas.\n" +
+                  "  3. Salvaguardar la escena sin alterar el material probatorio; fijar (fotografiar) la posición de los vehículos antes de moverlos para el croquis.\n\n" +
+                  "💡 *Consejo IA:* La preservación de la escena y la atención oportuna a los lesionados tienen prioridad sobre el diligenciamiento del croquis; la vida siempre primero."
+          },
+          {
+            keywords: ["genero", "género", "discriminacion", "discriminación", "diversidad", "lgbti", "vbg", "violencia basada en genero", "violencia de genero", "violencia de género"],
+            body: "🏳️ **Enfoque de Género y No Discriminación en el Servicio de Policía:**\n\n" +
+                  "• **Mandato Institucional:** Ofrecer un trato digno e igualitario a todas las personas, respetando su identidad de género y orientación sexual.\n" +
+                  "• **Prevención de Revictimización:** Evitar prejuicios, sesgos o estereotipos que puedan derivar en la revictimización de poblaciones vulnerables (mujeres, población LGBTI, migrantes, etc.).\n" +
+                  "• **Ruta de Atención Integral:** Ante un caso de Violencia Basada en Género (VBG), debes activar de inmediato la Ruta de Atención Integral institucional, brindando acompañamiento y protección a la víctima.\n\n" +
+                  "💡 *Consejo IA:* Escucha a la víctima sin juzgar, garantiza su privacidad durante la atención y documenta el caso con enfoque diferencial antes de remitirlo a la autoridad competente."
+          },
+          {
+            keywords: ["tutela", "habeas corpus", "peticion", "petición", "constitucional", "mecanismo de proteccion", "mecanismo de protección", "derecho fundamental"],
+            body: "⚖️ **Mecanismos de Protección Constitucional:**\n\n" +
+                  "• **Acción de Tutela (Art. 86 Constitución):** Mecanismo preferente y sumario para reclamar la protección inmediata de derechos fundamentales vulnerados o amenazados (vida, salud, buen nombre, etc.).\n" +
+                  "• **Habeas Corpus (Art. 30 Constitución):** Protege el derecho a la libertad personal cuando una persona considera que su captura o detención es ilegal o se ha prolongado indebidamente.\n" +
+                  "• **Derecho de Petición (Art. 23 Constitución):** Permite a cualquier ciudadano presentar solicitudes respetuosas ante la autoridad y recibir una respuesta pronta y de fondo.\n\n" +
+                  "💡 *Consejo IA:* Como uniformado, tu deber es orientar al ciudadano sobre cuál mecanismo aplica a su situación y hacia qué autoridad debe dirigirlo; no te corresponde resolverlo, sino garantizar el acceso a la justicia."
+          },
+          {
+            keywords: ["uniforme", "radio", "radiocomunicacion", "radiocomunicación", "dotacion", "dotación", "chaleco", "comunicaciones"],
+            body: "📻 **Porte de Uniforme, Dotación y Radiocomunicaciones:**\n\n" +
+                  "• **Obligaciones y Prohibiciones:** Portar el uniforme con decoro y pulcritud en todo momento del servicio. Está prohibido usar el celular personal en servicio, comer en vía pública o realizar actos que desdibujen la imagen institucional.\n" +
+                  "• **Elementos de Dotación:** Es obligatorio portar el cinturón multipropósito completo con sus elementos (radio, taser, esposas, bastón tonfa).\n" +
+                  "• **Radiocomunicaciones:** Utilizar la radio de forma efectiva, clara y precisa, empleando las claves y la jerga institucional correspondiente para no saturar el canal.\n\n" +
+                  "💡 *Consejo IA:* El abandono o mal uso de los elementos de dotación acarrea responsabilidad disciplinaria; revisa tu dotación completa al inicio de cada turno."
+          }
+        ];
+
+        // Elegir el tema con más coincidencias de palabras clave en la pregunta,
+        // en vez de la primera coincidencia (así se analiza la pregunta completa).
+        let bestTopic = null;
+        let bestScore = 0;
+        topics.forEach(topic => {
+          const score = topic.keywords.reduce((acc, kw) => acc + (textLower.includes(kw) ? 1 : 0), 0);
+          if (score > bestScore) {
+            bestScore = score;
+            bestTopic = topic;
+          }
+        });
+
+        let reply = "🔍 **[Asesor de Doctrina IA - Modo Integrado]**\n\n";
+        if (bestTopic) {
+          reply += bestTopic.body;
         } else {
-          reply += "👋 **¡Hola! Soy tu Asesor de Doctrina Policial.**\n\n" +
-                   "Puedo ayudarte a resolver dudas operativas y normativas sobre:\n" +
-                   "🔹 **Ley 1801:** Comparendos, medidas correctivas, mediación.\n" +
-                   "🔹 **Procedimiento Penal (Ley 906):** Capturas en flagrancia, lectura de derechos, cadena de custodia.\n" +
-                   "🔹 **Uso de la Fuerza (Res. 02903):** Principios, Taser, armas de fuego.\n" +
-                   "🔹 **Atención al Ciudadano (Res. 04180):** Protocolos S.E.A, saludo 'Dios y Patria'.\n" +
-                   "🔹 **Derechos Humanos:** Inviolabilidad de domicilio, protección a la vida.\n\n" +
-                   "👉 *Escribe tu duda, procedimiento o pregunta, y te daré el fundamento legal y los pasos exactos a seguir.*";
+          reply += `No encontré una coincidencia específica en el corpus de doctrina para tu pregunta: *"${text}"*.\n\n` +
+                   "Puedo ayudarte con estos temas del programa de Cursos Mandatorios:\n" +
+                   "🔹 **Ley 1801:** Comparendos, medidas correctivas, mediación policial.\n" +
+                   "🔹 **Procedimiento Penal (Ley 906) e Incautación:** Capturas en flagrancia, cadena de custodia, Decreto 2535.\n" +
+                   "🔹 **Uso de la Fuerza (Res. 02903):** Principios, Taser, esposamiento, posiciones tácticas.\n" +
+                   "🔹 **Atención al Ciudadano (Res. 04180):** Protocolo S.E.A, PQRS, portafolio de servicios.\n" +
+                   "🔹 **Derechos Humanos:** Protección de la vida, enfoque de género, manifestaciones.\n" +
+                   "🔹 **Mecanismos Constitucionales:** Tutela, Habeas Corpus, Derecho de Petición.\n" +
+                   "🔹 **Tránsito:** Puesto de control y atención de accidentes.\n" +
+                   "🔹 **Porte de Uniforme y Radiocomunicaciones.**\n\n" +
+                   "👉 *Intenta reformular tu pregunta incluyendo el procedimiento, la norma o la situación específica que necesitas resolver.*";
         }
         loadingMsg.innerHTML = `<span class="chat-message-sender">Asistente IA</span><p>${parseMarkdown(reply)}</p>`;
       }
