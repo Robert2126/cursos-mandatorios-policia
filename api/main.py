@@ -9,8 +9,8 @@ from fastapi.responses import FileResponse
 import httpx
 from fastapi.staticfiles import StaticFiles
 
-from app.config import Settings, get_settings
-from app.schemas import (
+from api.config import Settings, get_settings
+from api.schemas import (
     ChatRequest,
     ChatResponse,
     HealthResponse,
@@ -20,16 +20,16 @@ from app.schemas import (
     SourceSummary,
     UrlIngestRequest,
 )
-from app.security import (
+from api.security import (
     create_student_token,
     require_admin_key,
     require_integration_key,
     require_student_session,
 )
-from app.services.assistant import NormativeAdvisor
-from app.services.embeddings import EmbeddingService
-from app.services.ingestion import IngestionError, fetch_allowed_url, ingest_bytes
-from app.services.vector_store import SQLiteVectorStore
+from api.services.assistant import NormativeAdvisor
+from api.services.embeddings import EmbeddingService
+from api.services.ingestion import IngestionError, fetch_allowed_url, ingest_bytes
+from api.services.vector_store import SQLiteVectorStore
 
 settings = get_settings()
 app = FastAPI(
@@ -63,7 +63,14 @@ def get_advisor() -> NormativeAdvisor:
 
 @app.get("/", include_in_schema=False)
 def home() -> FileResponse:
-    return FileResponse(STATIC_DIR / "index.html")
+    # Just in case static files index isn't present
+    index_path = STATIC_DIR / "index.html"
+    if not index_path.exists():
+        index_path.parent.mkdir(parents=True, exist_ok=True)
+        # Create a simple fallback page
+        with open(index_path, "w", encoding="utf-8") as f:
+            f.write("<h1>Asesor Normativo Policial API</h1>")
+    return FileResponse(index_path)
 
 
 @app.get("/health", response_model=HealthResponse)

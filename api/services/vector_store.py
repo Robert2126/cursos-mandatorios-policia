@@ -114,7 +114,7 @@ class SQLiteVectorStore:
         query_norm = float(np.linalg.norm(query))
         if query_norm == 0:
             return []
-        hits: list[SearchHit] = []
+        
         with self._connect() as conn:
             rows = conn.execute(
                 """
@@ -122,10 +122,23 @@ class SQLiteVectorStore:
                 FROM chunks c JOIN sources s ON s.source_id = c.source_id
                 """
             ).fetchall()
-        for row in rows:
-            vector = np.frombuffer(row["embedding"], dtype=np.float32, count=row["embedding_dim"])
-            denominator = query_norm * float(np.linalg.norm(vector))
-            similarity = float(np.dot(query, vector) / denominator) if denominator else -1.0
+            
+        if not rows:
+            return []
+            
+        # Extraer todos los vectores en memoria de manera masiva
+        vectors = [np.frombuffer(row["embedding"], dtype=np.float32, count=row["embedding_dim"]) for row in rows]
+        matrix = np.vstack(vectors)
+        
+        # Calcular similitudes usando operaciones vectorizadas de NumPy (más eficiente que bucle for)
+        norms = np.linalg.norm(matrix, axis=1)
+        dot_products = np.dot(matrix, query)
+        denominators = query_norm * norms
+        similarities = np.where(denominators > 0, dot_products / denominators, -1.0)
+        
+        hits: list[SearchHit] = []
+        for idx, row in enumerate(rows):
+            similarity = float(similarities[idx])
             if similarity < min_similarity:
                 continue
             metadata = json.loads(row["metadata_json"])

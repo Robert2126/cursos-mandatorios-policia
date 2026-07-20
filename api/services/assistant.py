@@ -1,12 +1,12 @@
 import re
 from datetime import datetime, timezone
 
-from app.config import Settings
-from app.prompts import SYSTEM_INSTRUCTIONS, build_user_prompt
-from app.schemas import ChatRequest, ChatResponse, SourceCitation
-from app.services.embeddings import EmbeddingService
-from app.services.llm import LLMService
-from app.services.vector_store import SQLiteVectorStore
+from api.config import Settings
+from api.prompts import SYSTEM_INSTRUCTIONS, build_user_prompt
+from api.schemas import ChatRequest, ChatResponse, SourceCitation
+from api.services.embeddings import EmbeddingService
+from api.services.llm import LLMService
+from api.services.vector_store import SQLiteVectorStore
 
 
 class NormativeAdvisor:

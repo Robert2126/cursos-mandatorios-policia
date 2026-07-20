@@ -1,4 +1,4 @@
-from app.services.ingestion import chunk_sections
+from api.services.ingestion import chunk_sections
 
 
 def test_chunking_preserves_page() -> None:
