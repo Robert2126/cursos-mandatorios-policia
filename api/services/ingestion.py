@@ -135,7 +135,7 @@ async def fetch_allowed_url(url: str, settings: Settings) -> tuple[bytes, str, s
     if not _host_allowed(parsed.hostname, settings.allowed_source_domains):
         raise IngestionError("El dominio no está incluido en la lista de fuentes autorizadas")
     _reject_private_host(parsed.hostname)
-    async with httpx.AsyncClient(timeout=30, follow_redirects=True, headers={"User-Agent": "AsesorNormativoPolicial/1.0"}, verify=False) as client:
+    async with httpx.AsyncClient(timeout=30, follow_redirects=True, headers={"User-Agent": "AsesorNormativoPolicial/1.0"}) as client:
         response = await client.get(url)
         response.raise_for_status()
     final = urlparse(str(response.url))
